@@ -12,7 +12,7 @@ class HomeController extends Controller
 {
     public function index(): View
     {
-        return view('pages.home', [
+        return view('index', [
             'services' => Service::active()->limit(6)->get(),
             'featuredProjects' => Project::published()->where('is_featured', true)->limit(6)->get(),
             'portfolioItems' => Portfolio::published()->limit(6)->get(),
