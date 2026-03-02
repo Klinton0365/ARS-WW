@@ -28,7 +28,7 @@ class HomeController extends Controller
 
     public function about(): View
     {
-        return view('pages.about', [
+        return view('about', [
             'services' => Service::active()->limit(4)->get(),
             'projectCount' => Project::published()->count(),
         ]);
@@ -36,14 +36,14 @@ class HomeController extends Controller
 
     public function services(): View
     {
-        return view('pages.services', [
+        return view('service', [
             'services' => Service::active()->get(),
         ]);
     }
 
     public function projects(): View
     {
-        return view('pages.projects.index', [
+        return view('projects', [
             'projects' => Project::published()->paginate(9),
         ]);
     }

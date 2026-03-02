@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ARS Wood Works — Professional carpentry, interior works, carving, and industrial fit-out services.">
   <title>@yield('title', 'ARS Wood Works')</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +13,8 @@
 <body>
   @include('partials.nav')
   <main>
-    <div class="container section" style="padding-bottom:0;">
+    @if (session('success') || $errors->any())
+    <div class="container" style="padding-top:1.5rem;">
       @if (session('success'))
         <div class="alert alert-success">{{ session('success') }}</div>
       @endif
@@ -20,6 +22,7 @@
         <div class="alert alert-error">{{ $errors->first() }}</div>
       @endif
     </div>
+    @endif
     @yield('content')
   </main>
   @include('partials.footer')

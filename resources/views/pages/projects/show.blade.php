@@ -5,29 +5,33 @@
 @section('content')
 <section class="section">
   <div class="container grid grid-2">
-    <article class="card">
+    <article class="card reveal">
       @if($project->cover_image)
         <img class="thumb" src="{{ asset('storage/'.$project->cover_image) }}" alt="{{ $project->title }}">
       @endif
       <span class="badge">{{ $project->category }}</span>
       <h2>{{ $project->title }}</h2>
       <p class="meta">{{ $project->summary }}</p>
+      <div class="divider"></div>
       <p class="meta">{!! nl2br(e($project->description)) !!}</p>
     </article>
-    <aside class="card">
+    <aside class="card reveal">
       <h3>Project Details</h3>
-      <p class="meta"><strong>Client:</strong> {{ $project->client_name ?: 'N/A' }}</p>
-      <p class="meta"><strong>Location:</strong> {{ $project->location ?: 'N/A' }}</p>
-      <p class="meta"><strong>Completed:</strong> {{ $project->completed_at?->format('d M Y') ?: 'In Progress' }}</p>
+      <ul class="detail-list">
+        <li><span class="detail-label">Client</span><span class="detail-value">{{ $project->client_name ?: 'N/A' }}</span></li>
+        <li><span class="detail-label">Location</span><span class="detail-value">{{ $project->location ?: 'N/A' }}</span></li>
+        <li><span class="detail-label">Completed</span><span class="detail-value">{{ $project->completed_at?->format('d M Y') ?: 'In Progress' }}</span></li>
+      </ul>
       @if(!empty($project->gallery))
-      <h4>Gallery Links</h4>
+      <div class="divider"></div>
+      <h4>Gallery</h4>
       <ul>
         @foreach($project->gallery as $image)
           <li><a href="{{ $image }}" target="_blank">{{ $image }}</a></li>
         @endforeach
       </ul>
       @endif
-      <a class="btn btn-primary" href="{{ route('contact') }}">Request Similar Work</a>
+      <a class="btn btn-primary" href="{{ route('contact') }}" style="width:100%;justify-content:center;">Request Similar Work</a>
     </aside>
   </div>
 </section>
