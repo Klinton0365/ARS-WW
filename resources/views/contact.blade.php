@@ -25,37 +25,52 @@
                 <div class="col-lg-6 contact-text py-5 wow fadeIn" data-wow-delay="0.5s">
                     <div class="p-lg-5 ps-lg-0">
                         <div class="section-title text-start">
-                            <h1 class="display-5 mb-4">Contact Us</h1>
+                            <h1 class="display-5 mb-4">Get In Touch</h1>
                         </div>
-                        <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
-                        <form>
+                        <p class="mb-4">Have a project in mind? Fill out the form below and our team will reach out to you within 24 hours with a free consultation and quote.</p>
+                        <form method="POST" action="{{ route('lead.capture') }}">
+                            @csrf
+                            <input type="hidden" name="source" value="contact_legacy">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
                                         <label for="name">Your Name</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
                                         <label for="email">Your Email</label>
                                     </div>
                                 </div>
-                                <div class="col-12">
+                                <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                        <label for="subject">Subject</label>
+                                        <input type="text" class="form-control" id="phone" name="phone" placeholder="Your Phone" required>
+                                        <label for="phone">Phone Number</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="service_type" name="service_type" required>
+                                            <option value="" disabled selected>Select a Service</option>
+                                            <option value="Wood Works">Wood Works</option>
+                                            <option value="Interior Works">Interior Works</option>
+                                            <option value="Carving">Carving</option>
+                                            <option value="Carpentry Services">Carpentry Services</option>
+                                            <option value="Industrial Services">Industrial Services</option>
+                                        </select>
+                                        <label for="service_type">Service Type</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
-                                        <label for="message">Message</label>
+                                        <textarea class="form-control" placeholder="Describe your project" id="message" name="message" style="height: 120px"></textarea>
+                                        <label for="message">Project Details</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Submit Enquiry</button>
                                 </div>
                             </div>
                         </form>

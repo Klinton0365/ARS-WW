@@ -11,11 +11,11 @@
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-12 col-lg-8 text-center">
-                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Welcome To WooDY</h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">Best Carpenter & Craftsman Services</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Free Quote</a>
+                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Craftsmanship Meets Precision</h5>
+                                <h1 class="display-3 text-white animated slideInDown mb-4">Premium Wood Works & Interior Solutions</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">We design and execute premium carpentry and interior projects with reliable quality and finishing standards that scale from homes to industrial sites.</p>
+                                <a href="{{ route('projects') }}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">View Projects</a>
+                                <a href="{{ route('contact') }}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Get Free Quote</a>
                             </div>
                         </div>
                     </div>
@@ -27,11 +27,11 @@
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-12 col-lg-8 text-center">
-                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Welcome To WooDY</h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">Best Carpenter & Craftsman Services</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Free Quote</a>
+                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Expert Execution</h5>
+                                <h1 class="display-3 text-white animated slideInDown mb-4">Interior Fit-outs & Custom Carpentry</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">From custom furniture to complete interior execution, our team delivers quality craftsmanship with professional project management.</p>
+                                <a href="{{ route('services') }}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Our Services</a>
+                                <a href="{{ route('contact') }}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Start a Project</a>
                             </div>
                         </div>
                     </div>
@@ -43,11 +43,11 @@
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-12 col-lg-8 text-center">
-                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Welcome To WooDY</h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">Best Carpenter & Craftsman Services</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Free Quote</a>
+                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Industrial Grade Quality</h5>
+                                <h1 class="display-3 text-white animated slideInDown mb-4">Decorative Carving & Industrial Fit-outs</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Heavy-duty carpentry and decorative solutions for commercial and industrial environments, built with precision and durability.</p>
+                                <a href="{{ route('portfolio') }}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">View Portfolio</a>
+                                <a href="{{ route('contact') }}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Get Free Quote</a>
                             </div>
                         </div>
                     </div>
@@ -69,7 +69,7 @@
                         </div>
                         <h1 class="display-1 text-light mb-0">01</h1>
                     </div>
-                    <h5>Creative Designers</h5>
+                    <h5>Expert Craftsmen</h5>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
                     <div class="d-flex align-items-center justify-content-between mb-2">
@@ -78,7 +78,7 @@
                         </div>
                         <h1 class="display-1 text-light mb-0">02</h1>
                     </div>
-                    <h5>Quality Products</h5>
+                    <h5>Premium Quality</h5>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
                     <div class="d-flex align-items-center justify-content-between mb-2">
@@ -96,7 +96,7 @@
                         </div>
                         <h1 class="display-1 text-light mb-0">04</h1>
                     </div>
-                    <h5>Customer Support</h5>
+                    <h5>Dedicated Support</h5>
                 </div>
             </div>
         </div>
@@ -117,9 +117,9 @@
                 <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
                     <div class="p-lg-5 pe-lg-0">
                         <div class="section-title text-start">
-                            <h1 class="display-5 mb-4">About Us</h1>
+                            <h1 class="display-5 mb-4">About ARS Wood Works</h1>
                         </div>
-                        <p class="mb-4 pb-2">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
+                        <p class="mb-4 pb-2">ARS Wood Works delivers modular and custom wood solutions, complete interior execution, decorative carving, and heavy-duty carpentry for commercial and industrial environments. Our workflow covers consultation, design, fabrication, finishing, quality review, and handover.</p>
                         <div class="row g-4 mb-4 pb-2">
                             <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
                                 <div class="d-flex align-items-center">
@@ -127,7 +127,7 @@
                                         <i class="fa fa-users fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-3">
-                                        <h2 class="text-primary mb-1" data-toggle="counter-up">1234</h2>
+                                        <h2 class="text-primary mb-1" data-toggle="counter-up">500</h2>
                                         <p class="fw-medium mb-0">Happy Clients</p>
                                     </div>
                                 </div>
@@ -138,13 +138,13 @@
                                         <i class="fa fa-check fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-3">
-                                        <h2 class="text-primary mb-1" data-toggle="counter-up">1234</h2>
+                                        <h2 class="text-primary mb-1" data-toggle="counter-up">750</h2>
                                         <p class="fw-medium mb-0">Projects Done</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <a href="" class="btn btn-primary py-3 px-5">Explore More</a>
+                        <a href="{{ route('about') }}" class="btn btn-primary py-3 px-5">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -167,7 +167,7 @@
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">General Carpentry</h4>
-                            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
+                            <p>Professional execution with premium materials, quality-controlled processes, and reliable timelines.</p>
                             <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
@@ -179,7 +179,7 @@
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Furniture Manufacturing</h4>
-                            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
+                            <p>Professional execution with premium materials, quality-controlled processes, and reliable timelines.</p>
                             <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
@@ -191,7 +191,7 @@
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Furniture Remodeling</h4>
-                            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
+                            <p>Professional execution with premium materials, quality-controlled processes, and reliable timelines.</p>
                             <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
@@ -203,7 +203,7 @@
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Wooden Floor</h4>
-                            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
+                            <p>Professional execution with premium materials, quality-controlled processes, and reliable timelines.</p>
                             <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
@@ -215,7 +215,7 @@
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Wooden Furniture</h4>
-                            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
+                            <p>Professional execution with premium materials, quality-controlled processes, and reliable timelines.</p>
                             <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
@@ -227,7 +227,7 @@
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Custom Work</h4>
-                            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
+                            <p>Professional execution with premium materials, quality-controlled processes, and reliable timelines.</p>
                             <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
@@ -245,9 +245,9 @@
                 <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.5s">
                     <div class="p-lg-5 ps-lg-0">
                         <div class="section-title text-start">
-                            <h1 class="display-5 mb-4">Why Choose Us</h1>
+                            <h1 class="display-5 mb-4">Why Choose ARS</h1>
                         </div>
-                        <p class="mb-4 pb-2">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
+                        <p class="mb-4 pb-2">We combine decades of carpentry expertise with modern project management to deliver precision results. From residential interiors to industrial-scale fit-outs, our team ensures quality at every stage.</p>
                         <div class="row g-4">
                             <div class="col-6">
                                 <div class="d-flex align-items-center">
@@ -433,7 +433,7 @@
                         <div class="section-title text-start">
                             <h1 class="display-5 mb-4">Free Quote</h1>
                         </div>
-                        <p class="mb-4 pb-2">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
+                        <p class="mb-4 pb-2">ARS Wood Works combines decades of carpentry expertise with modern project management to deliver precision results. Get a free consultation and quote for your next project.</p>
                         <form>
                             <div class="row g-3">
                                 <div class="col-12 col-sm-6">
@@ -556,7 +556,7 @@
                 <div class="testimonial-item text-center">
                     <img class="img-fluid bg-light p-2 mx-auto mb-3" src="{{ asset('assets/img/testimonial-1.jpg') }}" style="width: 90px; height: 90px;">
                     <div class="testimonial-text text-center p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
+                        <p>ARS Wood Works transformed our office space with exceptional attention to detail. Their team managed the entire project professionally, from custom furniture to complete interior fit-out. Highly recommended for quality craftsmanship.</p>
                         <h5 class="mb-1">Client Name</h5>
                         <span class="fst-italic">Profession</span>
                     </div>
@@ -564,7 +564,7 @@
                 <div class="testimonial-item text-center">
                     <img class="img-fluid bg-light p-2 mx-auto mb-3" src="{{ asset('assets/img/testimonial-2.jpg') }}" style="width: 90px; height: 90px;">
                     <div class="testimonial-text text-center p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
+                        <p>ARS Wood Works transformed our office space with exceptional attention to detail. Their team managed the entire project professionally, from custom furniture to complete interior fit-out. Highly recommended for quality craftsmanship.</p>
                         <h5 class="mb-1">Client Name</h5>
                         <span class="fst-italic">Profession</span>
                     </div>
@@ -572,7 +572,7 @@
                 <div class="testimonial-item text-center">
                     <img class="img-fluid bg-light p-2 mx-auto mb-3" src="{{ asset('assets/img/testimonial-3.jpg') }}" style="width: 90px; height: 90px;">
                     <div class="testimonial-text text-center p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
+                        <p>ARS Wood Works transformed our office space with exceptional attention to detail. Their team managed the entire project professionally, from custom furniture to complete interior fit-out. Highly recommended for quality craftsmanship.</p>
                         <h5 class="mb-1">Client Name</h5>
                         <span class="fst-italic">Profession</span>
                     </div>

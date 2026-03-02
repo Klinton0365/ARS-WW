@@ -3,41 +3,37 @@
      <div class="container py-5">
          <div class="row g-5">
              <div class="col-lg-3 col-md-6">
-                 <h4 class="text-light mb-4">Address</h4>
-                 <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                 <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                 <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                 <h4 class="text-light mb-4">ARS Wood Works</h4>
+                 <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Professional Wood & Interior Services</p>
+                 <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>Contact Us for a Free Quote</p>
+                 <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@arswoodworks.com</p>
                  <div class="d-flex pt-2">
-                     <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                     <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                     <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                     <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                     <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                     <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                     <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-youtube"></i></a>
+                     <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
                  </div>
              </div>
              <div class="col-lg-3 col-md-6">
-                 <h4 class="text-light mb-4">Services</h4>
-                 <a class="btn btn-link" href="">General Carpentry</a>
-                 <a class="btn btn-link" href="">Furniture Remodeling</a>
-                 <a class="btn btn-link" href="">Wooden Floor</a>
-                 <a class="btn btn-link" href="">Wooden Furniture</a>
-                 <a class="btn btn-link" href="">Custom Carpentry</a>
+                 <h4 class="text-light mb-4">Our Services</h4>
+                 <a class="btn btn-link" href="{{ route('services') }}">Wood Works</a>
+                 <a class="btn btn-link" href="{{ route('services') }}">Interior Works</a>
+                 <a class="btn btn-link" href="{{ route('services') }}">Decorative Carving</a>
+                 <a class="btn btn-link" href="{{ route('services') }}">Carpentry Services</a>
+                 <a class="btn btn-link" href="{{ route('services') }}">Industrial Fit-outs</a>
              </div>
              <div class="col-lg-3 col-md-6">
                  <h4 class="text-light mb-4">Quick Links</h4>
-                 <a class="btn btn-link" href="">About Us</a>
-                 <a class="btn btn-link" href="">Contact Us</a>
-                 <a class="btn btn-link" href="">Our Services</a>
-                 <a class="btn btn-link" href="">Terms & Condition</a>
-                 <a class="btn btn-link" href="">Support</a>
+                 <a class="btn btn-link" href="{{ route('about') }}">About Us</a>
+                 <a class="btn btn-link" href="{{ route('contact') }}">Contact Us</a>
+                 <a class="btn btn-link" href="{{ route('projects') }}">Our Projects</a>
+                 <a class="btn btn-link" href="{{ route('portfolio') }}">Portfolio</a>
+                 <a class="btn btn-link" href="{{ route('catalog') }}">Catalog</a>
              </div>
              <div class="col-lg-3 col-md-6">
-                 <h4 class="text-light mb-4">Newsletter</h4>
-                 <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                 <div class="position-relative mx-auto" style="max-width: 400px;">
-                     <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                     <button type="button"
-                         class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                 </div>
+                 <h4 class="text-light mb-4">Get In Touch</h4>
+                 <p>Have a project in mind? Submit your details and our team will reach out within 24 hours.</p>
+                 <a href="{{ route('contact') }}" class="btn btn-primary py-3 px-4">Start Your Project<i class="fa fa-arrow-right ms-2"></i></a>
              </div>
          </div>
      </div>
@@ -45,7 +41,7 @@
          <div class="copyright">
              <div class="row">
                  <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                     &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+                     &copy; {{ date('Y') }} <a class="border-bottom" href="{{ route('home') }}">ARS Wood Works</a>, All Rights Reserved.
                  </div>
                  <div class="col-md-6 text-center text-md-end">
                      <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->

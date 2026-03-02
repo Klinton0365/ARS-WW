@@ -29,7 +29,7 @@
                         </div>
                         <h1 class="display-1 text-light mb-0">01</h1>
                     </div>
-                    <h5>Creative Designers</h5>
+                    <h5>Expert Craftsmen</h5>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
                     <div class="d-flex align-items-center justify-content-between mb-2">
@@ -39,7 +39,7 @@
                         </div>
                         <h1 class="display-1 text-light mb-0">02</h1>
                     </div>
-                    <h5>Quality Products</h5>
+                    <h5>Premium Quality</h5>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
                     <div class="d-flex align-items-center justify-content-between mb-2">
@@ -59,7 +59,7 @@
                         </div>
                         <h1 class="display-1 text-light mb-0">04</h1>
                     </div>
-                    <h5>Customer Support</h5>
+                    <h5>Dedicated Support</h5>
                 </div>
             </div>
         </div>
@@ -81,10 +81,9 @@
                 <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
                     <div class="p-lg-5 pe-lg-0">
                         <div class="section-title text-start">
-                            <h1 class="display-5 mb-4">About Us</h1>
+                            <h1 class="display-5 mb-4">About ARS Wood Works</h1>
                         </div>
-                        <p class="mb-4 pb-2">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet
-                            diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
+                        <p class="mb-4 pb-2">ARS Wood Works delivers modular and custom wood solutions, complete interior execution, decorative carving, and heavy-duty carpentry. Our workflow covers consultation, design, fabrication, finishing, quality review, and handover documentation.</p>
                         <div class="row g-4 mb-4 pb-2">
                             <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
                                 <div class="d-flex align-items-center">
