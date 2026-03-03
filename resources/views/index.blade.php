@@ -1,23 +1,29 @@
 @extends('layouts.master')
 
 @section('content')
-
-    @include('hero')
+    {{-- @include('hero') --}}
 
     <!-- Carousel Start -->
     <div class="container-fluid p-0 pb-5">
         <div class="owl-carousel header-carousel position-relative">
             <div class="owl-carousel-item position-relative">
                 <img class="img-fluid" src="{{ asset('assets/img/carousel-1.jpg') }}" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+                    style="background: rgba(53, 53, 53, .7);">
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-12 col-lg-8 text-center">
-                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Craftsmanship Meets Precision</h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">Premium Wood Works & Interior Solutions</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">We design and execute premium carpentry and interior projects with reliable quality and finishing standards that scale from homes to industrial sites.</p>
-                                <a href="{{ route('projects') }}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">View Projects</a>
-                                <a href="{{ route('contact') }}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Get Free Quote</a>
+                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Craftsmanship Meets
+                                    Precision</h5>
+                                <h1 class="display-3 text-white animated slideInDown mb-4">Premium Wood Works & Interior
+                                    Solutions</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">We design and execute premium carpentry and
+                                    interior projects with reliable quality and finishing standards that scale from homes to
+                                    industrial sites.</p>
+                                <a href="{{ route('projects') }}"
+                                    class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">View Projects</a>
+                                <a href="{{ route('contact') }}"
+                                    class="btn btn-light py-md-3 px-md-5 animated slideInRight">Get Free Quote</a>
                             </div>
                         </div>
                     </div>
@@ -25,15 +31,21 @@
             </div>
             <div class="owl-carousel-item position-relative">
                 <img class="img-fluid" src="{{ asset('assets/img/carousel-2.jpg') }}" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+                    style="background: rgba(53, 53, 53, .7);">
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-12 col-lg-8 text-center">
                                 <h5 class="text-white text-uppercase mb-3 animated slideInDown">Expert Execution</h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">Interior Fit-outs & Custom Carpentry</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">From custom furniture to complete interior execution, our team delivers quality craftsmanship with professional project management.</p>
-                                <a href="{{ route('services') }}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Our Services</a>
-                                <a href="{{ route('contact') }}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Start a Project</a>
+                                <h1 class="display-3 text-white animated slideInDown mb-4">Interior Fit-outs & Custom
+                                    Carpentry</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">From custom furniture to complete interior
+                                    execution, our team delivers quality craftsmanship with professional project management.
+                                </p>
+                                <a href="{{ route('services') }}"
+                                    class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Our Services</a>
+                                <a href="{{ route('contact') }}"
+                                    class="btn btn-light py-md-3 px-md-5 animated slideInRight">Start a Project</a>
                             </div>
                         </div>
                     </div>
@@ -41,15 +53,21 @@
             </div>
             <div class="owl-carousel-item position-relative">
                 <img class="img-fluid" src="{{ asset('assets/img/carousel-3.jpg') }}" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+                    style="background: rgba(53, 53, 53, .7);">
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-12 col-lg-8 text-center">
-                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Industrial Grade Quality</h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">Decorative Carving & Industrial Fit-outs</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Heavy-duty carpentry and decorative solutions for commercial and industrial environments, built with precision and durability.</p>
-                                <a href="{{ route('portfolio') }}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">View Portfolio</a>
-                                <a href="{{ route('contact') }}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Get Free Quote</a>
+                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Industrial Grade Quality
+                                </h5>
+                                <h1 class="display-3 text-white animated slideInDown mb-4">Decorative Carving & Industrial
+                                    Fit-outs</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Heavy-duty carpentry and decorative solutions
+                                    for commercial and industrial environments, built with precision and durability.</p>
+                                <a href="{{ route('portfolio') }}"
+                                    class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">View Portfolio</a>
+                                <a href="{{ route('contact') }}"
+                                    class="btn btn-light py-md-3 px-md-5 animated slideInRight">Get Free Quote</a>
                             </div>
                         </div>
                     </div>
@@ -66,7 +84,8 @@
             <div class="row g-5">
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
                     <div class="d-flex align-items-center justify-content-between mb-2">
-                        <div class="d-flex align-items-center justify-content-center bg-light" style="width: 60px; height: 60px;">
+                        <div class="d-flex align-items-center justify-content-center bg-light"
+                            style="width: 60px; height: 60px;">
                             <i class="fa fa-user-check fa-2x text-primary"></i>
                         </div>
                         <h1 class="display-1 text-light mb-0">01</h1>
@@ -75,7 +94,8 @@
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
                     <div class="d-flex align-items-center justify-content-between mb-2">
-                        <div class="d-flex align-items-center justify-content-center bg-light" style="width: 60px; height: 60px;">
+                        <div class="d-flex align-items-center justify-content-center bg-light"
+                            style="width: 60px; height: 60px;">
                             <i class="fa fa-check fa-2x text-primary"></i>
                         </div>
                         <h1 class="display-1 text-light mb-0">02</h1>
@@ -84,7 +104,8 @@
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
                     <div class="d-flex align-items-center justify-content-between mb-2">
-                        <div class="d-flex align-items-center justify-content-center bg-light" style="width: 60px; height: 60px;">
+                        <div class="d-flex align-items-center justify-content-center bg-light"
+                            style="width: 60px; height: 60px;">
                             <i class="fa fa-drafting-compass fa-2x text-primary"></i>
                         </div>
                         <h1 class="display-1 text-light mb-0">03</h1>
@@ -93,7 +114,8 @@
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
                     <div class="d-flex align-items-center justify-content-between mb-2">
-                        <div class="d-flex align-items-center justify-content-center bg-light" style="width: 60px; height: 60px;">
+                        <div class="d-flex align-items-center justify-content-center bg-light"
+                            style="width: 60px; height: 60px;">
                             <i class="fa fa-headphones fa-2x text-primary"></i>
                         </div>
                         <h1 class="display-1 text-light mb-0">04</h1>
@@ -113,7 +135,8 @@
             <div class="row g-0 mx-lg-0">
                 <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="{{ asset('assets/img/about.jpg') }}" style="object-fit: cover;" alt="">
+                        <img class="position-absolute img-fluid w-100 h-100" src="{{ asset('assets/img/about.jpg') }}"
+                            style="object-fit: cover;" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
@@ -121,11 +144,15 @@
                         <div class="section-title text-start">
                             <h1 class="display-5 mb-4">About ARS Wood Works</h1>
                         </div>
-                        <p class="mb-4 pb-2">ARS Wood Works delivers modular and custom wood solutions, complete interior execution, decorative carving, and heavy-duty carpentry for commercial and industrial environments. Our workflow covers consultation, design, fabrication, finishing, quality review, and handover.</p>
+                        <p class="mb-4 pb-2">ARS Wood Works delivers modular and custom wood solutions, complete interior
+                            execution, decorative carving, and heavy-duty carpentry for commercial and industrial
+                            environments. Our workflow covers consultation, design, fabrication, finishing, quality review,
+                            and handover.</p>
                         <div class="row g-4 mb-4 pb-2">
                             <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
                                 <div class="d-flex align-items-center">
-                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white"
+                                        style="width: 60px; height: 60px;">
                                         <i class="fa fa-users fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-3">
@@ -136,7 +163,8 @@
                             </div>
                             <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
                                 <div class="d-flex align-items-center">
-                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white"
+                                        style="width: 60px; height: 60px;">
                                         <i class="fa fa-check fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-3">
@@ -169,7 +197,8 @@
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">General Carpentry</h4>
-                            <p>Professional execution with premium materials, quality-controlled processes, and reliable timelines.</p>
+                            <p>Professional execution with premium materials, quality-controlled processes, and reliable
+                                timelines.</p>
                             <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
@@ -181,7 +210,8 @@
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Furniture Manufacturing</h4>
-                            <p>Professional execution with premium materials, quality-controlled processes, and reliable timelines.</p>
+                            <p>Professional execution with premium materials, quality-controlled processes, and reliable
+                                timelines.</p>
                             <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
@@ -193,7 +223,8 @@
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Furniture Remodeling</h4>
-                            <p>Professional execution with premium materials, quality-controlled processes, and reliable timelines.</p>
+                            <p>Professional execution with premium materials, quality-controlled processes, and reliable
+                                timelines.</p>
                             <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
@@ -205,7 +236,8 @@
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Wooden Floor</h4>
-                            <p>Professional execution with premium materials, quality-controlled processes, and reliable timelines.</p>
+                            <p>Professional execution with premium materials, quality-controlled processes, and reliable
+                                timelines.</p>
                             <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
@@ -217,7 +249,8 @@
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Wooden Furniture</h4>
-                            <p>Professional execution with premium materials, quality-controlled processes, and reliable timelines.</p>
+                            <p>Professional execution with premium materials, quality-controlled processes, and reliable
+                                timelines.</p>
                             <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
@@ -229,7 +262,8 @@
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Custom Work</h4>
-                            <p>Professional execution with premium materials, quality-controlled processes, and reliable timelines.</p>
+                            <p>Professional execution with premium materials, quality-controlled processes, and reliable
+                                timelines.</p>
                             <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
@@ -245,7 +279,8 @@
         <div class="container">
             <div class="section-title text-center">
                 <h1 class="display-5 mb-3">How We Work</h1>
-                <p class="text-muted mb-5 mx-auto" style="max-width: 600px;">From the first conversation to the final handover, every step is managed with precision and craftsmanship.</p>
+                <p class="text-muted mb-5 mx-auto" style="max-width: 600px;">From the first conversation to the final
+                    handover, every step is managed with precision and craftsmanship.</p>
             </div>
             <div class="work-process-timeline">
                 <div class="process-line"></div>
@@ -346,7 +381,8 @@
         <div class="container">
             <div class="section-title text-center">
                 <h1 class="display-5 mb-3">Transformation</h1>
-                <p class="text-muted mb-5 mx-auto" style="max-width: 600px;">See the difference our craftsmanship makes. Drag the slider to reveal the before and after.</p>
+                <p class="text-muted mb-5 mx-auto" style="max-width: 600px;">See the difference our craftsmanship makes.
+                    Drag the slider to reveal the before and after.</p>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-10 wow fadeInUp" data-wow-delay="0.3s">
@@ -402,7 +438,8 @@
         <div class="container">
             <div class="section-title text-center">
                 <h1 class="display-5 mb-3">Design Your Dream Room</h1>
-                <p class="text-muted mb-5 mx-auto" style="max-width: 600px;">Experience our craftsmanship in 3D. Customize walls, floors, and furniture to visualize your perfect space.</p>
+                <p class="text-muted mb-5 mx-auto" style="max-width: 600px;">Experience our craftsmanship in 3D. Customize
+                    walls, floors, and furniture to visualize your perfect space.</p>
             </div>
             <div class="room-designer-wrap wow fadeInUp" data-wow-delay="0.2s">
                 <div class="rd-canvas-container" id="rdCanvas"></div>
@@ -410,7 +447,8 @@
 
                     <div class="rd-group">
                         <label class="rd-label">Wall Color</label>
-                        <input type="color" id="rdWallColor" value="#f0e8dc" class="rd-color-picker" onchange="rdSetWallColor(this.value)">
+                        <input type="color" id="rdWallColor" value="#f0e8dc" class="rd-color-picker"
+                            onchange="rdSetWallColor(this.value)">
                     </div>
 
                     <div class="rd-group">
@@ -465,10 +503,12 @@
                         <label class="rd-label">Selected</label>
                         <div class="rd-selected-row">
                             <span id="rdSelectedInfo">None</span>
-                            <button id="rdRotateBtn" class="rd-icon-btn" style="display:none" onclick="rdRotateSelected()" title="Rotate 45°">
+                            <button id="rdRotateBtn" class="rd-icon-btn" style="display:none"
+                                onclick="rdRotateSelected()" title="Rotate 45°">
                                 <i class="fa fa-redo-alt"></i>
                             </button>
-                            <button id="rdDeleteBtn" class="rd-icon-btn rd-danger" style="display:none" onclick="rdDeleteSelected()" title="Remove">
+                            <button id="rdDeleteBtn" class="rd-icon-btn rd-danger" style="display:none"
+                                onclick="rdDeleteSelected()" title="Remove">
                                 <i class="fa fa-trash-alt"></i>
                             </button>
                         </div>
@@ -491,7 +531,8 @@
                     </div>
 
                     <div class="rd-hint">
-                        <small><i class="fa fa-mouse-pointer"></i> Drag to orbit &bull; Scroll to zoom &bull; Click furniture to select &bull; Drag to move</small>
+                        <small><i class="fa fa-mouse-pointer"></i> Drag to orbit &bull; Scroll to zoom &bull; Click
+                            furniture to select &bull; Drag to move</small>
                     </div>
                 </div>
             </div>
@@ -509,11 +550,14 @@
                         <div class="section-title text-start">
                             <h1 class="display-5 mb-4">Why Choose ARS</h1>
                         </div>
-                        <p class="mb-4 pb-2">We combine decades of carpentry expertise with modern project management to deliver precision results. From residential interiors to industrial-scale fit-outs, our team ensures quality at every stage.</p>
+                        <p class="mb-4 pb-2">We combine decades of carpentry expertise with modern project management to
+                            deliver precision results. From residential interiors to industrial-scale fit-outs, our team
+                            ensures quality at every stage.</p>
                         <div class="row g-4">
                             <div class="col-6">
                                 <div class="d-flex align-items-center">
-                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white"
+                                        style="width: 60px; height: 60px;">
                                         <i class="fa fa-check fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-4">
@@ -524,7 +568,8 @@
                             </div>
                             <div class="col-6">
                                 <div class="d-flex align-items-center">
-                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white"
+                                        style="width: 60px; height: 60px;">
                                         <i class="fa fa-user-check fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-4">
@@ -535,7 +580,8 @@
                             </div>
                             <div class="col-6">
                                 <div class="d-flex align-items-center">
-                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white"
+                                        style="width: 60px; height: 60px;">
                                         <i class="fa fa-drafting-compass fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-4">
@@ -546,7 +592,8 @@
                             </div>
                             <div class="col-6">
                                 <div class="d-flex align-items-center">
-                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white"
+                                        style="width: 60px; height: 60px;">
                                         <i class="fa fa-headphones fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-4">
@@ -560,7 +607,8 @@
                 </div>
                 <div class="col-lg-6 pe-lg-0" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="{{ asset('assets/img/feature.jpg') }}" style="object-fit: cover;" alt="">
+                        <img class="position-absolute img-fluid w-100 h-100" src="{{ asset('assets/img/feature.jpg') }}"
+                            style="object-fit: cover;" alt="">
                     </div>
                 </div>
             </div>
@@ -584,14 +632,24 @@
                     </ul>
                 </div>
             </div>
+            <style>
+                .portfolio-box-spacing {
+                    /* margin: 170px 0; */
+                    margin-bottom: 250px;
+                }
+            </style>
             <div class="row g-4 portfolio-container">
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp portfolio-box-spacing"
+                    data-wow-delay="0.1s">
                     <div class="rounded overflow-hidden">
                         <div class="position-relative overflow-hidden">
                             <img class="img-fluid w-100" src="{{ asset('assets/img/portfolio-1.jpg') }}" alt="">
                             <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="{{ asset('assets/img/portfolio-1.jpg') }}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1"
+                                    href="{{ asset('assets/img/portfolio-1.jpg') }}" data-lightbox="portfolio"><i
+                                        class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href=""><i
+                                        class="fa fa-link"></i></a>
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
@@ -600,13 +658,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp portfolio-box-spacing"
+                    data-wow-delay="0.3s">
                     <div class="rounded overflow-hidden">
                         <div class="position-relative overflow-hidden">
                             <img class="img-fluid w-100" src="{{ asset('assets/img/portfolio-2.jpg') }}" alt="">
                             <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="{{ asset('assets/img/portfolio-2.jpg') }}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1"
+                                    href="{{ asset('assets/img/portfolio-2.jpg') }}" data-lightbox="portfolio"><i
+                                        class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href=""><i
+                                        class="fa fa-link"></i></a>
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
@@ -615,13 +677,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.5s">
+                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp portfolio-box-spacing"
+                    data-wow-delay="0.5s">
                     <div class="rounded overflow-hidden">
                         <div class="position-relative overflow-hidden">
                             <img class="img-fluid w-100" src="{{ asset('assets/img/portfolio-3.jpg') }}" alt="">
                             <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="{{ asset('assets/img/portfolio-3.jpg') }}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1"
+                                    href="{{ asset('assets/img/portfolio-3.jpg') }}" data-lightbox="portfolio"><i
+                                        class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href=""><i
+                                        class="fa fa-link"></i></a>
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
@@ -630,13 +696,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp portfolio-box-spacing"
+                    data-wow-delay="0.1s">
                     <div class="rounded overflow-hidden">
                         <div class="position-relative overflow-hidden">
                             <img class="img-fluid w-100" src="{{ asset('assets/img/portfolio-4.jpg') }}" alt="">
                             <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="{{ asset('assets/img/portfolio-4.jpg') }}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1"
+                                    href="{{ asset('assets/img/portfolio-4.jpg') }}" data-lightbox="portfolio"><i
+                                        class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href=""><i
+                                        class="fa fa-link"></i></a>
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
@@ -645,13 +715,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp portfolio-box-spacing"
+                    data-wow-delay="0.3s">
                     <div class="rounded overflow-hidden">
                         <div class="position-relative overflow-hidden">
                             <img class="img-fluid w-100" src="{{ asset('assets/img/portfolio-5.jpg') }}" alt="">
                             <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="{{ asset('assets/img/portfolio-5.jpg') }}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1"
+                                    href="{{ asset('assets/img/portfolio-5.jpg') }}" data-lightbox="portfolio"><i
+                                        class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href=""><i
+                                        class="fa fa-link"></i></a>
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
@@ -660,13 +734,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
+                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp portfolio-box-spacing"
+                    data-wow-delay="0.5s">
                     <div class="rounded overflow-hidden">
                         <div class="position-relative overflow-hidden">
                             <img class="img-fluid w-100" src="{{ asset('assets/img/portfolio-6.jpg') }}" alt="">
                             <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="{{ asset('assets/img/portfolio-6.jpg') }}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1"
+                                    href="{{ asset('assets/img/portfolio-6.jpg') }}" data-lightbox="portfolio"><i
+                                        class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href=""><i
+                                        class="fa fa-link"></i></a>
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
@@ -687,7 +765,8 @@
             <div class="row g-0 mx-lg-0">
                 <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="{{ asset('assets/img/quote.jpg') }}" style="object-fit: cover;" alt="">
+                        <img class="position-absolute img-fluid w-100 h-100" src="{{ asset('assets/img/quote.jpg') }}"
+                            style="object-fit: cover;" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 quote-text py-5 wow fadeIn" data-wow-delay="0.5s">
@@ -695,17 +774,22 @@
                         <div class="section-title text-start">
                             <h1 class="display-5 mb-4">Free Quote</h1>
                         </div>
-                        <p class="mb-4 pb-2">ARS Wood Works combines decades of carpentry expertise with modern project management to deliver precision results. Get a free consultation and quote for your next project.</p>
+                        <p class="mb-4 pb-2">ARS Wood Works combines decades of carpentry expertise with modern project
+                            management to deliver precision results. Get a free consultation and quote for your next
+                            project.</p>
                         <form>
                             <div class="row g-3">
                                 <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control border-0" placeholder="Your Name" style="height: 55px;">
+                                    <input type="text" class="form-control border-0" placeholder="Your Name"
+                                        style="height: 55px;">
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <input type="email" class="form-control border-0" placeholder="Your Email" style="height: 55px;">
+                                    <input type="email" class="form-control border-0" placeholder="Your Email"
+                                        style="height: 55px;">
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control border-0" placeholder="Your Mobile" style="height: 55px;">
+                                    <input type="text" class="form-control border-0" placeholder="Your Mobile"
+                                        style="height: 55px;">
                                 </div>
                                 <div class="col-12 col-sm-6">
                                     <select class="form-select border-0" style="height: 55px;">
@@ -816,25 +900,34 @@
             </div>
             <div class="owl-carousel testimonial-carousel">
                 <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light p-2 mx-auto mb-3" src="{{ asset('assets/img/testimonial-1.jpg') }}" style="width: 90px; height: 90px;">
+                    <img class="img-fluid bg-light p-2 mx-auto mb-3" src="{{ asset('assets/img/testimonial-1.jpg') }}"
+                        style="width: 90px; height: 90px;">
                     <div class="testimonial-text text-center p-4">
-                        <p>ARS Wood Works transformed our office space with exceptional attention to detail. Their team managed the entire project professionally, from custom furniture to complete interior fit-out. Highly recommended for quality craftsmanship.</p>
+                        <p>ARS Wood Works transformed our office space with exceptional attention to detail. Their team
+                            managed the entire project professionally, from custom furniture to complete interior fit-out.
+                            Highly recommended for quality craftsmanship.</p>
                         <h5 class="mb-1">Client Name</h5>
                         <span class="fst-italic">Profession</span>
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light p-2 mx-auto mb-3" src="{{ asset('assets/img/testimonial-2.jpg') }}" style="width: 90px; height: 90px;">
+                    <img class="img-fluid bg-light p-2 mx-auto mb-3" src="{{ asset('assets/img/testimonial-2.jpg') }}"
+                        style="width: 90px; height: 90px;">
                     <div class="testimonial-text text-center p-4">
-                        <p>ARS Wood Works transformed our office space with exceptional attention to detail. Their team managed the entire project professionally, from custom furniture to complete interior fit-out. Highly recommended for quality craftsmanship.</p>
+                        <p>ARS Wood Works transformed our office space with exceptional attention to detail. Their team
+                            managed the entire project professionally, from custom furniture to complete interior fit-out.
+                            Highly recommended for quality craftsmanship.</p>
                         <h5 class="mb-1">Client Name</h5>
                         <span class="fst-italic">Profession</span>
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light p-2 mx-auto mb-3" src="{{ asset('assets/img/testimonial-3.jpg') }}" style="width: 90px; height: 90px;">
+                    <img class="img-fluid bg-light p-2 mx-auto mb-3" src="{{ asset('assets/img/testimonial-3.jpg') }}"
+                        style="width: 90px; height: 90px;">
                     <div class="testimonial-text text-center p-4">
-                        <p>ARS Wood Works transformed our office space with exceptional attention to detail. Their team managed the entire project professionally, from custom furniture to complete interior fit-out. Highly recommended for quality craftsmanship.</p>
+                        <p>ARS Wood Works transformed our office space with exceptional attention to detail. Their team
+                            managed the entire project professionally, from custom furniture to complete interior fit-out.
+                            Highly recommended for quality craftsmanship.</p>
                         <h5 class="mb-1">Client Name</h5>
                         <span class="fst-italic">Profession</span>
                     </div>
@@ -843,75 +936,80 @@
         </div>
     </div>
     <!-- Testimonial End -->
-
 @endsection
 
 @push('scripts')
-<script>
-(function () {
-    /* ===== Before / After Slider ===== */
-    var wrapper = document.getElementById('baSlider');
-    var handle  = document.getElementById('baHandle');
-    if (wrapper && handle) {
-        var beforeImg = wrapper.querySelector('.ba-before');
-        var dragging  = false;
+    <script>
+        (function() {
+            /* ===== Before / After Slider ===== */
+            var wrapper = document.getElementById('baSlider');
+            var handle = document.getElementById('baHandle');
+            if (wrapper && handle) {
+                var beforeImg = wrapper.querySelector('.ba-before');
+                var dragging = false;
 
-        function setPosition(x) {
-            var rect = wrapper.getBoundingClientRect();
-            var pct  = Math.max(0, Math.min(1, (x - rect.left) / rect.width));
-            beforeImg.style.clipPath = 'inset(0 ' + ((1 - pct) * 100) + '% 0 0)';
-            handle.style.left = (pct * 100) + '%';
-        }
-
-        wrapper.addEventListener('mousedown', function (e) {
-            e.preventDefault();
-            dragging = true;
-            wrapper.classList.add('active');
-            setPosition(e.clientX);
-        });
-        window.addEventListener('mousemove', function (e) {
-            if (!dragging) return;
-            setPosition(e.clientX);
-        });
-        window.addEventListener('mouseup', function () {
-            dragging = false;
-            wrapper.classList.remove('active');
-        });
-
-        wrapper.addEventListener('touchstart', function (e) {
-            dragging = true;
-            wrapper.classList.add('active');
-            setPosition(e.touches[0].clientX);
-        }, { passive: true });
-        wrapper.addEventListener('touchmove', function (e) {
-            if (!dragging) return;
-            setPosition(e.touches[0].clientX);
-        }, { passive: true });
-        wrapper.addEventListener('touchend', function () {
-            dragging = false;
-            wrapper.classList.remove('active');
-        });
-    }
-
-    /* ===== Work Process Timeline animation ===== */
-    var timeline = document.querySelector('.work-process-timeline');
-    if (timeline) {
-        var observer = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    timeline.classList.add('animated');
-                    observer.unobserve(timeline);
+                function setPosition(x) {
+                    var rect = wrapper.getBoundingClientRect();
+                    var pct = Math.max(0, Math.min(1, (x - rect.left) / rect.width));
+                    beforeImg.style.clipPath = 'inset(0 ' + ((1 - pct) * 100) + '% 0 0)';
+                    handle.style.left = (pct * 100) + '%';
                 }
-            });
-        }, { threshold: 0.25 });
-        observer.observe(timeline);
-    }
-})();
-</script>
+
+                wrapper.addEventListener('mousedown', function(e) {
+                    e.preventDefault();
+                    dragging = true;
+                    wrapper.classList.add('active');
+                    setPosition(e.clientX);
+                });
+                window.addEventListener('mousemove', function(e) {
+                    if (!dragging) return;
+                    setPosition(e.clientX);
+                });
+                window.addEventListener('mouseup', function() {
+                    dragging = false;
+                    wrapper.classList.remove('active');
+                });
+
+                wrapper.addEventListener('touchstart', function(e) {
+                    dragging = true;
+                    wrapper.classList.add('active');
+                    setPosition(e.touches[0].clientX);
+                }, {
+                    passive: true
+                });
+                wrapper.addEventListener('touchmove', function(e) {
+                    if (!dragging) return;
+                    setPosition(e.touches[0].clientX);
+                }, {
+                    passive: true
+                });
+                wrapper.addEventListener('touchend', function() {
+                    dragging = false;
+                    wrapper.classList.remove('active');
+                });
+            }
+
+            /* ===== Work Process Timeline animation ===== */
+            var timeline = document.querySelector('.work-process-timeline');
+            if (timeline) {
+                var observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            timeline.classList.add('animated');
+                            observer.unobserve(timeline);
+                        }
+                    });
+                }, {
+                    threshold: 0.25
+                });
+                observer.observe(timeline);
+            }
+        })();
+    </script>
 @endpush
 
 @push('scripts')
-<script type="importmap">
+    <script type="importmap">
 {
     "imports": {
         "three": "https://cdn.jsdelivr.net/npm/three@0.162.0/build/three.module.js",
@@ -919,17 +1017,21 @@
     }
 }
 </script>
-<script type="module">
-    const rdContainer = document.getElementById('rdCanvas');
-    if (rdContainer) {
-        const obs = new IntersectionObserver(async (entries) => {
-            if (entries[0].isIntersecting) {
-                obs.disconnect();
-                const { initRoomDesigner } = await import('{{ asset("assets/js/room-designer.js") }}');
-                initRoomDesigner(rdContainer);
-            }
-        }, { threshold: 0.1 });
-        obs.observe(rdContainer);
-    }
-</script>
+    <script type="module">
+        const rdContainer = document.getElementById('rdCanvas');
+        if (rdContainer) {
+            const obs = new IntersectionObserver(async (entries) => {
+                if (entries[0].isIntersecting) {
+                    obs.disconnect();
+                    const {
+                        initRoomDesigner
+                    } = await import('{{ asset('assets/js/room-designer.js') }}');
+                    initRoomDesigner(rdContainer);
+                }
+            }, {
+                threshold: 0.1
+            });
+            obs.observe(rdContainer);
+        }
+    </script>
 @endpush

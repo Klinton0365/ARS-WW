@@ -7,13 +7,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
 <style>
-body {
+/* body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background: #111;
   color: white;
   overflow-x: hidden;
-}
+} */
 
 /* HERO SECTION */
 .hero {
