@@ -12,7 +12,7 @@
       <a href="{{ route('services') }}" @if(request()->routeIs('services')) class="active" @endif>Services</a>
       <a href="{{ route('projects') }}" @if(request()->routeIs('projects') || request()->routeIs('projects.show')) class="active" @endif>Projects</a>
       <a href="{{ route('portfolio') }}" @if(request()->routeIs('portfolio')) class="active" @endif>Portfolio</a>
-      <a href="{{ route('catalog') }}" @if(request()->routeIs('catalog')) class="active" @endif>Catalog</a>
+      <a href="{{ route('catalog') }}" @if(request()->routeIs('catalog*')) class="active" @endif>Catalog</a>
       <a href="{{ route('contact') }}" @if(request()->routeIs('contact')) class="active" @endif>Contact</a>
       <a class="btn btn-outline btn-sm" href="{{ route('admin.login') }}">Admin</a>
     </nav>

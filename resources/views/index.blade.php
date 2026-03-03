@@ -388,11 +388,11 @@
                 <div class="col-lg-10 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="ba-wrapper" id="baSlider">
                         <div class="ba-image ba-before">
-                            <img src="{{ asset('assets/img/before.jpg') }}" alt="Before renovation">
+                            <img src="{{ asset('assets/img/before.jpg') }}" alt="Before carpentry and interior work">
                             <span class="ba-label ba-label-before">BEFORE</span>
                         </div>
                         <div class="ba-image ba-after">
-                            <img src="{{ asset('assets/img/after.jpg') }}" alt="After renovation">
+                            <img src="{{ asset('assets/img/after.jpg') }}" alt="After carpentry and interior work">
                             <span class="ba-label ba-label-after">AFTER</span>
                         </div>
                         <div class="ba-handle" id="baHandle">

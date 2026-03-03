@@ -64,8 +64,15 @@ class HomeController extends Controller
 
     public function catalog(): View
     {
-        return view('pages.catalog', [
+        return view('catalog', [
             'catalogItems' => Catalog::published()->get(),
+        ]);
+    }
+
+    public function catalogShow(string $slug): View
+    {
+        return view('pages.catalog.show', [
+            'catalogItem' => Catalog::where('slug', $slug)->where('is_published', true)->firstOrFail(),
         ]);
     }
 }

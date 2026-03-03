@@ -18,6 +18,7 @@ Route::get('/projects', [HomeController::class, 'projects'])->name('projects');
 Route::get('/projects/{slug}', [HomeController::class, 'projectShow'])->name('projects.show');
 Route::get('/portfolio', [HomeController::class, 'portfolio'])->name('portfolio');
 Route::get('/catalog', [HomeController::class, 'catalog'])->name('catalog');
+Route::get('/catalog/{slug}', [HomeController::class, 'catalogShow'])->name('catalog.show');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::post('/lead-capture', [ContactController::class, 'store'])->name('lead.capture');
 
