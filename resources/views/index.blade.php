@@ -2,6 +2,8 @@
 
 @section('content')
 
+    @include('hero')
+
     <!-- Carousel Start -->
     <div class="container-fluid p-0 pb-5">
         <div class="owl-carousel header-carousel position-relative">
@@ -236,6 +238,266 @@
         </div>
     </div>
     <!-- Service End -->
+
+
+    <!-- Work Process Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="section-title text-center">
+                <h1 class="display-5 mb-3">How We Work</h1>
+                <p class="text-muted mb-5 mx-auto" style="max-width: 600px;">From the first conversation to the final handover, every step is managed with precision and craftsmanship.</p>
+            </div>
+            <div class="work-process-timeline">
+                <div class="process-line"></div>
+                <div class="row g-0">
+                    <div class="col-lg-2 col-md-4 col-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="process-step" data-step="1">
+                            <div class="process-icon">
+                                <div class="process-icon-inner">
+                                    <i class="fa fa-comments fa-2x"></i>
+                                </div>
+                                <svg class="process-ring" viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="46" />
+                                </svg>
+                            </div>
+                            <h6 class="mt-3 mb-1">Consultation</h6>
+                            <small class="text-muted">Understand your vision</small>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="process-step" data-step="2">
+                            <div class="process-icon">
+                                <div class="process-icon-inner">
+                                    <i class="fa fa-drafting-compass fa-2x"></i>
+                                </div>
+                                <svg class="process-ring" viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="46" />
+                                </svg>
+                            </div>
+                            <h6 class="mt-3 mb-1">Design</h6>
+                            <small class="text-muted">Blueprint & planning</small>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="process-step" data-step="3">
+                            <div class="process-icon">
+                                <div class="process-icon-inner">
+                                    <i class="fa fa-hammer fa-2x"></i>
+                                </div>
+                                <svg class="process-ring" viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="46" />
+                                </svg>
+                            </div>
+                            <h6 class="mt-3 mb-1">Fabrication</h6>
+                            <small class="text-muted">Precision woodwork</small>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="process-step" data-step="4">
+                            <div class="process-icon">
+                                <div class="process-icon-inner">
+                                    <i class="fa fa-tools fa-2x"></i>
+                                </div>
+                                <svg class="process-ring" viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="46" />
+                                </svg>
+                            </div>
+                            <h6 class="mt-3 mb-1">Installation</h6>
+                            <small class="text-muted">On-site assembly</small>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="process-step" data-step="5">
+                            <div class="process-icon">
+                                <div class="process-icon-inner">
+                                    <i class="fa fa-search fa-2x"></i>
+                                </div>
+                                <svg class="process-ring" viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="46" />
+                                </svg>
+                            </div>
+                            <h6 class="mt-3 mb-1">Quality Check</h6>
+                            <small class="text-muted">Inspect & refine</small>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="process-step" data-step="6">
+                            <div class="process-icon">
+                                <div class="process-icon-inner">
+                                    <i class="fa fa-handshake fa-2x"></i>
+                                </div>
+                                <svg class="process-ring" viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="46" />
+                                </svg>
+                            </div>
+                            <h6 class="mt-3 mb-1">Handover</h6>
+                            <small class="text-muted">Delivered with care</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Work Process End -->
+
+
+    <!-- Before & After Start -->
+    <div class="container-fluid bg-light overflow-hidden py-5">
+        <div class="container">
+            <div class="section-title text-center">
+                <h1 class="display-5 mb-3">Transformation</h1>
+                <p class="text-muted mb-5 mx-auto" style="max-width: 600px;">See the difference our craftsmanship makes. Drag the slider to reveal the before and after.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="ba-wrapper" id="baSlider">
+                        <div class="ba-image ba-before">
+                            <img src="{{ asset('assets/img/before.jpg') }}" alt="Before renovation">
+                            <span class="ba-label ba-label-before">BEFORE</span>
+                        </div>
+                        <div class="ba-image ba-after">
+                            <img src="{{ asset('assets/img/after.jpg') }}" alt="After renovation">
+                            <span class="ba-label ba-label-after">AFTER</span>
+                        </div>
+                        <div class="ba-handle" id="baHandle">
+                            <div class="ba-handle-line"></div>
+                            <div class="ba-handle-circle">
+                                <i class="fa fa-arrows-alt-h"></i>
+                            </div>
+                            <div class="ba-handle-line"></div>
+                        </div>
+                    </div>
+                    <div class="row mt-4 g-3">
+                        <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="ba-stat-card text-center p-3">
+                                <i class="fa fa-home fa-2x text-primary mb-2"></i>
+                                <h5 class="mb-1">Complete Renovation</h5>
+                                <small class="text-muted">Interior + Furniture</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="ba-stat-card text-center p-3">
+                                <i class="fa fa-calendar-check fa-2x text-primary mb-2"></i>
+                                <h5 class="mb-1">45 Days</h5>
+                                <small class="text-muted">Project Duration</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="ba-stat-card text-center p-3">
+                                <i class="fa fa-star fa-2x text-primary mb-2"></i>
+                                <h5 class="mb-1">100% Satisfied</h5>
+                                <small class="text-muted">Client Approved</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Before & After End -->
+
+
+    <!-- Room Designer Start -->
+    <div class="container-xxl py-5" id="roomDesignerSection">
+        <div class="container">
+            <div class="section-title text-center">
+                <h1 class="display-5 mb-3">Design Your Dream Room</h1>
+                <p class="text-muted mb-5 mx-auto" style="max-width: 600px;">Experience our craftsmanship in 3D. Customize walls, floors, and furniture to visualize your perfect space.</p>
+            </div>
+            <div class="room-designer-wrap wow fadeInUp" data-wow-delay="0.2s">
+                <div class="rd-canvas-container" id="rdCanvas"></div>
+                <div class="rd-panel">
+
+                    <div class="rd-group">
+                        <label class="rd-label">Wall Color</label>
+                        <input type="color" id="rdWallColor" value="#f0e8dc" class="rd-color-picker" onchange="rdSetWallColor(this.value)">
+                    </div>
+
+                    <div class="rd-group">
+                        <label class="rd-label">Floor Material</label>
+                        <div class="rd-btn-row">
+                            <button class="rd-floor-btn active" data-floor="wood" onclick="rdSetFloor('wood')">
+                                <span class="rd-swatch" style="background:#b08050"></span> Wood
+                            </button>
+                            <button class="rd-floor-btn" data-floor="marble" onclick="rdSetFloor('marble')">
+                                <span class="rd-swatch" style="background:#e8e0d8"></span> Marble
+                            </button>
+                            <button class="rd-floor-btn" data-floor="tiles" onclick="rdSetFloor('tiles')">
+                                <span class="rd-swatch" style="background:#d0c8c0"></span> Tiles
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="rd-group">
+                        <label class="rd-label">Wood Finish</label>
+                        <div class="rd-btn-row">
+                            <button class="rd-wood-btn active" data-wood="oak" onclick="rdSetWoodFinish('oak')">
+                                <span class="rd-swatch" style="background:#c4a76c"></span> Oak
+                            </button>
+                            <button class="rd-wood-btn" data-wood="teak" onclick="rdSetWoodFinish('teak')">
+                                <span class="rd-swatch" style="background:#9a6b3a"></span> Teak
+                            </button>
+                            <button class="rd-wood-btn" data-wood="walnut" onclick="rdSetWoodFinish('walnut')">
+                                <span class="rd-swatch" style="background:#4a2c17"></span> Walnut
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="rd-group">
+                        <label class="rd-label">Add Furniture</label>
+                        <div class="rd-furniture-grid">
+                            <button onclick="rdAddFurniture('sofa')" title="Add Sofa">
+                                <i class="fa fa-couch"></i><span>Sofa</span>
+                            </button>
+                            <button onclick="rdAddFurniture('table')" title="Add Table">
+                                <i class="fa fa-border-all"></i><span>Table</span>
+                            </button>
+                            <button onclick="rdAddFurniture('chair')" title="Add Chair">
+                                <i class="fa fa-chair"></i><span>Chair</span>
+                            </button>
+                            <button onclick="rdAddFurniture('cabinet')" title="Add Cabinet">
+                                <i class="fa fa-th-large"></i><span>Cabinet</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="rd-group">
+                        <label class="rd-label">Selected</label>
+                        <div class="rd-selected-row">
+                            <span id="rdSelectedInfo">None</span>
+                            <button id="rdRotateBtn" class="rd-icon-btn" style="display:none" onclick="rdRotateSelected()" title="Rotate 45°">
+                                <i class="fa fa-redo-alt"></i>
+                            </button>
+                            <button id="rdDeleteBtn" class="rd-icon-btn rd-danger" style="display:none" onclick="rdDeleteSelected()" title="Remove">
+                                <i class="fa fa-trash-alt"></i>
+                            </button>
+                        </div>
+                        <div id="rdFurnitureList"></div>
+                    </div>
+
+                    <div class="rd-group">
+                        <label class="rd-label">Lighting</label>
+                        <div class="rd-lighting-row">
+                            <button id="rdLightBtn" class="rd-toggle-btn active" onclick="rdToggleLights()">
+                                <i class="fa fa-lightbulb"></i> Lights
+                            </button>
+                            <button id="rdDayBtn" class="rd-toggle-btn active" onclick="rdSetDayMode(true)">
+                                <i class="fa fa-sun"></i>
+                            </button>
+                            <button id="rdNightBtn" class="rd-toggle-btn" onclick="rdSetDayMode(false)">
+                                <i class="fa fa-moon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="rd-hint">
+                        <small><i class="fa fa-mouse-pointer"></i> Drag to orbit &bull; Scroll to zoom &bull; Click furniture to select &bull; Drag to move</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Room Designer End -->
 
 
     <!-- Feature Start -->
@@ -583,3 +845,91 @@
     <!-- Testimonial End -->
 
 @endsection
+
+@push('scripts')
+<script>
+(function () {
+    /* ===== Before / After Slider ===== */
+    var wrapper = document.getElementById('baSlider');
+    var handle  = document.getElementById('baHandle');
+    if (wrapper && handle) {
+        var beforeImg = wrapper.querySelector('.ba-before');
+        var dragging  = false;
+
+        function setPosition(x) {
+            var rect = wrapper.getBoundingClientRect();
+            var pct  = Math.max(0, Math.min(1, (x - rect.left) / rect.width));
+            beforeImg.style.clipPath = 'inset(0 ' + ((1 - pct) * 100) + '% 0 0)';
+            handle.style.left = (pct * 100) + '%';
+        }
+
+        wrapper.addEventListener('mousedown', function (e) {
+            e.preventDefault();
+            dragging = true;
+            wrapper.classList.add('active');
+            setPosition(e.clientX);
+        });
+        window.addEventListener('mousemove', function (e) {
+            if (!dragging) return;
+            setPosition(e.clientX);
+        });
+        window.addEventListener('mouseup', function () {
+            dragging = false;
+            wrapper.classList.remove('active');
+        });
+
+        wrapper.addEventListener('touchstart', function (e) {
+            dragging = true;
+            wrapper.classList.add('active');
+            setPosition(e.touches[0].clientX);
+        }, { passive: true });
+        wrapper.addEventListener('touchmove', function (e) {
+            if (!dragging) return;
+            setPosition(e.touches[0].clientX);
+        }, { passive: true });
+        wrapper.addEventListener('touchend', function () {
+            dragging = false;
+            wrapper.classList.remove('active');
+        });
+    }
+
+    /* ===== Work Process Timeline animation ===== */
+    var timeline = document.querySelector('.work-process-timeline');
+    if (timeline) {
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    timeline.classList.add('animated');
+                    observer.unobserve(timeline);
+                }
+            });
+        }, { threshold: 0.25 });
+        observer.observe(timeline);
+    }
+})();
+</script>
+@endpush
+
+@push('scripts')
+<script type="importmap">
+{
+    "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.162.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.162.0/examples/jsm/"
+    }
+}
+</script>
+<script type="module">
+    const rdContainer = document.getElementById('rdCanvas');
+    if (rdContainer) {
+        const obs = new IntersectionObserver(async (entries) => {
+            if (entries[0].isIntersecting) {
+                obs.disconnect();
+                const { initRoomDesigner } = await import('{{ asset("assets/js/room-designer.js") }}');
+                initRoomDesigner(rdContainer);
+            }
+        }, { threshold: 0.1 });
+        obs.observe(rdContainer);
+    }
+</script>
+@endpush
