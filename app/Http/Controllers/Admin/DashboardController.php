@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Catalog;
 use App\Models\Lead;
 use App\Models\Portfolio;
+use App\Models\Product;
 use App\Models\Project;
 use App\Models\Service;
 use Illuminate\View\View;
@@ -19,6 +20,7 @@ class DashboardController extends Controller
                 'services' => Service::count(),
                 'projects' => Project::count(),
                 'portfolio' => Portfolio::count(),
+                'products' => Product::count(),
                 'catalog' => Catalog::count(),
                 'new_leads' => Lead::where('status', 'new')->count(),
             ],
