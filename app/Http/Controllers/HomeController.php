@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Catalog;
 use App\Models\Portfolio;
+use App\Models\Product;
 use App\Models\Project;
 use App\Models\Service;
 use Illuminate\View\View;
@@ -71,8 +72,38 @@ class HomeController extends Controller
 
     public function catalogShow(string $slug): View
     {
+        $catalogItem = Catalog::where('slug', $slug)->where('is_published', true)->firstOrFail();
+
         return view('pages.catalog.show', [
-            'catalogItem' => Catalog::where('slug', $slug)->where('is_published', true)->firstOrFail(),
+            'catalogItem' => $catalogItem,
+            'relatedCatalogItems' => Catalog::published()
+                ->where('id', '!=', $catalogItem->id)
+                ->where('category', $catalogItem->category)
+                ->latest('id')
+                ->limit(3)
+                ->get(),
+        ]);
+    }
+
+    public function products(): View
+    {
+        return view('products', [
+            'products' => Product::published()->get(),
+        ]);
+    }
+
+    public function productShow(string $slug): View
+    {
+        $product = Product::where('slug', $slug)->where('is_published', true)->firstOrFail();
+
+        return view('pages.products.show', [
+            'product' => $product,
+            'relatedProducts' => Product::published()
+                ->where('id', '!=', $product->id)
+                ->where('category', $product->category)
+                ->latest('id')
+                ->limit(3)
+                ->get(),
         ]);
     }
 }

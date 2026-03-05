@@ -28,6 +28,7 @@
                  <a class="btn btn-link" href="{{ route('contact') }}">Contact Us</a>
                  <a class="btn btn-link" href="{{ route('projects') }}">Our Projects</a>
                  {{-- <a class="btn btn-link" href="{{ route('portfolio') }}">Portfolio</a> --}}
+                 <a class="btn btn-link" href="{{ route('products') }}">Products</a>
                  <a class="btn btn-link" href="{{ route('catalog') }}">Catalog</a>
              </div>
              <div class="col-lg-3 col-md-6">

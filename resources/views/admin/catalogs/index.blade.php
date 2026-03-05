@@ -7,12 +7,19 @@
 </div>
 <div class="table-wrap card">
 <table>
-  <thead><tr><th>Name</th><th>Category</th><th>Published</th><th>Actions</th></tr></thead>
+  <thead><tr><th>Name</th><th>Category</th><th>Attachment</th><th>Published</th><th>Actions</th></tr></thead>
   <tbody>
     @forelse($catalogs as $catalog)
     <tr>
       <td>{{ $catalog->name }}</td>
       <td>{{ $catalog->category }}</td>
+      <td>
+        @if($catalog->attachment)
+          <a href="{{ asset('storage/' . $catalog->attachment) }}" target="_blank" rel="noopener">Download</a>
+        @else
+          -
+        @endif
+      </td>
       <td>{{ $catalog->is_published ? 'Yes' : 'No' }}</td>
       <td>
         <a href="{{ route('admin.catalogs.edit', $catalog) }}">Edit</a>
@@ -22,7 +29,7 @@
       </td>
     </tr>
     @empty
-    <tr><td colspan="4">No catalog items yet.</td></tr>
+    <tr><td colspan="5">No catalog items yet.</td></tr>
     @endforelse
   </tbody>
 </table>

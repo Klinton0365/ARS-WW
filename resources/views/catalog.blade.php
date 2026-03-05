@@ -7,6 +7,22 @@
     .catalog-section {
         background: #f8f8f8;
     }
+    .catalog-category-section + .catalog-category-section {
+        margin-top: 2.5rem;
+    }
+    .catalog-category-header {
+        border-left: 4px solid #ab7442;
+        padding-left: 14px;
+        margin-bottom: 1rem;
+    }
+    .catalog-category-title {
+        margin-bottom: 0.25rem;
+    }
+    .catalog-category-meta {
+        color: #6b7280;
+        font-size: 0.92rem;
+        margin-bottom: 0;
+    }
     .catalog-card {
         background: #fff;
         border: 1px solid #ececec;
@@ -63,57 +79,74 @@
 
 <div class="container-fluid catalog-section py-5">
     <div class="container py-3">
+        @php
+            $groupedCatalogItems = $catalogItems->groupBy(function ($item) {
+                return $item->category ?: 'Uncategorized';
+            });
+        @endphp
+
         <div class="section-title text-center mx-auto" style="max-width: 760px;">
             <h1 class="display-5 mb-3">Product Catalog</h1>
-            <p class="text-muted mb-0">Explore our curated carpentry and interior product options. Open any item to view full details and specifications.</p>
+            <p class="text-muted mb-0">Explore our curated carpentry and interior product options, grouped dynamically by category.</p>
         </div>
 
-        <div class="row g-4 mt-2">
-            @forelse($catalogItems as $item)
-                @php
-                    $imagePath = $item->image ?: 'assets/img/portfolio-1.jpg';
-                    $imageUrl = \Illuminate\Support\Str::startsWith($imagePath, ['http://', 'https://'])
-                        ? $imagePath
-                        : (str_starts_with($imagePath, 'assets/') ? asset($imagePath) : asset('storage/' . ltrim($imagePath, '/')));
-
-                    $specs = is_array($item->specifications) ? $item->specifications : [];
-                    $specLabels = [];
-                    foreach ($specs as $key => $value) {
-                        $specLabels[] = is_string($key) ? ucfirst(str_replace('_', ' ', (string) $key)) . ': ' . $value : $value;
-                    }
-                @endphp
-
-                <div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                    <article class="catalog-card">
-                        <img class="catalog-thumb" src="{{ $imageUrl }}" alt="{{ $item->name }}">
-                        <div class="p-4">
-                            <span class="catalog-category">{{ $item->category }}</span>
-                            <h3 class="catalog-title">{{ $item->name }}</h3>
-                            <p class="catalog-description">{{ \Illuminate\Support\Str::limit($item->description, 110) }}</p>
-
-                            @if(!empty($specLabels))
-                                <div class="catalog-specs">
-                                    @foreach(array_slice($specLabels, 0, 3) as $spec)
-                                        <span class="catalog-spec-chip">{{ $spec }}</span>
-                                    @endforeach
-                                </div>
-                            @endif
-
-                            <a href="{{ route('catalog.show', $item->slug) }}" class="btn btn-primary py-2 px-4">
-                                View Details
-                            </a>
-                        </div>
-                    </article>
+        @forelse($groupedCatalogItems as $categoryName => $items)
+            <section class="catalog-category-section mt-4">
+                <div class="catalog-category-header">
+                    <h2 class="h4 catalog-category-title">{{ $categoryName }}</h2>
+                    <p class="catalog-category-meta">{{ $items->count() }} {{ $items->count() === 1 ? 'product' : 'products' }}</p>
                 </div>
-            @empty
+
+                <div class="row g-4">
+                    @foreach($items as $item)
+                        @php
+                            $imagePath = $item->image ?: 'assets/img/portfolio-1.jpg';
+                            $imageUrl = \Illuminate\Support\Str::startsWith($imagePath, ['http://', 'https://'])
+                                ? $imagePath
+                                : (str_starts_with($imagePath, 'assets/') ? asset($imagePath) : asset('storage/' . ltrim($imagePath, '/')));
+
+                            $specs = is_array($item->specifications) ? $item->specifications : [];
+                            $specLabels = [];
+                            foreach ($specs as $key => $value) {
+                                $specLabels[] = is_string($key) ? ucfirst(str_replace('_', ' ', (string) $key)) . ': ' . $value : $value;
+                            }
+                        @endphp
+
+                        <div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                            <article class="catalog-card">
+                                <img class="catalog-thumb" src="{{ $imageUrl }}" alt="{{ $item->name }}">
+                                <div class="p-4">
+                                    <span class="catalog-category">{{ $item->category }}</span>
+                                    <h3 class="catalog-title">{{ $item->name }}</h3>
+                                    <p class="catalog-description">{{ \Illuminate\Support\Str::limit($item->description, 110) }}</p>
+
+                                    @if(!empty($specLabels))
+                                        <div class="catalog-specs">
+                                            @foreach(array_slice($specLabels, 0, 3) as $spec)
+                                                <span class="catalog-spec-chip">{{ $spec }}</span>
+                                            @endforeach
+                                        </div>
+                                    @endif
+
+                                    <a href="{{ route('catalog.show', $item->slug) }}" class="btn btn-primary py-2 px-4">
+                                        View Details
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                    @endforeach
+                </div>
+            </section>
+        @empty
+            <div class="row g-4 mt-2">
                 <div class="col-12">
                     <div class="bg-white border rounded p-5 text-center">
                         <h5 class="mb-2">No Catalog Items Available</h5>
                         <p class="text-muted mb-0">Add and publish catalog entries from your admin panel to display them here.</p>
                     </div>
                 </div>
-            @endforelse
-        </div>
+            </div>
+        @endforelse
     </div>
 </div>
 @endsection

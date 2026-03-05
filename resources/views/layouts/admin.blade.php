@@ -17,6 +17,7 @@
       <a href="{{ route('admin.services.index') }}">Services</a>
       <a href="{{ route('admin.projects.index') }}">Projects</a>
       <a href="{{ route('admin.portfolios.index') }}">Portfolio</a>
+      <a href="{{ route('admin.products.index') }}">Products</a>
       <a href="{{ route('admin.catalogs.index') }}">Catalog</a>
       <a href="{{ route('admin.leads.index') }}">Leads</a>
       <form method="POST" action="{{ route('admin.logout') }}" style="margin-top:1rem;">

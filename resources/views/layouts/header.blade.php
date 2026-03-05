@@ -41,10 +41,11 @@
             <a href="{{ route('about') }}" class="nav-item nav-link {{ request()->routeIs('about') ? 'active' : '' }}">About</a>
             <a href="{{ route('services') }}" class="nav-item nav-link {{ request()->routeIs('services') ? 'active' : '' }}">Services</a>
             <a href="{{ route('projects') }}" class="nav-item nav-link {{ request()->routeIs('projects') || request()->routeIs('projects.show') ? 'active' : '' }}">Projects</a>
+            <a href="{{ route('products') }}" class="nav-item nav-link {{ request()->routeIs('products*') ? 'active' : '' }}">Products</a>
             <a href="{{ route('catalog') }}" class="nav-item nav-link {{ request()->routeIs('catalog*') ? 'active' : '' }}">Catalog</a>
             <a href="{{ route('contact') }}" class="nav-item nav-link {{ request()->routeIs('contact') ? 'active' : '' }}">Contact</a>
         </div>
-        <a href="{{ route('contact') }}" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Get A Quote<i class="fa fa-arrow-right ms-3"></i></a>
+        <a href="{{ route('contact') }}" class="btn btn-primary py-4 px-lg-4 d-none d-lg-block">Get A Quote<i class="fa fa-arrow-right ms-3"></i></a>
     </div>
 </nav>
 <!-- Navbar End -->

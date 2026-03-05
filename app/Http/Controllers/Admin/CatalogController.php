@@ -30,6 +30,9 @@ class CatalogController extends Controller
         if ($request->hasFile('image')) {
             $data['image'] = $request->file('image')->store('catalog', 'public');
         }
+        if ($request->hasFile('attachment')) {
+            $data['attachment'] = $request->file('attachment')->store('catalog/attachments', 'public');
+        }
 
         Catalog::create($data);
         return redirect()->route('admin.catalogs.index')->with('success', 'Catalog item created.');
@@ -54,6 +57,12 @@ class CatalogController extends Controller
             }
             $data['image'] = $request->file('image')->store('catalog', 'public');
         }
+        if ($request->hasFile('attachment')) {
+            if ($catalog->attachment) {
+                Storage::disk('public')->delete($catalog->attachment);
+            }
+            $data['attachment'] = $request->file('attachment')->store('catalog/attachments', 'public');
+        }
 
         $catalog->update($data);
         return redirect()->route('admin.catalogs.index')->with('success', 'Catalog item updated.');
@@ -63,6 +72,9 @@ class CatalogController extends Controller
     {
         if ($catalog->image) {
             Storage::disk('public')->delete($catalog->image);
+        }
+        if ($catalog->attachment) {
+            Storage::disk('public')->delete($catalog->attachment);
         }
         $catalog->delete();
         return back()->with('success', 'Catalog item deleted.');
@@ -78,6 +90,7 @@ class CatalogController extends Controller
             'specifications_input' => ['nullable', 'string'],
             'is_published' => ['nullable', 'boolean'],
             'image' => ['nullable', 'image', 'max:4096'],
+            'attachment' => ['nullable', 'file', 'mimes:pdf,doc,docx,xls,xlsx,ppt,pptx,zip', 'max:10240'],
         ]);
 
         $data['slug'] = $data['slug'] ?: Str::slug($data['name']);
