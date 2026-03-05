@@ -13,13 +13,13 @@
   <div class="admin-shell">
     <aside class="admin-aside">
       <h3>ARS Admin</h3>
-      <a href="{{ route('admin.dashboard') }}">Dashboard</a>
-      <a href="{{ route('admin.services.index') }}">Services</a>
-      <a href="{{ route('admin.projects.index') }}">Projects</a>
+      <a href="{{ route('admin.dashboard') }}" class="{{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">Dashboard</a>
+      <a href="{{ route('admin.services.index') }}" class="{{ request()->routeIs('admin.services.*') ? 'active' : '' }}">Services</a>
+      <a href="{{ route('admin.projects.index') }}" class="{{ request()->routeIs('admin.projects.*') ? 'active' : '' }}">Projects</a>
       {{-- <a href="{{ route('admin.portfolios.index') }}">Portfolio</a> --}}
-      <a href="{{ route('admin.products.index') }}">Products</a>
-      <a href="{{ route('admin.catalogs.index') }}">Catalog</a>
-      <a href="{{ route('admin.leads.index') }}">Leads</a>
+      <a href="{{ route('admin.products.index') }}" class="{{ request()->routeIs('admin.products.*') ? 'active' : '' }}">Products</a>
+      <a href="{{ route('admin.catalogs.index') }}" class="{{ request()->routeIs('admin.catalogs.*') ? 'active' : '' }}">Catalog</a>
+      <a href="{{ route('admin.leads.index') }}" class="{{ request()->routeIs('admin.leads.*') ? 'active' : '' }}">Leads</a>
       <form method="POST" action="{{ route('admin.logout') }}" style="margin-top:1rem;">
         @csrf
         <button class="btn btn-outline" type="submit">Logout</button>
