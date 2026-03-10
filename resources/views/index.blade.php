@@ -1,81 +1,659 @@
 @extends('layouts.master')
 
 @section('content')
-    {{-- @include('hero') --}}
+    <!-- Storytelling Scroll Hero Start -->
+    <style>
+        /* ========== STORYTELLING SCROLL HERO ========== */
+        .story-hero {
+            position: relative;
+            background: #1E1E1E;
+        }
 
-    <!-- Carousel Start -->
-    <div class="container-fluid p-0 pb-5">
-        <div class="owl-carousel header-carousel position-relative">
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="{{ asset('assets/img/carousel-1.jpg') }}" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-                    style="background: rgba(53, 53, 53, .7);">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-lg-8 text-center">
-                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Craftsmanship Meets
-                                    Precision</h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">Premium Wood Works & Interior
-                                    Solutions</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">We design and execute premium carpentry and
-                                    interior projects with reliable quality and finishing standards that scale from homes to
-                                    industrial sites.</p>
-                                <a href="{{ route('projects') }}"
-                                    class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">View Projects</a>
-                                <a href="{{ route('contact') }}"
-                                    class="btn btn-light py-md-3 px-md-5 animated slideInRight">Get Free Quote</a>
+        /* Sticky viewport container */
+        .story-hero__sticky {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Scroll spacer - 4 scenes x 100vh each */
+        .story-hero__spacer {
+            height: 400vh;
+            position: relative;
+        }
+
+        /* --- Scene panels --- */
+        .story-scene {
+            position: absolute;
+            inset: 0;
+            transition: opacity 0.1s linear;
+            will-change: opacity;
+        }
+
+        .story-scene__bg {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            transform: scale(1.1);
+            will-change: transform;
+        }
+
+        .story-scene--1 .story-scene__bg {
+            background-image: url('{{ asset('assets/img/carousel-1.jpg') }}');
+            filter: brightness(0.3) saturate(0.85);
+        }
+        .story-scene--2 .story-scene__bg {
+            background-image: url('{{ asset('assets/img/carousel-2.jpg') }}');
+            filter: brightness(0.32) saturate(0.9);
+        }
+        .story-scene--3 .story-scene__bg {
+            background-image: url('{{ asset('assets/img/carousel-3.jpg') }}');
+            filter: brightness(0.35) saturate(0.9);
+        }
+        .story-scene--4 .story-scene__bg {
+            background-image: url('{{ asset('assets/img/carousel-1.jpg') }}');
+            filter: brightness(0.4) saturate(1.15);
+        }
+
+        .story-scene__overlay {
+            position: absolute;
+            inset: 0;
+        }
+
+        .story-scene--1 .story-scene__overlay {
+            background: linear-gradient(135deg, rgba(30,30,30,0.6) 0%, rgba(60,40,20,0.4) 100%);
+        }
+        .story-scene--2 .story-scene__overlay {
+            background: linear-gradient(180deg, rgba(30,30,30,0.5) 0%, rgba(80,50,20,0.35) 100%);
+        }
+        .story-scene--3 .story-scene__overlay {
+            background: linear-gradient(225deg, rgba(30,30,30,0.5) 0%, rgba(50,35,15,0.4) 100%);
+        }
+        .story-scene--4 .story-scene__overlay {
+            background: linear-gradient(180deg, rgba(20,15,10,0.3) 0%, rgba(30,30,30,0.5) 100%);
+        }
+
+        /* --- Cinematic vignette --- */
+        .story-hero__vignette {
+            position: absolute;
+            inset: 0;
+            z-index: 3;
+            pointer-events: none;
+            box-shadow: inset 0 0 180px rgba(0,0,0,0.45);
+        }
+
+        /* --- Light rays through windows --- */
+        .story-hero__rays {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .story-ray {
+            position: absolute;
+            top: -20%;
+            width: 120px;
+            height: 140%;
+            background: linear-gradient(180deg, rgba(200,155,109,0.08) 0%, transparent 80%);
+            transform-origin: top center;
+            opacity: 0;
+            animation: rayPulse 10s ease-in-out infinite;
+        }
+
+        .story-ray--1 { left: 15%; transform: rotate(15deg); animation-delay: 0s; width: 100px; }
+        .story-ray--2 { left: 30%; transform: rotate(8deg); animation-delay: 3s; width: 80px; }
+        .story-ray--3 { right: 20%; transform: rotate(-12deg); animation-delay: 6s; width: 110px; }
+        .story-ray--4 { right: 5%; transform: rotate(-20deg); animation-delay: 1.5s; width: 70px; }
+
+        @keyframes rayPulse {
+            0%, 100% { opacity: 0; }
+            30% { opacity: 0.6; }
+            70% { opacity: 0.4; }
+        }
+
+        /* --- Dust particles --- */
+        .story-hero__dust {
+            position: absolute;
+            inset: 0;
+            z-index: 4;
+            pointer-events: none;
+        }
+
+        .story-dust {
+            position: absolute;
+            background: #C89B6D;
+            border-radius: 50%;
+            opacity: 0;
+            animation: storyDustFloat linear infinite;
+        }
+
+        .story-dust:nth-child(1)  { width: 3px; height: 3px; left: 8%;  top: 85%; animation-duration: 14s; animation-delay: 0s; }
+        .story-dust:nth-child(2)  { width: 4px; height: 4px; left: 22%; top: 92%; animation-duration: 11s; animation-delay: 2s; }
+        .story-dust:nth-child(3)  { width: 2px; height: 2px; left: 38%; top: 80%; animation-duration: 16s; animation-delay: 4s; }
+        .story-dust:nth-child(4)  { width: 5px; height: 5px; left: 55%; top: 95%; animation-duration: 10s; animation-delay: 1s; }
+        .story-dust:nth-child(5)  { width: 3px; height: 3px; left: 70%; top: 88%; animation-duration: 13s; animation-delay: 3s; }
+        .story-dust:nth-child(6)  { width: 2px; height: 2px; left: 85%; top: 90%; animation-duration: 15s; animation-delay: 5s; }
+        .story-dust:nth-child(7)  { width: 4px; height: 4px; left: 45%; top: 78%; animation-duration: 12s; animation-delay: 7s; }
+        .story-dust:nth-child(8)  { width: 3px; height: 3px; left: 92%; top: 96%; animation-duration: 9s;  animation-delay: 0.5s; }
+        .story-dust:nth-child(9)  { width: 2px; height: 2px; left: 15%; top: 75%; animation-duration: 17s; animation-delay: 6s; }
+        .story-dust:nth-child(10) { width: 3px; height: 3px; left: 62%; top: 82%; animation-duration: 11s; animation-delay: 8s; }
+
+        @keyframes storyDustFloat {
+            0%   { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0; }
+            8%   { opacity: 0.5; }
+            50%  { opacity: 0.25; }
+            100% { transform: translateY(-110vh) translateX(25px) rotate(540deg); opacity: 0; }
+        }
+
+        /* --- Wood grain overlay --- */
+        .story-hero__grain {
+            position: absolute;
+            inset: 0;
+            z-index: 5;
+            pointer-events: none;
+            opacity: 0.04;
+            background: repeating-linear-gradient(
+                87deg,
+                transparent, transparent 3px,
+                rgba(200,155,109,0.2) 3px,
+                rgba(200,155,109,0.2) 5px
+            );
+            animation: storyGrain 14s linear infinite;
+        }
+
+        @keyframes storyGrain {
+            0%   { background-position: 0 0; }
+            100% { background-position: 350px 180px; }
+        }
+
+        /* --- Progress bar (horizontal, top) --- */
+        .story-hero__progress {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #C89B6D, #E8C9A0);
+            z-index: 20;
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+
+        /* --- Scene step indicators (right side) --- */
+        .story-hero__steps {
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 15;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .story-step {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 2px solid rgba(200,155,109,0.3);
+            background: transparent;
+            transition: all 0.5s ease;
+            position: relative;
+            cursor: default;
+        }
+
+        .story-step.active {
+            border-color: #C89B6D;
+            background: #C89B6D;
+            box-shadow: 0 0 15px rgba(200,155,109,0.4);
+        }
+
+        .story-step__label {
+            position: absolute;
+            right: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+            white-space: nowrap;
+            font-family: 'Manrope', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(200,155,109,0);
+            transition: color 0.4s ease;
+        }
+
+        .story-step.active .story-step__label {
+            color: rgba(200,155,109,0.7);
+        }
+
+        .story-steps__line {
+            width: 1px;
+            height: 16px;
+            background: rgba(200,155,109,0.15);
+        }
+
+        /* --- Scene text content --- */
+        .story-scene__content {
+            position: absolute;
+            inset: 0;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            pointer-events: none;
+        }
+
+        .story-scene__text {
+            padding: 0 60px;
+            max-width: 600px;
+            pointer-events: auto;
+        }
+
+        .story-scene__step-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Manrope', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #C89B6D;
+            margin-bottom: 16px;
+        }
+
+        .story-scene__step-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            border: 2px solid rgba(200,155,109,0.4);
+            font-size: 0.7rem;
+            color: #C89B6D;
+        }
+
+        .story-scene__heading {
+            font-family: 'Manrope', sans-serif;
+            font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+            font-weight: 800;
+            color: #F5F5F5;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            text-shadow: 0 4px 30px rgba(0,0,0,0.5);
+        }
+
+        .story-scene__desc {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            color: rgba(245,245,245,0.6);
+            line-height: 1.7;
+            max-width: 440px;
+        }
+
+        /* --- Center content (headline + CTA on scene 4) --- */
+        .story-scene--4 .story-scene__content {
+            justify-content: center;
+        }
+
+        .story-scene--4 .story-scene__text {
+            text-align: center;
+            max-width: 740px;
+        }
+
+        .story-hero__title {
+            font-family: 'Manrope', sans-serif;
+            font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+            font-weight: 800;
+            color: #F5F5F5;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 40px rgba(0,0,0,0.5);
+        }
+
+        .story-hero__title em {
+            font-style: normal;
+            background: linear-gradient(135deg, #C89B6D, #E8C9A0, #C89B6D);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: storyGradient 6s ease-in-out infinite;
+        }
+
+        @keyframes storyGradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .story-hero__subtitle {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.15rem;
+            color: rgba(245,245,245,0.65);
+            line-height: 1.8;
+            margin-bottom: 36px;
+        }
+
+        .story-hero__actions {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+
+        .story-btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 38px;
+            background: linear-gradient(135deg, #C89B6D, #A07B50);
+            color: #fff;
+            font-family: 'Manrope', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
+            box-shadow: 0 4px 25px rgba(200,155,109,0.35);
+        }
+
+        .story-btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 35px rgba(200,155,109,0.5);
+            color: #fff;
+            background: linear-gradient(135deg, #D4A87A, #B08B5E);
+        }
+
+        .story-btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 38px;
+            background: rgba(255,255,255,0.06);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            color: #F5F5F5;
+            font-family: 'Manrope', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            border: 2px solid rgba(245,245,245,0.2);
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
+        }
+
+        .story-btn-secondary:hover {
+            border-color: #C89B6D;
+            color: #C89B6D;
+            transform: translateY(-3px);
+            background: rgba(200,155,109,0.1);
+        }
+
+        /* Trust bar */
+        .story-hero__trust {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 36px;
+        }
+
+        .story-trust__item { text-align: center; }
+
+        .story-trust__value {
+            font-family: 'Manrope', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #C89B6D;
+            line-height: 1;
+        }
+
+        .story-trust__label {
+            font-size: 0.72rem;
+            color: rgba(245,245,245,0.45);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-top: 4px;
+        }
+
+        .story-trust__divider {
+            width: 1px;
+            height: 36px;
+            background: rgba(245,245,245,0.12);
+        }
+
+        /* --- Scroll prompt (scene 1 only) --- */
+        .story-hero__scroll-hint {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 15;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            transition: opacity 0.4s ease;
+        }
+
+        .story-scroll__mouse {
+            width: 22px;
+            height: 34px;
+            border: 2px solid rgba(200,155,109,0.35);
+            border-radius: 12px;
+            position: relative;
+        }
+
+        .story-scroll__wheel {
+            width: 3px;
+            height: 6px;
+            background: #C89B6D;
+            border-radius: 2px;
+            position: absolute;
+            top: 6px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: storyScrollWheel 2s ease-in-out infinite;
+        }
+
+        @keyframes storyScrollWheel {
+            0%, 100% { top: 6px; opacity: 1; }
+            50% { top: 18px; opacity: 0.3; }
+        }
+
+        .story-scroll__label {
+            font-family: 'Manrope', sans-serif;
+            font-size: 0.6rem;
+            color: rgba(200,155,109,0.4);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 991px) {
+            .story-hero__steps { display: none; }
+            .story-scene__text { padding: 0 30px; }
+            .story-hero__scroll-hint { display: none; }
+        }
+
+        @media (max-width: 575px) {
+            .story-scene__text { padding: 0 20px; }
+            .story-hero__actions { flex-direction: column; }
+            .story-btn-primary, .story-btn-secondary { width: 100%; justify-content: center; }
+            .story-hero__trust { gap: 18px; flex-wrap: wrap; }
+            .story-scene__heading { font-size: clamp(1.5rem, 6vw, 2rem); }
+        }
+    </style>
+
+    <section class="story-hero" id="storyHero">
+        <div class="story-hero__spacer">
+            <div class="story-hero__sticky">
+                <!-- Progress bar -->
+                <div class="story-hero__progress" id="storyProgress"></div>
+
+                <!-- Scene 1: Design / Sketching -->
+                <div class="story-scene story-scene--1" id="storyScene1" style="opacity:1;">
+                    <div class="story-scene__bg" id="storyBg1"></div>
+                    <div class="story-scene__overlay"></div>
+                    <div class="story-scene__content">
+                        <div class="story-scene__text">
+                            <div class="story-scene__step-label">
+                                <span class="story-scene__step-num">1</span>
+                                Design
+                            </div>
+                            <h2 class="story-scene__heading">Every Masterpiece<br>Begins With a Vision</h2>
+                            <p class="story-scene__desc">We start by understanding your space, your style, and your story. Our designers sketch every detail before a single plank is touched.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scene 2: Cutting & Shaping -->
+                <div class="story-scene story-scene--2" id="storyScene2" style="opacity:0;">
+                    <div class="story-scene__bg" id="storyBg2"></div>
+                    <div class="story-scene__overlay"></div>
+                    <div class="story-scene__content">
+                        <div class="story-scene__text">
+                            <div class="story-scene__step-label">
+                                <span class="story-scene__step-num">2</span>
+                                Craft
+                            </div>
+                            <h2 class="story-scene__heading">Precision Cuts,<br>Perfect Shapes</h2>
+                            <p class="story-scene__desc">Raw timber meets master craftsmanship. Every cut is measured twice, every joint hand-fitted for strength and beauty.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scene 3: Assembly -->
+                <div class="story-scene story-scene--3" id="storyScene3" style="opacity:0;">
+                    <div class="story-scene__bg" id="storyBg3"></div>
+                    <div class="story-scene__overlay"></div>
+                    <div class="story-scene__content">
+                        <div class="story-scene__text">
+                            <div class="story-scene__step-label">
+                                <span class="story-scene__step-num">3</span>
+                                Assemble
+                            </div>
+                            <h2 class="story-scene__heading">Pieces Come Together<br>With Purpose</h2>
+                            <p class="story-scene__desc">Components are assembled on-site with care. Furniture, cabinetry, and interiors take shape as your vision becomes reality.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scene 4: Final Reveal + CTA -->
+                <div class="story-scene story-scene--4" id="storyScene4" style="opacity:0;">
+                    <div class="story-scene__bg" id="storyBg4"></div>
+                    <div class="story-scene__overlay"></div>
+                    <div class="story-scene__content">
+                        <div class="story-scene__text">
+                            <div class="story-scene__step-label" style="justify-content:center;">
+                                <span class="story-scene__step-num">4</span>
+                                Transform
+                            </div>
+                            <h1 class="story-hero__title">
+                                <em>Design.</em> <em>Craft.</em> <em>Transform.</em>
+                            </h1>
+                            <p class="story-hero__subtitle">Where craftsmanship meets modern interior design. Your dream space, delivered with precision and passion.</p>
+                            <div class="story-hero__actions">
+                                <a href="{{ route('contact') }}" class="story-btn-primary">
+                                    Start Your Project
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                    </svg>
+                                </a>
+                                <a href="{{ route('portfolio') }}" class="story-btn-secondary">
+                                    View Portfolio
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                        <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                        <polyline points="21 15 16 10 5 21"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="story-hero__trust">
+                                <div class="story-trust__item">
+                                    <div class="story-trust__value">15+</div>
+                                    <div class="story-trust__label">Years Experience</div>
+                                </div>
+                                <div class="story-trust__divider"></div>
+                                <div class="story-trust__item">
+                                    <div class="story-trust__value">500+</div>
+                                    <div class="story-trust__label">Projects Done</div>
+                                </div>
+                                <div class="story-trust__divider"></div>
+                                <div class="story-trust__item">
+                                    <div class="story-trust__value">100%</div>
+                                    <div class="story-trust__label">Client Satisfaction</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="{{ asset('assets/img/carousel-2.jpg') }}" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-                    style="background: rgba(53, 53, 53, .7);">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-lg-8 text-center">
-                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Expert Execution</h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">Interior Fit-outs & Custom
-                                    Carpentry</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">From custom furniture to complete interior
-                                    execution, our team delivers quality craftsmanship with professional project management.
-                                </p>
-                                <a href="{{ route('services') }}"
-                                    class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Our Services</a>
-                                <a href="{{ route('contact') }}"
-                                    class="btn btn-light py-md-3 px-md-5 animated slideInRight">Start a Project</a>
-                            </div>
-                        </div>
+
+                <!-- Light rays -->
+                <div class="story-hero__rays">
+                    <div class="story-ray story-ray--1"></div>
+                    <div class="story-ray story-ray--2"></div>
+                    <div class="story-ray story-ray--3"></div>
+                    <div class="story-ray story-ray--4"></div>
+                </div>
+
+                <!-- Dust particles -->
+                <div class="story-hero__dust">
+                    <div class="story-dust"></div>
+                    <div class="story-dust"></div>
+                    <div class="story-dust"></div>
+                    <div class="story-dust"></div>
+                    <div class="story-dust"></div>
+                    <div class="story-dust"></div>
+                    <div class="story-dust"></div>
+                    <div class="story-dust"></div>
+                    <div class="story-dust"></div>
+                    <div class="story-dust"></div>
+                </div>
+
+                <!-- Wood grain overlay -->
+                <div class="story-hero__grain"></div>
+
+                <!-- Vignette -->
+                <div class="story-hero__vignette"></div>
+
+                <!-- Step indicators -->
+                <div class="story-hero__steps" id="storySteps">
+                    <div class="story-step active" data-step="1">
+                        <span class="story-step__label">Design</span>
+                    </div>
+                    <div class="story-steps__line"></div>
+                    <div class="story-step" data-step="2">
+                        <span class="story-step__label">Craft</span>
+                    </div>
+                    <div class="story-steps__line"></div>
+                    <div class="story-step" data-step="3">
+                        <span class="story-step__label">Assemble</span>
+                    </div>
+                    <div class="story-steps__line"></div>
+                    <div class="story-step" data-step="4">
+                        <span class="story-step__label">Transform</span>
                     </div>
                 </div>
-            </div>
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="{{ asset('assets/img/carousel-3.jpg') }}" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-                    style="background: rgba(53, 53, 53, .7);">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-lg-8 text-center">
-                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Industrial Grade Quality
-                                </h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">Decorative Carving & Industrial
-                                    Fit-outs</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Heavy-duty carpentry and decorative solutions
-                                    for commercial and industrial environments, built with precision and durability.</p>
-                                <a href="{{ route('portfolio') }}"
-                                    class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">View Portfolio</a>
-                                <a href="{{ route('contact') }}"
-                                    class="btn btn-light py-md-3 px-md-5 animated slideInRight">Get Free Quote</a>
-                            </div>
-                        </div>
+
+                <!-- Scroll hint -->
+                <div class="story-hero__scroll-hint" id="storyScrollHint">
+                    <div class="story-scroll__mouse">
+                        <div class="story-scroll__wheel"></div>
                     </div>
+                    <span class="story-scroll__label">Scroll to explore</span>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Carousel End -->
+    </section>
+    <!-- Storytelling Scroll Hero End -->
 
 
     <!-- Feature Start -->
@@ -199,7 +777,7 @@
                             <h4 class="mb-3">General Carpentry</h4>
                             <p>Professional execution with premium materials, quality-controlled processes, and reliable
                                 timelines.</p>
-                            <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="{{ route('services') }}">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -212,7 +790,7 @@
                             <h4 class="mb-3">Furniture Manufacturing</h4>
                             <p>Professional execution with premium materials, quality-controlled processes, and reliable
                                 timelines.</p>
-                            <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="{{ route('services') }}">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -225,7 +803,7 @@
                             <h4 class="mb-3">Furniture Remodeling</h4>
                             <p>Professional execution with premium materials, quality-controlled processes, and reliable
                                 timelines.</p>
-                            <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="{{ route('services') }}">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -238,7 +816,7 @@
                             <h4 class="mb-3">Wooden Floor</h4>
                             <p>Professional execution with premium materials, quality-controlled processes, and reliable
                                 timelines.</p>
-                            <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="{{ route('services') }}">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -251,7 +829,7 @@
                             <h4 class="mb-3">Wooden Furniture</h4>
                             <p>Professional execution with premium materials, quality-controlled processes, and reliable
                                 timelines.</p>
-                            <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="{{ route('services') }}">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -264,7 +842,7 @@
                             <h4 class="mb-3">Custom Work</h4>
                             <p>Professional execution with premium materials, quality-controlled processes, and reliable
                                 timelines.</p>
-                            <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="{{ route('services') }}">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -635,7 +1213,7 @@
             <style>
                 .portfolio-box-spacing {
                     /* margin: 170px 0; */
-                    margin-bottom: 250px;
+                    /* margin-bottom: 50px; */
                 }
             </style>
             <div class="row g-4 portfolio-container">
@@ -937,6 +1515,111 @@
     </div>
     <!-- Testimonial End -->
 @endsection
+
+@push('scripts')
+    <script>
+        (function() {
+            /* ===== Story Hero Scroll Controller ===== */
+            var hero = document.getElementById('storyHero');
+            if (hero) {
+                var spacer = hero.querySelector('.story-hero__spacer');
+                var scenes = [
+                    document.getElementById('storyScene1'),
+                    document.getElementById('storyScene2'),
+                    document.getElementById('storyScene3'),
+                    document.getElementById('storyScene4')
+                ];
+                var bgs = [
+                    document.getElementById('storyBg1'),
+                    document.getElementById('storyBg2'),
+                    document.getElementById('storyBg3'),
+                    document.getElementById('storyBg4')
+                ];
+                var progressBar = document.getElementById('storyProgress');
+                var stepsContainer = document.getElementById('storySteps');
+                var steps = stepsContainer ? stepsContainer.querySelectorAll('.story-step') : [];
+                var scrollHint = document.getElementById('storyScrollHint');
+                var hintHidden = false;
+                var ticking = false;
+
+                function updateHero() {
+                    var heroRect = spacer.getBoundingClientRect();
+                    var spacerHeight = spacer.offsetHeight - window.innerHeight;
+                    var scrolled = -heroRect.top;
+                    var progress = Math.max(0, Math.min(1, scrolled / spacerHeight));
+
+                    // Update progress bar
+                    if (progressBar) {
+                        progressBar.style.width = (progress * 100) + '%';
+                    }
+
+                    // Hide scroll hint after 5% scroll
+                    if (!hintHidden && progress > 0.05 && scrollHint) {
+                        scrollHint.style.opacity = '0';
+                        hintHidden = true;
+                    } else if (hintHidden && progress <= 0.02 && scrollHint) {
+                        scrollHint.style.opacity = '1';
+                        hintHidden = false;
+                    }
+
+                    // Scene transitions (4 scenes across 0-1 range)
+                    var sceneCount = 4;
+                    var sceneProgress = progress * sceneCount;
+                    var activeScene = Math.min(Math.floor(sceneProgress), sceneCount - 1);
+
+                    for (var i = 0; i < sceneCount; i++) {
+                        if (!scenes[i]) continue;
+
+                        var sceneLocal = sceneProgress - i;
+
+                        if (i === activeScene) {
+                            // Active scene: fade in
+                            var fadeIn = i === 0 ? 1 : Math.min(1, sceneLocal * 4);
+                            scenes[i].style.opacity = fadeIn;
+                            scenes[i].style.zIndex = 2;
+                        } else if (i === activeScene - 1) {
+                            // Previous scene: still visible behind, fading out
+                            var fadeOut = Math.max(0, 1 - (sceneLocal) * 2);
+                            scenes[i].style.opacity = fadeOut;
+                            scenes[i].style.zIndex = 1;
+                        } else {
+                            scenes[i].style.opacity = 0;
+                            scenes[i].style.zIndex = 0;
+                        }
+
+                        // Parallax on backgrounds
+                        if (bgs[i]) {
+                            var parallaxOffset = (sceneProgress - i) * -30;
+                            bgs[i].style.transform = 'scale(1.15) translateY(' + parallaxOffset + 'px)';
+                        }
+                    }
+
+                    // Update step indicators
+                    for (var j = 0; j < steps.length; j++) {
+                        if (j <= activeScene) {
+                            steps[j].classList.add('active');
+                        } else {
+                            steps[j].classList.remove('active');
+                        }
+                    }
+
+                    ticking = false;
+                }
+
+                function onScroll() {
+                    if (!ticking) {
+                        ticking = true;
+                        requestAnimationFrame(updateHero);
+                    }
+                }
+
+                window.addEventListener('scroll', onScroll, { passive: true });
+                // Initial call
+                updateHero();
+            }
+        })();
+    </script>
+@endpush
 
 @push('scripts')
     <script>
