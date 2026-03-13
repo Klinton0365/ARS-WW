@@ -1,27 +1,32 @@
 <!-- Header Hide/Reveal Styles -->
 <style>
+    /* Default: normal flow for all pages */
     .site-header {
+        position: relative;
+        z-index: 9999;
+    }
+    /* Homepage only: fixed + hidden until hero scroll completes */
+    .site-header.header-hero-hidden {
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
-        z-index: 9999;
         transform: translateY(-100%);
         opacity: 0;
         transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
         pointer-events: none;
     }
-    .site-header.header-revealed {
+    .site-header.header-hero-hidden.header-revealed {
         transform: translateY(0);
         opacity: 1;
         pointer-events: auto;
     }
-    .site-header .navbar {
+    .site-header.header-hero-hidden .navbar {
         position: relative !important;
     }
 </style>
 
-<div class="site-header {{ request()->routeIs('home') ? '' : 'header-revealed' }}" id="siteHeader">
+<div class="site-header {{ request()->routeIs('home') ? 'header-hero-hidden' : '' }}" id="siteHeader">
 <!-- Topbar Start -->
 <div class="container-fluid bg-light p-0">
     <div class="row gx-0 d-none d-lg-flex">
