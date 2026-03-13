@@ -5,7 +5,7 @@
 @section('content')
 <h2>Dashboard</h2>
 <div class="grid grid-3" style="margin-bottom:1rem;">
-  <div class="card"><strong>{{ $stats['services'] }}</strong><p class="meta">Services</p></div>
+  {{-- <div class="card"><strong>{{ $stats['services'] }}</strong><p class="meta">Services</p></div> --}}
   <div class="card"><strong>{{ $stats['projects'] }}</strong><p class="meta">Projects</p></div>
   {{-- <div class="card"><strong>{{ $stats['portfolio'] }}</strong><p class="meta">Portfolio</p></div> --}}
   <div class="card"><strong>{{ $stats['products'] }}</strong><p class="meta">Products</p></div>

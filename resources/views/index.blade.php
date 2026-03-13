@@ -41,20 +41,20 @@
         }
 
         .story-scene--1 .story-scene__bg {
-            background-image: url('{{ asset('assets/img/carousel-1.jpg') }}');
-            filter: brightness(0.3) saturate(0.85);
+            background-image: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1920&q=80&auto=format');
+            filter: brightness(0.35) saturate(0.9) contrast(1.05);
         }
         .story-scene--2 .story-scene__bg {
-            background-image: url('{{ asset('assets/img/carousel-2.jpg') }}');
-            filter: brightness(0.32) saturate(0.9);
+            background-image: url('https://images.unsplash.com/photo-1622021142947-da7dedc7c39a?w=1920&q=80&auto=format');
+            filter: brightness(0.38) saturate(0.95) contrast(1.05);
         }
         .story-scene--3 .story-scene__bg {
-            background-image: url('{{ asset('assets/img/carousel-3.jpg') }}');
-            filter: brightness(0.35) saturate(0.9);
+            background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1920&q=80&auto=format');
+            filter: brightness(0.38) saturate(0.9) contrast(1.05);
         }
         .story-scene--4 .story-scene__bg {
-            background-image: url('{{ asset('assets/img/carousel-1.jpg') }}');
-            filter: brightness(0.4) saturate(1.15);
+            background-image: url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1920&q=80&auto=format');
+            filter: brightness(0.45) saturate(1.2) contrast(1.05);
         }
 
         .story-scene__overlay {
@@ -218,9 +218,9 @@
             top: 50%;
             transform: translateY(-50%);
             white-space: nowrap;
-            font-family: 'Manrope', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             font-size: 0.65rem;
-            font-weight: 700;
+            font-weight: 600;
             letter-spacing: 2px;
             text-transform: uppercase;
             color: rgba(200,155,109,0);
@@ -257,13 +257,13 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            font-family: 'Manrope', sans-serif;
-            font-size: 0.72rem;
-            font-weight: 700;
-            letter-spacing: 3px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 4px;
             text-transform: uppercase;
             color: #C89B6D;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
         }
 
         .story-scene__step-num {
@@ -279,21 +279,24 @@
         }
 
         .story-scene__heading {
-            font-family: 'Manrope', sans-serif;
-            font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(2rem, 4vw, 3.2rem);
             font-weight: 800;
             color: #F5F5F5;
-            line-height: 1.2;
-            margin-bottom: 16px;
-            text-shadow: 0 4px 30px rgba(0,0,0,0.5);
+            line-height: 1.15;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 40px rgba(0,0,0,0.6);
+            letter-spacing: -0.5px;
         }
 
         .story-scene__desc {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1rem;
-            color: rgba(245,245,245,0.6);
-            line-height: 1.7;
-            max-width: 440px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 300;
+            color: rgba(245,245,245,0.7);
+            line-height: 1.8;
+            max-width: 480px;
+            letter-spacing: 0.2px;
         }
 
         /* --- Center content (headline + CTA on scene 4) --- */
@@ -307,13 +310,14 @@
         }
 
         .story-hero__title {
-            font-family: 'Manrope', sans-serif;
-            font-size: clamp(2.5rem, 5.5vw, 4.5rem);
-            font-weight: 800;
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(2.8rem, 6vw, 5.5rem);
+            font-weight: 900;
             color: #F5F5F5;
-            line-height: 1.1;
-            margin-bottom: 20px;
-            text-shadow: 0 4px 40px rgba(0,0,0,0.5);
+            line-height: 1.05;
+            margin-bottom: 24px;
+            text-shadow: 0 6px 50px rgba(0,0,0,0.6);
+            letter-spacing: -1px;
         }
 
         .story-hero__title em {
@@ -332,11 +336,13 @@
         }
 
         .story-hero__subtitle {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1.15rem;
-            color: rgba(245,245,245,0.65);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: rgba(245,245,245,0.7);
             line-height: 1.8;
-            margin-bottom: 36px;
+            margin-bottom: 40px;
+            letter-spacing: 0.3px;
         }
 
         .story-hero__actions {
@@ -354,19 +360,20 @@
             padding: 16px 38px;
             background: linear-gradient(135deg, #C89B6D, #A07B50);
             color: #fff;
-            font-family: 'Manrope', sans-serif;
-            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
             font-size: 0.95rem;
+            letter-spacing: 0.5px;
             border: none;
-            border-radius: 8px;
+            border-radius: 50px;
             text-decoration: none;
             transition: all 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
             box-shadow: 0 4px 25px rgba(200,155,109,0.35);
         }
 
         .story-btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 35px rgba(200,155,109,0.5);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(200,155,109,0.55);
             color: #fff;
             background: linear-gradient(135deg, #D4A87A, #B08B5E);
         }
@@ -380,11 +387,12 @@
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
             color: #F5F5F5;
-            font-family: 'Manrope', sans-serif;
-            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
             font-size: 0.95rem;
+            letter-spacing: 0.5px;
             border: 2px solid rgba(245,245,245,0.2);
-            border-radius: 8px;
+            border-radius: 50px;
             text-decoration: none;
             transition: all 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
         }
@@ -407,19 +415,21 @@
         .story-trust__item { text-align: center; }
 
         .story-trust__value {
-            font-family: 'Manrope', sans-serif;
-            font-size: 1.5rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
             font-weight: 800;
             color: #C89B6D;
             line-height: 1;
         }
 
         .story-trust__label {
-            font-size: 0.72rem;
-            color: rgba(245,245,245,0.45);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 400;
+            color: rgba(245,245,245,0.5);
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-top: 4px;
+            letter-spacing: 2px;
+            margin-top: 6px;
         }
 
         .story-trust__divider {
@@ -468,7 +478,7 @@
         }
 
         .story-scroll__label {
-            font-family: 'Manrope', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             font-size: 0.6rem;
             color: rgba(200,155,109,0.4);
             letter-spacing: 3px;
@@ -713,8 +723,8 @@
             <div class="row g-0 mx-lg-0">
                 <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="{{ asset('assets/img/about.jpg') }}"
-                            style="object-fit: cover;" alt="">
+                        <img class="position-absolute img-fluid w-100 h-100" src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=800&q=80&auto=format"
+                            style="object-fit: cover;" alt="Master carpenter at work">
                     </div>
                 </div>
                 <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
@@ -771,7 +781,7 @@
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="{{ asset('assets/img/service-1.jpg') }}" alt="">
+                            <img class="img-fluid" src="https://images.unsplash.com/photo-1504148455328-c376907d081c?w=600&q=80&auto=format" alt="General Carpentry">
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">General Carpentry</h4>
@@ -784,7 +794,7 @@
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="{{ asset('assets/img/service-2.jpg') }}" alt="">
+                            <img class="img-fluid" src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80&auto=format" alt="Furniture Manufacturing">
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Furniture Manufacturing</h4>
@@ -797,7 +807,7 @@
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="{{ asset('assets/img/service-3.jpg') }}" alt="">
+                            <img class="img-fluid" src="https://images.unsplash.com/photo-1581783898377-1c85bf937427?w=600&q=80&auto=format" alt="Furniture Remodeling">
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Furniture Remodeling</h4>
@@ -810,7 +820,7 @@
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="{{ asset('assets/img/service-4.jpg') }}" alt="">
+                            <img class="img-fluid" src="https://images.unsplash.com/photo-1615529182904-14819c35db37?w=600&q=80&auto=format" alt="Wooden Floor">
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Wooden Floor</h4>
@@ -823,7 +833,7 @@
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="{{ asset('assets/img/service-5.jpg') }}" alt="">
+                            <img class="img-fluid" src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?w=600&q=80&auto=format" alt="Wooden Furniture">
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Wooden Furniture</h4>
@@ -836,7 +846,7 @@
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="{{ asset('assets/img/service-6.jpg') }}" alt="">
+                            <img class="img-fluid" src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=600&q=80&auto=format" alt="Custom Work">
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Custom Work</h4>
@@ -966,11 +976,11 @@
                 <div class="col-lg-10 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="ba-wrapper" id="baSlider">
                         <div class="ba-image ba-before">
-                            <img src="{{ asset('assets/img/before.jpg') }}" alt="Before carpentry and interior work">
+                            <img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?w=1200&q=80&auto=format" alt="Before carpentry and interior work">
                             <span class="ba-label ba-label-before">BEFORE</span>
                         </div>
                         <div class="ba-image ba-after">
-                            <img src="{{ asset('assets/img/after.jpg') }}" alt="After carpentry and interior work">
+                            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200&q=80&auto=format" alt="After carpentry and interior work">
                             <span class="ba-label ba-label-after">AFTER</span>
                         </div>
                         <div class="ba-handle" id="baHandle">
@@ -1185,8 +1195,8 @@
                 </div>
                 <div class="col-lg-6 pe-lg-0" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="{{ asset('assets/img/feature.jpg') }}"
-                            style="object-fit: cover;" alt="">
+                        <img class="position-absolute img-fluid w-100 h-100" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80&auto=format"
+                            style="object-fit: cover;" alt="Premium interior craftsmanship">
                     </div>
                 </div>
             </div>
@@ -1221,10 +1231,10 @@
                     data-wow-delay="0.1s">
                     <div class="rounded overflow-hidden">
                         <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="{{ asset('assets/img/portfolio-1.jpg') }}" alt="">
+                            <img class="img-fluid w-100" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80&auto=format" alt="">
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1"
-                                    href="{{ asset('assets/img/portfolio-1.jpg') }}" data-lightbox="portfolio"><i
+                                    href="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80&auto=format" data-lightbox="portfolio"><i
                                         class="fa fa-eye"></i></a>
                                 <a class="btn btn-square btn-outline-light mx-1" href=""><i
                                         class="fa fa-link"></i></a>
@@ -1240,10 +1250,10 @@
                     data-wow-delay="0.3s">
                     <div class="rounded overflow-hidden">
                         <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="{{ asset('assets/img/portfolio-2.jpg') }}" alt="">
+                            <img class="img-fluid w-100" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80&auto=format" alt="">
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1"
-                                    href="{{ asset('assets/img/portfolio-2.jpg') }}" data-lightbox="portfolio"><i
+                                    href="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80&auto=format" data-lightbox="portfolio"><i
                                         class="fa fa-eye"></i></a>
                                 <a class="btn btn-square btn-outline-light mx-1" href=""><i
                                         class="fa fa-link"></i></a>
@@ -1259,10 +1269,10 @@
                     data-wow-delay="0.5s">
                     <div class="rounded overflow-hidden">
                         <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="{{ asset('assets/img/portfolio-3.jpg') }}" alt="">
+                            <img class="img-fluid w-100" src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80&auto=format" alt="">
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1"
-                                    href="{{ asset('assets/img/portfolio-3.jpg') }}" data-lightbox="portfolio"><i
+                                    href="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80&auto=format" data-lightbox="portfolio"><i
                                         class="fa fa-eye"></i></a>
                                 <a class="btn btn-square btn-outline-light mx-1" href=""><i
                                         class="fa fa-link"></i></a>
@@ -1278,10 +1288,10 @@
                     data-wow-delay="0.1s">
                     <div class="rounded overflow-hidden">
                         <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="{{ asset('assets/img/portfolio-4.jpg') }}" alt="">
+                            <img class="img-fluid w-100" src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?w=800&q=80&auto=format" alt="">
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1"
-                                    href="{{ asset('assets/img/portfolio-4.jpg') }}" data-lightbox="portfolio"><i
+                                    href="https://images.unsplash.com/photo-1600121848594-d8644e57abab?w=800&q=80&auto=format" data-lightbox="portfolio"><i
                                         class="fa fa-eye"></i></a>
                                 <a class="btn btn-square btn-outline-light mx-1" href=""><i
                                         class="fa fa-link"></i></a>
@@ -1297,10 +1307,10 @@
                     data-wow-delay="0.3s">
                     <div class="rounded overflow-hidden">
                         <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="{{ asset('assets/img/portfolio-5.jpg') }}" alt="">
+                            <img class="img-fluid w-100" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80&auto=format" alt="">
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1"
-                                    href="{{ asset('assets/img/portfolio-5.jpg') }}" data-lightbox="portfolio"><i
+                                    href="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80&auto=format" data-lightbox="portfolio"><i
                                         class="fa fa-eye"></i></a>
                                 <a class="btn btn-square btn-outline-light mx-1" href=""><i
                                         class="fa fa-link"></i></a>
@@ -1316,10 +1326,10 @@
                     data-wow-delay="0.5s">
                     <div class="rounded overflow-hidden">
                         <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="{{ asset('assets/img/portfolio-6.jpg') }}" alt="">
+                            <img class="img-fluid w-100" src="https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=800&q=80&auto=format" alt="">
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1"
-                                    href="{{ asset('assets/img/portfolio-6.jpg') }}" data-lightbox="portfolio"><i
+                                    href="https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=800&q=80&auto=format" data-lightbox="portfolio"><i
                                         class="fa fa-eye"></i></a>
                                 <a class="btn btn-square btn-outline-light mx-1" href=""><i
                                         class="fa fa-link"></i></a>
@@ -1343,8 +1353,8 @@
             <div class="row g-0 mx-lg-0">
                 <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="{{ asset('assets/img/quote.jpg') }}"
-                            style="object-fit: cover;" alt="">
+                        <img class="position-absolute img-fluid w-100 h-100" src="https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=800&q=80&auto=format"
+                            style="object-fit: cover;" alt="Get a free quote">
                     </div>
                 </div>
                 <div class="col-lg-6 quote-text py-5 wow fadeIn" data-wow-delay="0.5s">
@@ -1403,7 +1413,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item">
                         <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="{{ asset('assets/img/team-1.jpg') }}" alt="">
+                            <img class="img-fluid" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80&auto=format" alt="Team Member">
                             <div class="team-social">
                                 <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
@@ -1419,7 +1429,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item">
                         <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="{{ asset('assets/img/team-2.jpg') }}" alt="">
+                            <img class="img-fluid" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80&auto=format" alt="Team Member">
                             <div class="team-social">
                                 <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
@@ -1435,7 +1445,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item">
                         <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="{{ asset('assets/img/team-3.jpg') }}" alt="">
+                            <img class="img-fluid" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80&auto=format" alt="Team Member">
                             <div class="team-social">
                                 <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
@@ -1451,7 +1461,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="team-item">
                         <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="{{ asset('assets/img/team-4.jpg') }}" alt="">
+                            <img class="img-fluid" src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80&auto=format" alt="Team Member">
                             <div class="team-social">
                                 <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
@@ -1478,8 +1488,8 @@
             </div>
             <div class="owl-carousel testimonial-carousel">
                 <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light p-2 mx-auto mb-3" src="{{ asset('assets/img/testimonial-1.jpg') }}"
-                        style="width: 90px; height: 90px;">
+                    <img class="img-fluid bg-light p-2 mx-auto mb-3 rounded-circle" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80&auto=format"
+                        style="width: 90px; height: 90px; object-fit: cover;">
                     <div class="testimonial-text text-center p-4">
                         <p>ARS Wood Works transformed our office space with exceptional attention to detail. Their team
                             managed the entire project professionally, from custom furniture to complete interior fit-out.
@@ -1489,8 +1499,8 @@
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light p-2 mx-auto mb-3" src="{{ asset('assets/img/testimonial-2.jpg') }}"
-                        style="width: 90px; height: 90px;">
+                    <img class="img-fluid bg-light p-2 mx-auto mb-3 rounded-circle" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80&auto=format"
+                        style="width: 90px; height: 90px; object-fit: cover;">
                     <div class="testimonial-text text-center p-4">
                         <p>ARS Wood Works transformed our office space with exceptional attention to detail. Their team
                             managed the entire project professionally, from custom furniture to complete interior fit-out.
@@ -1500,8 +1510,8 @@
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light p-2 mx-auto mb-3" src="{{ asset('assets/img/testimonial-3.jpg') }}"
-                        style="width: 90px; height: 90px;">
+                    <img class="img-fluid bg-light p-2 mx-auto mb-3 rounded-circle" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80&auto=format"
+                        style="width: 90px; height: 90px; object-fit: cover;">
                     <div class="testimonial-text text-center p-4">
                         <p>ARS Wood Works transformed our office space with exceptional attention to detail. Their team
                             managed the entire project professionally, from custom furniture to complete interior fit-out.
@@ -1540,6 +1550,8 @@
                 var steps = stepsContainer ? stepsContainer.querySelectorAll('.story-step') : [];
                 var scrollHint = document.getElementById('storyScrollHint');
                 var hintHidden = false;
+                var headerRevealed = false;
+                var siteHeader = document.getElementById('siteHeader');
                 var ticking = false;
 
                 function updateHero() {
@@ -1551,6 +1563,17 @@
                     // Update progress bar
                     if (progressBar) {
                         progressBar.style.width = (progress * 100) + '%';
+                    }
+
+                    // Reveal header after hero scroll completes (~95%)
+                    if (siteHeader) {
+                        if (!headerRevealed && progress >= 0.92) {
+                            siteHeader.classList.add('header-revealed');
+                            headerRevealed = true;
+                        } else if (headerRevealed && progress < 0.85) {
+                            siteHeader.classList.remove('header-revealed');
+                            headerRevealed = false;
+                        }
                     }
 
                     // Hide scroll hint after 5% scroll
@@ -1629,7 +1652,6 @@
             var handle = document.getElementById('baHandle');
             if (wrapper && handle) {
                 var beforeImg = wrapper.querySelector('.ba-before');
-                var dragging = false;
 
                 function setPosition(x) {
                     var rect = wrapper.getBoundingClientRect();
@@ -1638,36 +1660,30 @@
                     handle.style.left = (pct * 100) + '%';
                 }
 
-                wrapper.addEventListener('mousedown', function(e) {
-                    e.preventDefault();
-                    dragging = true;
+                // Desktop: auto-follow cursor on hover (no click needed)
+                wrapper.addEventListener('mousemove', function(e) {
+                    setPosition(e.clientX);
+                });
+
+                wrapper.addEventListener('mouseenter', function() {
                     wrapper.classList.add('active');
-                    setPosition(e.clientX);
                 });
-                window.addEventListener('mousemove', function(e) {
-                    if (!dragging) return;
-                    setPosition(e.clientX);
-                });
-                window.addEventListener('mouseup', function() {
-                    dragging = false;
+
+                wrapper.addEventListener('mouseleave', function() {
                     wrapper.classList.remove('active');
                 });
 
+                // Mobile: touch drag support
                 wrapper.addEventListener('touchstart', function(e) {
-                    dragging = true;
                     wrapper.classList.add('active');
                     setPosition(e.touches[0].clientX);
-                }, {
-                    passive: true
-                });
+                }, { passive: true });
+
                 wrapper.addEventListener('touchmove', function(e) {
-                    if (!dragging) return;
                     setPosition(e.touches[0].clientX);
-                }, {
-                    passive: true
-                });
+                }, { passive: true });
+
                 wrapper.addEventListener('touchend', function() {
-                    dragging = false;
                     wrapper.classList.remove('active');
                 });
             }
