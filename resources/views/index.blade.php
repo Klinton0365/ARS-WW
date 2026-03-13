@@ -44,14 +44,17 @@
             background-image: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1920&q=80&auto=format');
             filter: brightness(0.35) saturate(0.9) contrast(1.05);
         }
+
         .story-scene--2 .story-scene__bg {
             background-image: url('https://images.unsplash.com/photo-1622021142947-da7dedc7c39a?w=1920&q=80&auto=format');
             filter: brightness(0.38) saturate(0.95) contrast(1.05);
         }
+
         .story-scene--3 .story-scene__bg {
             background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1920&q=80&auto=format');
             filter: brightness(0.38) saturate(0.9) contrast(1.05);
         }
+
         .story-scene--4 .story-scene__bg {
             background-image: url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1920&q=80&auto=format');
             filter: brightness(0.45) saturate(1.2) contrast(1.05);
@@ -63,16 +66,19 @@
         }
 
         .story-scene--1 .story-scene__overlay {
-            background: linear-gradient(135deg, rgba(30,30,30,0.6) 0%, rgba(60,40,20,0.4) 100%);
+            background: linear-gradient(135deg, rgba(30, 30, 30, 0.6) 0%, rgba(60, 40, 20, 0.4) 100%);
         }
+
         .story-scene--2 .story-scene__overlay {
-            background: linear-gradient(180deg, rgba(30,30,30,0.5) 0%, rgba(80,50,20,0.35) 100%);
+            background: linear-gradient(180deg, rgba(30, 30, 30, 0.5) 0%, rgba(80, 50, 20, 0.35) 100%);
         }
+
         .story-scene--3 .story-scene__overlay {
-            background: linear-gradient(225deg, rgba(30,30,30,0.5) 0%, rgba(50,35,15,0.4) 100%);
+            background: linear-gradient(225deg, rgba(30, 30, 30, 0.5) 0%, rgba(50, 35, 15, 0.4) 100%);
         }
+
         .story-scene--4 .story-scene__overlay {
-            background: linear-gradient(180deg, rgba(20,15,10,0.3) 0%, rgba(30,30,30,0.5) 100%);
+            background: linear-gradient(180deg, rgba(20, 15, 10, 0.3) 0%, rgba(30, 30, 30, 0.5) 100%);
         }
 
         /* --- Cinematic vignette --- */
@@ -81,7 +87,7 @@
             inset: 0;
             z-index: 3;
             pointer-events: none;
-            box-shadow: inset 0 0 180px rgba(0,0,0,0.45);
+            box-shadow: inset 0 0 180px rgba(0, 0, 0, 0.45);
         }
 
         /* --- Light rays through windows --- */
@@ -98,21 +104,54 @@
             top: -20%;
             width: 120px;
             height: 140%;
-            background: linear-gradient(180deg, rgba(200,155,109,0.08) 0%, transparent 80%);
+            background: linear-gradient(180deg, rgba(200, 155, 109, 0.08) 0%, transparent 80%);
             transform-origin: top center;
             opacity: 0;
             animation: rayPulse 10s ease-in-out infinite;
         }
 
-        .story-ray--1 { left: 15%; transform: rotate(15deg); animation-delay: 0s; width: 100px; }
-        .story-ray--2 { left: 30%; transform: rotate(8deg); animation-delay: 3s; width: 80px; }
-        .story-ray--3 { right: 20%; transform: rotate(-12deg); animation-delay: 6s; width: 110px; }
-        .story-ray--4 { right: 5%; transform: rotate(-20deg); animation-delay: 1.5s; width: 70px; }
+        .story-ray--1 {
+            left: 15%;
+            transform: rotate(15deg);
+            animation-delay: 0s;
+            width: 100px;
+        }
+
+        .story-ray--2 {
+            left: 30%;
+            transform: rotate(8deg);
+            animation-delay: 3s;
+            width: 80px;
+        }
+
+        .story-ray--3 {
+            right: 20%;
+            transform: rotate(-12deg);
+            animation-delay: 6s;
+            width: 110px;
+        }
+
+        .story-ray--4 {
+            right: 5%;
+            transform: rotate(-20deg);
+            animation-delay: 1.5s;
+            width: 70px;
+        }
 
         @keyframes rayPulse {
-            0%, 100% { opacity: 0; }
-            30% { opacity: 0.6; }
-            70% { opacity: 0.4; }
+
+            0%,
+            100% {
+                opacity: 0;
+            }
+
+            30% {
+                opacity: 0.6;
+            }
+
+            70% {
+                opacity: 0.4;
+            }
         }
 
         /* --- Dust particles --- */
@@ -131,22 +170,114 @@
             animation: storyDustFloat linear infinite;
         }
 
-        .story-dust:nth-child(1)  { width: 3px; height: 3px; left: 8%;  top: 85%; animation-duration: 14s; animation-delay: 0s; }
-        .story-dust:nth-child(2)  { width: 4px; height: 4px; left: 22%; top: 92%; animation-duration: 11s; animation-delay: 2s; }
-        .story-dust:nth-child(3)  { width: 2px; height: 2px; left: 38%; top: 80%; animation-duration: 16s; animation-delay: 4s; }
-        .story-dust:nth-child(4)  { width: 5px; height: 5px; left: 55%; top: 95%; animation-duration: 10s; animation-delay: 1s; }
-        .story-dust:nth-child(5)  { width: 3px; height: 3px; left: 70%; top: 88%; animation-duration: 13s; animation-delay: 3s; }
-        .story-dust:nth-child(6)  { width: 2px; height: 2px; left: 85%; top: 90%; animation-duration: 15s; animation-delay: 5s; }
-        .story-dust:nth-child(7)  { width: 4px; height: 4px; left: 45%; top: 78%; animation-duration: 12s; animation-delay: 7s; }
-        .story-dust:nth-child(8)  { width: 3px; height: 3px; left: 92%; top: 96%; animation-duration: 9s;  animation-delay: 0.5s; }
-        .story-dust:nth-child(9)  { width: 2px; height: 2px; left: 15%; top: 75%; animation-duration: 17s; animation-delay: 6s; }
-        .story-dust:nth-child(10) { width: 3px; height: 3px; left: 62%; top: 82%; animation-duration: 11s; animation-delay: 8s; }
+        .story-dust:nth-child(1) {
+            width: 3px;
+            height: 3px;
+            left: 8%;
+            top: 85%;
+            animation-duration: 14s;
+            animation-delay: 0s;
+        }
+
+        .story-dust:nth-child(2) {
+            width: 4px;
+            height: 4px;
+            left: 22%;
+            top: 92%;
+            animation-duration: 11s;
+            animation-delay: 2s;
+        }
+
+        .story-dust:nth-child(3) {
+            width: 2px;
+            height: 2px;
+            left: 38%;
+            top: 80%;
+            animation-duration: 16s;
+            animation-delay: 4s;
+        }
+
+        .story-dust:nth-child(4) {
+            width: 5px;
+            height: 5px;
+            left: 55%;
+            top: 95%;
+            animation-duration: 10s;
+            animation-delay: 1s;
+        }
+
+        .story-dust:nth-child(5) {
+            width: 3px;
+            height: 3px;
+            left: 70%;
+            top: 88%;
+            animation-duration: 13s;
+            animation-delay: 3s;
+        }
+
+        .story-dust:nth-child(6) {
+            width: 2px;
+            height: 2px;
+            left: 85%;
+            top: 90%;
+            animation-duration: 15s;
+            animation-delay: 5s;
+        }
+
+        .story-dust:nth-child(7) {
+            width: 4px;
+            height: 4px;
+            left: 45%;
+            top: 78%;
+            animation-duration: 12s;
+            animation-delay: 7s;
+        }
+
+        .story-dust:nth-child(8) {
+            width: 3px;
+            height: 3px;
+            left: 92%;
+            top: 96%;
+            animation-duration: 9s;
+            animation-delay: 0.5s;
+        }
+
+        .story-dust:nth-child(9) {
+            width: 2px;
+            height: 2px;
+            left: 15%;
+            top: 75%;
+            animation-duration: 17s;
+            animation-delay: 6s;
+        }
+
+        .story-dust:nth-child(10) {
+            width: 3px;
+            height: 3px;
+            left: 62%;
+            top: 82%;
+            animation-duration: 11s;
+            animation-delay: 8s;
+        }
 
         @keyframes storyDustFloat {
-            0%   { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0; }
-            8%   { opacity: 0.5; }
-            50%  { opacity: 0.25; }
-            100% { transform: translateY(-110vh) translateX(25px) rotate(540deg); opacity: 0; }
+            0% {
+                transform: translateY(0) translateX(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            8% {
+                opacity: 0.5;
+            }
+
+            50% {
+                opacity: 0.25;
+            }
+
+            100% {
+                transform: translateY(-110vh) translateX(25px) rotate(540deg);
+                opacity: 0;
+            }
         }
 
         /* --- Wood grain overlay --- */
@@ -156,18 +287,21 @@
             z-index: 5;
             pointer-events: none;
             opacity: 0.04;
-            background: repeating-linear-gradient(
-                87deg,
-                transparent, transparent 3px,
-                rgba(200,155,109,0.2) 3px,
-                rgba(200,155,109,0.2) 5px
-            );
+            background: repeating-linear-gradient(87deg,
+                    transparent, transparent 3px,
+                    rgba(200, 155, 109, 0.2) 3px,
+                    rgba(200, 155, 109, 0.2) 5px);
             animation: storyGrain 14s linear infinite;
         }
 
         @keyframes storyGrain {
-            0%   { background-position: 0 0; }
-            100% { background-position: 350px 180px; }
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 350px 180px;
+            }
         }
 
         /* --- Progress bar (horizontal, top) --- */
@@ -199,7 +333,7 @@
             width: 12px;
             height: 12px;
             border-radius: 50%;
-            border: 2px solid rgba(200,155,109,0.3);
+            border: 2px solid rgba(200, 155, 109, 0.3);
             background: transparent;
             transition: all 0.5s ease;
             position: relative;
@@ -209,7 +343,7 @@
         .story-step.active {
             border-color: #C89B6D;
             background: #C89B6D;
-            box-shadow: 0 0 15px rgba(200,155,109,0.4);
+            box-shadow: 0 0 15px rgba(200, 155, 109, 0.4);
         }
 
         .story-step__label {
@@ -223,18 +357,18 @@
             font-weight: 600;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: rgba(200,155,109,0);
+            color: rgba(200, 155, 109, 0);
             transition: color 0.4s ease;
         }
 
         .story-step.active .story-step__label {
-            color: rgba(200,155,109,0.7);
+            color: rgba(200, 155, 109, 0.7);
         }
 
         .story-steps__line {
             width: 1px;
             height: 16px;
-            background: rgba(200,155,109,0.15);
+            background: rgba(200, 155, 109, 0.15);
         }
 
         /* --- Scene text content --- */
@@ -273,7 +407,7 @@
             width: 28px;
             height: 28px;
             border-radius: 50%;
-            border: 2px solid rgba(200,155,109,0.4);
+            border: 2px solid rgba(200, 155, 109, 0.4);
             font-size: 0.7rem;
             color: #C89B6D;
         }
@@ -285,7 +419,7 @@
             color: #F5F5F5;
             line-height: 1.15;
             margin-bottom: 20px;
-            text-shadow: 0 4px 40px rgba(0,0,0,0.6);
+            text-shadow: 0 4px 40px rgba(0, 0, 0, 0.6);
             letter-spacing: -0.5px;
         }
 
@@ -293,7 +427,7 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 1.05rem;
             font-weight: 300;
-            color: rgba(245,245,245,0.7);
+            color: rgba(245, 245, 245, 0.7);
             line-height: 1.8;
             max-width: 480px;
             letter-spacing: 0.2px;
@@ -316,7 +450,7 @@
             color: #F5F5F5;
             line-height: 1.05;
             margin-bottom: 24px;
-            text-shadow: 0 6px 50px rgba(0,0,0,0.6);
+            text-shadow: 0 6px 50px rgba(0, 0, 0, 0.6);
             letter-spacing: -1px;
         }
 
@@ -331,15 +465,22 @@
         }
 
         @keyframes storyGradient {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
         }
 
         .story-hero__subtitle {
             font-family: 'Montserrat', sans-serif;
             font-size: 1.2rem;
             font-weight: 300;
-            color: rgba(245,245,245,0.7);
+            color: rgba(245, 245, 245, 0.7);
             line-height: 1.8;
             margin-bottom: 40px;
             letter-spacing: 0.3px;
@@ -367,13 +508,13 @@
             border: none;
             border-radius: 50px;
             text-decoration: none;
-            transition: all 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
-            box-shadow: 0 4px 25px rgba(200,155,109,0.35);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow: 0 4px 25px rgba(200, 155, 109, 0.35);
         }
 
         .story-btn-primary:hover {
             transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 12px 40px rgba(200,155,109,0.55);
+            box-shadow: 0 12px 40px rgba(200, 155, 109, 0.55);
             color: #fff;
             background: linear-gradient(135deg, #D4A87A, #B08B5E);
         }
@@ -383,7 +524,7 @@
             align-items: center;
             gap: 10px;
             padding: 16px 38px;
-            background: rgba(255,255,255,0.06);
+            background: rgba(255, 255, 255, 0.06);
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
             color: #F5F5F5;
@@ -391,17 +532,17 @@
             font-weight: 600;
             font-size: 0.95rem;
             letter-spacing: 0.5px;
-            border: 2px solid rgba(245,245,245,0.2);
+            border: 2px solid rgba(245, 245, 245, 0.2);
             border-radius: 50px;
             text-decoration: none;
-            transition: all 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
         .story-btn-secondary:hover {
             border-color: #C89B6D;
             color: #C89B6D;
             transform: translateY(-3px);
-            background: rgba(200,155,109,0.1);
+            background: rgba(200, 155, 109, 0.1);
         }
 
         /* Trust bar */
@@ -412,7 +553,9 @@
             gap: 36px;
         }
 
-        .story-trust__item { text-align: center; }
+        .story-trust__item {
+            text-align: center;
+        }
 
         .story-trust__value {
             font-family: 'Montserrat', sans-serif;
@@ -426,7 +569,7 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 0.7rem;
             font-weight: 400;
-            color: rgba(245,245,245,0.5);
+            color: rgba(245, 245, 245, 0.5);
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-top: 6px;
@@ -435,7 +578,7 @@
         .story-trust__divider {
             width: 1px;
             height: 36px;
-            background: rgba(245,245,245,0.12);
+            background: rgba(245, 245, 245, 0.12);
         }
 
         /* --- Scroll prompt (scene 1 only) --- */
@@ -455,7 +598,7 @@
         .story-scroll__mouse {
             width: 22px;
             height: 34px;
-            border: 2px solid rgba(200,155,109,0.35);
+            border: 2px solid rgba(200, 155, 109, 0.35);
             border-radius: 12px;
             position: relative;
         }
@@ -473,31 +616,65 @@
         }
 
         @keyframes storyScrollWheel {
-            0%, 100% { top: 6px; opacity: 1; }
-            50% { top: 18px; opacity: 0.3; }
+
+            0%,
+            100% {
+                top: 6px;
+                opacity: 1;
+            }
+
+            50% {
+                top: 18px;
+                opacity: 0.3;
+            }
         }
 
         .story-scroll__label {
             font-family: 'Montserrat', sans-serif;
             font-size: 0.6rem;
-            color: rgba(200,155,109,0.4);
+            color: rgba(200, 155, 109, 0.4);
             letter-spacing: 3px;
             text-transform: uppercase;
         }
 
         /* --- Responsive --- */
         @media (max-width: 991px) {
-            .story-hero__steps { display: none; }
-            .story-scene__text { padding: 0 30px; }
-            .story-hero__scroll-hint { display: none; }
+            .story-hero__steps {
+                display: none;
+            }
+
+            .story-scene__text {
+                padding: 0 30px;
+            }
+
+            .story-hero__scroll-hint {
+                display: none;
+            }
         }
 
         @media (max-width: 575px) {
-            .story-scene__text { padding: 0 20px; }
-            .story-hero__actions { flex-direction: column; }
-            .story-btn-primary, .story-btn-secondary { width: 100%; justify-content: center; }
-            .story-hero__trust { gap: 18px; flex-wrap: wrap; }
-            .story-scene__heading { font-size: clamp(1.5rem, 6vw, 2rem); }
+            .story-scene__text {
+                padding: 0 20px;
+            }
+
+            .story-hero__actions {
+                flex-direction: column;
+            }
+
+            .story-btn-primary,
+            .story-btn-secondary {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .story-hero__trust {
+                gap: 18px;
+                flex-wrap: wrap;
+            }
+
+            .story-scene__heading {
+                font-size: clamp(1.5rem, 6vw, 2rem);
+            }
         }
     </style>
 
@@ -518,7 +695,8 @@
                                 Design
                             </div>
                             <h2 class="story-scene__heading">Every Masterpiece<br>Begins With a Vision</h2>
-                            <p class="story-scene__desc">We start by understanding your space, your style, and your story. Our designers sketch every detail before a single plank is touched.</p>
+                            <p class="story-scene__desc">We start by understanding your space, your style, and your story.
+                                Our designers sketch every detail before a single plank is touched.</p>
                         </div>
                     </div>
                 </div>
@@ -534,7 +712,8 @@
                                 Craft
                             </div>
                             <h2 class="story-scene__heading">Precision Cuts,<br>Perfect Shapes</h2>
-                            <p class="story-scene__desc">Raw timber meets master craftsmanship. Every cut is measured twice, every joint hand-fitted for strength and beauty.</p>
+                            <p class="story-scene__desc">Raw timber meets master craftsmanship. Every cut is measured twice,
+                                every joint hand-fitted for strength and beauty.</p>
                         </div>
                     </div>
                 </div>
@@ -550,7 +729,8 @@
                                 Assemble
                             </div>
                             <h2 class="story-scene__heading">Pieces Come Together<br>With Purpose</h2>
-                            <p class="story-scene__desc">Components are assembled on-site with care. Furniture, cabinetry, and interiors take shape as your vision becomes reality.</p>
+                            <p class="story-scene__desc">Components are assembled on-site with care. Furniture, cabinetry,
+                                and interiors take shape as your vision becomes reality.</p>
                         </div>
                     </div>
                 </div>
@@ -568,19 +748,25 @@
                             <h1 class="story-hero__title">
                                 <em>Design.</em> <em>Craft.</em> <em>Transform.</em>
                             </h1>
-                            <p class="story-hero__subtitle">Where craftsmanship meets modern interior design. Your dream space, delivered with precision and passion.</p>
+                            <p class="story-hero__subtitle">Where craftsmanship meets modern interior design. Your dream
+                                space, delivered with precision and passion.</p>
                             <div class="story-hero__actions">
                                 <a href="{{ route('contact') }}" class="story-btn-primary">
                                     Start Your Project
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                        stroke-linejoin="round">
                                         <line x1="5" y1="12" x2="19" y2="12"></line>
                                         <polyline points="12 5 19 12 12 19"></polyline>
                                     </svg>
                                 </a>
                                 <a href="{{ route('projects') }}" class="story-btn-secondary">
                                     View Projects
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2">
+                                        </rect>
                                         <circle cx="8.5" cy="8.5" r="1.5"></circle>
                                         <polyline points="21 15 16 10 5 21"></polyline>
                                     </svg>
@@ -665,7 +851,6 @@
     </section>
     <!-- Storytelling Scroll Hero End -->
 
-
     <!-- Feature Start -->
     <div class="container-xxl py-5">
         <div class="container">
@@ -723,7 +908,8 @@
             <div class="row g-0 mx-lg-0">
                 <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=800&q=80&auto=format"
+                        <img class="position-absolute img-fluid w-100 h-100"
+                            src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=800&q=80&auto=format"
                             style="object-fit: cover;" alt="Master carpenter at work">
                     </div>
                 </div>
@@ -781,78 +967,96 @@
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="https://images.unsplash.com/photo-1504148455328-c376907d081c?w=600&q=80&auto=format" alt="General Carpentry">
+                            <img class="img-fluid"
+                                src="https://images.unsplash.com/photo-1504148455328-c376907d081c?w=600&q=80&auto=format"
+                                alt="General Carpentry">
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">General Carpentry</h4>
                             <p>Professional execution with premium materials, quality-controlled processes, and reliable
                                 timelines.</p>
-                            <a class="fw-medium" href="{{ route('services') }}">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="{{ route('services') }}">Read More<i
+                                    class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80&auto=format" alt="Furniture Manufacturing">
+                            <img class="img-fluid"
+                                src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80&auto=format"
+                                alt="Furniture Manufacturing">
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Furniture Manufacturing</h4>
                             <p>Professional execution with premium materials, quality-controlled processes, and reliable
                                 timelines.</p>
-                            <a class="fw-medium" href="{{ route('services') }}">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="{{ route('services') }}">Read More<i
+                                    class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="https://images.unsplash.com/photo-1581783898377-1c85bf937427?w=600&q=80&auto=format" alt="Furniture Remodeling">
+                            <img class="img-fluid"
+                                src="https://images.unsplash.com/photo-1581783898377-1c85bf937427?w=600&q=80&auto=format"
+                                alt="Furniture Remodeling">
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Furniture Remodeling</h4>
                             <p>Professional execution with premium materials, quality-controlled processes, and reliable
                                 timelines.</p>
-                            <a class="fw-medium" href="{{ route('services') }}">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="{{ route('services') }}">Read More<i
+                                    class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="https://images.unsplash.com/photo-1615529182904-14819c35db37?w=600&q=80&auto=format" alt="Wooden Floor">
+                            <img class="img-fluid"
+                                src="https://images.unsplash.com/photo-1615529182904-14819c35db37?w=600&q=80&auto=format"
+                                alt="Wooden Floor">
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Wooden Floor</h4>
                             <p>Professional execution with premium materials, quality-controlled processes, and reliable
                                 timelines.</p>
-                            <a class="fw-medium" href="{{ route('services') }}">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="{{ route('services') }}">Read More<i
+                                    class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?w=600&q=80&auto=format" alt="Wooden Furniture">
+                            <img class="img-fluid"
+                                src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?w=600&q=80&auto=format"
+                                alt="Wooden Furniture">
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Wooden Furniture</h4>
                             <p>Professional execution with premium materials, quality-controlled processes, and reliable
                                 timelines.</p>
-                            <a class="fw-medium" href="{{ route('services') }}">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="{{ route('services') }}">Read More<i
+                                    class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=600&q=80&auto=format" alt="Custom Work">
+                            <img class="img-fluid"
+                                src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=600&q=80&auto=format"
+                                alt="Custom Work">
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Custom Work</h4>
                             <p>Professional execution with premium materials, quality-controlled processes, and reliable
                                 timelines.</p>
-                            <a class="fw-medium" href="{{ route('services') }}">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="{{ route('services') }}">Read More<i
+                                    class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -976,11 +1180,13 @@
                 <div class="col-lg-10 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="ba-wrapper" id="baSlider">
                         <div class="ba-image ba-before">
-                            <img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?w=1200&q=80&auto=format" alt="Before carpentry and interior work">
+                            <img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?w=1200&q=80&auto=format"
+                                alt="Before carpentry and interior work">
                             <span class="ba-label ba-label-before">BEFORE</span>
                         </div>
                         <div class="ba-image ba-after">
-                            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200&q=80&auto=format" alt="After carpentry and interior work">
+                            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200&q=80&auto=format"
+                                alt="After carpentry and interior work">
                             <span class="ba-label ba-label-after">AFTER</span>
                         </div>
                         <div class="ba-handle" id="baHandle">
@@ -1195,7 +1401,8 @@
                 </div>
                 <div class="col-lg-6 pe-lg-0" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80&auto=format"
+                        <img class="position-absolute img-fluid w-100 h-100"
+                            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80&auto=format"
                             style="object-fit: cover;" alt="Premium interior craftsmanship">
                     </div>
                 </div>
@@ -1231,11 +1438,13 @@
                     data-wow-delay="0.1s">
                     <div class="rounded overflow-hidden">
                         <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80&auto=format" alt="">
+                            <img class="img-fluid w-100"
+                                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80&auto=format"
+                                alt="">
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1"
-                                    href="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80&auto=format" data-lightbox="portfolio"><i
-                                        class="fa fa-eye"></i></a>
+                                    href="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80&auto=format"
+                                    data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
                                 <a class="btn btn-square btn-outline-light mx-1" href=""><i
                                         class="fa fa-link"></i></a>
                             </div>
@@ -1250,11 +1459,13 @@
                     data-wow-delay="0.3s">
                     <div class="rounded overflow-hidden">
                         <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80&auto=format" alt="">
+                            <img class="img-fluid w-100"
+                                src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80&auto=format"
+                                alt="">
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1"
-                                    href="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80&auto=format" data-lightbox="portfolio"><i
-                                        class="fa fa-eye"></i></a>
+                                    href="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80&auto=format"
+                                    data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
                                 <a class="btn btn-square btn-outline-light mx-1" href=""><i
                                         class="fa fa-link"></i></a>
                             </div>
@@ -1269,11 +1480,13 @@
                     data-wow-delay="0.5s">
                     <div class="rounded overflow-hidden">
                         <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80&auto=format" alt="">
+                            <img class="img-fluid w-100"
+                                src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80&auto=format"
+                                alt="">
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1"
-                                    href="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80&auto=format" data-lightbox="portfolio"><i
-                                        class="fa fa-eye"></i></a>
+                                    href="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80&auto=format"
+                                    data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
                                 <a class="btn btn-square btn-outline-light mx-1" href=""><i
                                         class="fa fa-link"></i></a>
                             </div>
@@ -1288,11 +1501,13 @@
                     data-wow-delay="0.1s">
                     <div class="rounded overflow-hidden">
                         <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?w=800&q=80&auto=format" alt="">
+                            <img class="img-fluid w-100"
+                                src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?w=800&q=80&auto=format"
+                                alt="">
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1"
-                                    href="https://images.unsplash.com/photo-1600121848594-d8644e57abab?w=800&q=80&auto=format" data-lightbox="portfolio"><i
-                                        class="fa fa-eye"></i></a>
+                                    href="https://images.unsplash.com/photo-1600121848594-d8644e57abab?w=800&q=80&auto=format"
+                                    data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
                                 <a class="btn btn-square btn-outline-light mx-1" href=""><i
                                         class="fa fa-link"></i></a>
                             </div>
@@ -1307,11 +1522,13 @@
                     data-wow-delay="0.3s">
                     <div class="rounded overflow-hidden">
                         <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80&auto=format" alt="">
+                            <img class="img-fluid w-100"
+                                src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80&auto=format"
+                                alt="">
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1"
-                                    href="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80&auto=format" data-lightbox="portfolio"><i
-                                        class="fa fa-eye"></i></a>
+                                    href="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80&auto=format"
+                                    data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
                                 <a class="btn btn-square btn-outline-light mx-1" href=""><i
                                         class="fa fa-link"></i></a>
                             </div>
@@ -1326,11 +1543,13 @@
                     data-wow-delay="0.5s">
                     <div class="rounded overflow-hidden">
                         <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=800&q=80&auto=format" alt="">
+                            <img class="img-fluid w-100"
+                                src="https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=800&q=80&auto=format"
+                                alt="">
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1"
-                                    href="https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=800&q=80&auto=format" data-lightbox="portfolio"><i
-                                        class="fa fa-eye"></i></a>
+                                    href="https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=800&q=80&auto=format"
+                                    data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
                                 <a class="btn btn-square btn-outline-light mx-1" href=""><i
                                         class="fa fa-link"></i></a>
                             </div>
@@ -1353,7 +1572,8 @@
             <div class="row g-0 mx-lg-0">
                 <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=800&q=80&auto=format"
+                        <img class="position-absolute img-fluid w-100 h-100"
+                            src="https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=800&q=80&auto=format"
                             style="object-fit: cover;" alt="Get a free quote">
                     </div>
                 </div>
@@ -1413,7 +1633,9 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item">
                         <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80&auto=format" alt="Team Member">
+                            <img class="img-fluid"
+                                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80&auto=format"
+                                alt="Team Member">
                             <div class="team-social">
                                 <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
@@ -1429,7 +1651,9 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item">
                         <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80&auto=format" alt="Team Member">
+                            <img class="img-fluid"
+                                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80&auto=format"
+                                alt="Team Member">
                             <div class="team-social">
                                 <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
@@ -1445,7 +1669,9 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item">
                         <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80&auto=format" alt="Team Member">
+                            <img class="img-fluid"
+                                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80&auto=format"
+                                alt="Team Member">
                             <div class="team-social">
                                 <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
@@ -1461,7 +1687,9 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="team-item">
                         <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80&auto=format" alt="Team Member">
+                            <img class="img-fluid"
+                                src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80&auto=format"
+                                alt="Team Member">
                             <div class="team-social">
                                 <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
@@ -1488,7 +1716,8 @@
             </div>
             <div class="owl-carousel testimonial-carousel">
                 <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light p-2 mx-auto mb-3 rounded-circle" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80&auto=format"
+                    <img class="img-fluid bg-light p-2 mx-auto mb-3 rounded-circle"
+                        src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80&auto=format"
                         style="width: 90px; height: 90px; object-fit: cover;">
                     <div class="testimonial-text text-center p-4">
                         <p>ARS Wood Works transformed our office space with exceptional attention to detail. Their team
@@ -1499,7 +1728,8 @@
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light p-2 mx-auto mb-3 rounded-circle" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80&auto=format"
+                    <img class="img-fluid bg-light p-2 mx-auto mb-3 rounded-circle"
+                        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80&auto=format"
                         style="width: 90px; height: 90px; object-fit: cover;">
                     <div class="testimonial-text text-center p-4">
                         <p>ARS Wood Works transformed our office space with exceptional attention to detail. Their team
@@ -1510,7 +1740,8 @@
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light p-2 mx-auto mb-3 rounded-circle" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80&auto=format"
+                    <img class="img-fluid bg-light p-2 mx-auto mb-3 rounded-circle"
+                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80&auto=format"
                         style="width: 90px; height: 90px; object-fit: cover;">
                     <div class="testimonial-text text-center p-4">
                         <p>ARS Wood Works transformed our office space with exceptional attention to detail. Their team
@@ -1636,7 +1867,9 @@
                     }
                 }
 
-                window.addEventListener('scroll', onScroll, { passive: true });
+                window.addEventListener('scroll', onScroll, {
+                    passive: true
+                });
                 // Initial call
                 updateHero();
             }
@@ -1677,11 +1910,15 @@
                 wrapper.addEventListener('touchstart', function(e) {
                     wrapper.classList.add('active');
                     setPosition(e.touches[0].clientX);
-                }, { passive: true });
+                }, {
+                    passive: true
+                });
 
                 wrapper.addEventListener('touchmove', function(e) {
                     setPosition(e.touches[0].clientX);
-                }, { passive: true });
+                }, {
+                    passive: true
+                });
 
                 wrapper.addEventListener('touchend', function() {
                     wrapper.classList.remove('active');
