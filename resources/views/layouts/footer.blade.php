@@ -4,14 +4,14 @@
          <div class="row g-5">
              <div class="col-lg-3 col-md-6">
                  <h4 class="text-light mb-4">ARS Wood Works</h4>
-                 <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Professional Wood & Interior Services</p>
-                 <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>Contact Us for a Free Quote</p>
-                 <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@arswoodworks.com</p>
+                 <p class="mb-2"><i class="fa-solid fa-map-marker-alt me-3"></i>Professional Wood & Interior Services</p>
+                 <p class="mb-2"><i class="fa-solid fa-phone-alt me-3"></i>Contact Us for a Free Quote</p>
+                 <p class="mb-2"><i class="fa-solid fa-envelope me-3"></i>info@arswoodworks.com</p>
                  <div class="d-flex pt-2">
-                     <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
-                     <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
-                     <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-youtube"></i></a>
-                     <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                     <a class="btn btn-outline-light btn-social" href="#"><i class="fa-brands fa-twitter"></i></a>
+                     <a class="btn btn-outline-light btn-social" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                     <a class="btn btn-outline-light btn-social" href="#"><i class="fa-brands fa-youtube"></i></a>
+                     <a class="btn btn-outline-light btn-social" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
                  </div>
              </div>
              <div class="col-lg-3 col-md-6">
@@ -34,7 +34,7 @@
              <div class="col-lg-3 col-md-6">
                  <h4 class="text-light mb-4">Get In Touch</h4>
                  <p>Have a project in mind? Submit your details and our team will reach out within 24 hours.</p>
-                 <a href="{{ route('contact') }}" class="btn btn-primary py-3 px-4">Start Your Project<i class="fa fa-arrow-right ms-2"></i></a>
+                 <a href="{{ route('contact') }}" class="btn btn-primary py-3 px-4">Start Your Project<i class="fa-solid fa-arrow-right ms-2"></i></a>
              </div>
          </div>
      </div>
@@ -46,7 +46,7 @@
                  </div>
                  <div class="col-md-6 text-center text-md-end">
                      <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                     Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                     {{-- Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> --}}
                  </div>
              </div>
          </div>

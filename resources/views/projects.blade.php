@@ -40,8 +40,8 @@
                             <div class="position-relative overflow-hidden">
                                 <img class="img-fluid w-100" src="{{ $project->cover_image }}" alt="{{ $project->title }}" style="height: 260px; object-fit: cover;">
                                 <div class="portfolio-overlay">
-                                    <a class="btn btn-square btn-outline-light mx-1" href="{{ $project->cover_image }}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-square btn-outline-light mx-1" href="{{ route('projects.show', $project->slug) }}"><i class="fa fa-link"></i></a>
+                                    <a class="btn btn-square btn-outline-light mx-1" href="{{ $project->cover_image }}" data-lightbox="portfolio"><i class="fa-solid fa-eye"></i></a>
+                                    <a class="btn btn-square btn-outline-light mx-1" href="{{ route('projects.show', $project->slug) }}"><i class="fa-solid fa-link"></i></a>
                                 </div>
                             </div>
                             <div class="border border-5 border-light border-top-0 p-4">

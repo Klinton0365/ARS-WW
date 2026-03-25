@@ -124,72 +124,72 @@
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="svc-card">
                         <div class="svc-icon-wrap">
-                            <i class="fa fa-hammer"></i>
+                            <i class="fa-solid fa-hammer"></i>
                         </div>
                         <h4>General Carpentry</h4>
                         <div class="svc-card-body">
                             <p>From structural framing to fine trim work — professional execution with premium materials and reliable timelines.</p>
-                            <a href="{{ route('services') }}" class="svc-link">Learn More <i class="fa fa-arrow-right"></i></a>
+                            <a href="{{ route('services') }}" class="svc-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="svc-card">
                         <div class="svc-icon-wrap">
-                            <i class="fa fa-couch"></i>
+                            <i class="fa-solid fa-couch"></i>
                         </div>
                         <h4>Furniture Manufacturing</h4>
                         <div class="svc-card-body">
                             <p>Bespoke furniture crafted to your exact specifications — from concept sketches to showroom-quality pieces.</p>
-                            <a href="{{ route('services') }}" class="svc-link">Learn More <i class="fa fa-arrow-right"></i></a>
+                            <a href="{{ route('services') }}" class="svc-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="svc-card">
                         <div class="svc-icon-wrap">
-                            <i class="fa fa-sync-alt"></i>
+                            <i class="fa-solid fa-sync-alt"></i>
                         </div>
                         <h4>Furniture Remodeling</h4>
                         <div class="svc-card-body">
                             <p>Breathe new life into existing pieces. We restore, refinish, and reimagine furniture to match your evolving style.</p>
-                            <a href="{{ route('services') }}" class="svc-link">Learn More <i class="fa fa-arrow-right"></i></a>
+                            <a href="{{ route('services') }}" class="svc-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="svc-card">
                         <div class="svc-icon-wrap">
-                            <i class="fa fa-th-large"></i>
+                            <i class="fa-solid fa-th-large"></i>
                         </div>
                         <h4>Wooden Flooring</h4>
                         <div class="svc-card-body">
                             <p>Hardwood, engineered, and parquet flooring — installed with precision for warmth and elegance underfoot.</p>
-                            <a href="{{ route('services') }}" class="svc-link">Learn More <i class="fa fa-arrow-right"></i></a>
+                            <a href="{{ route('services') }}" class="svc-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="svc-card">
                         <div class="svc-icon-wrap">
-                            <i class="fa fa-chair"></i>
+                            <i class="fa-solid fa-chair"></i>
                         </div>
                         <h4>Wooden Furniture</h4>
                         <div class="svc-card-body">
                             <p>Tables, cabinets, wardrobes, and shelving — handcrafted from select timber with meticulous joinery.</p>
-                            <a href="{{ route('services') }}" class="svc-link">Learn More <i class="fa fa-arrow-right"></i></a>
+                            <a href="{{ route('services') }}" class="svc-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="svc-card">
                         <div class="svc-icon-wrap">
-                            <i class="fa fa-pencil-ruler"></i>
+                            <i class="fa-solid fa-pencil-ruler"></i>
                         </div>
                         <h4>Custom Work</h4>
                         <div class="svc-card-body">
                             <p>Unique projects that defy categories — decorative carving, built-ins, and one-of-a-kind commissioned pieces.</p>
-                            <a href="{{ route('services') }}" class="svc-link">Learn More <i class="fa fa-arrow-right"></i></a>
+                            <a href="{{ route('services') }}" class="svc-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -331,7 +331,7 @@
                             <span class="gr-tag">Corporate Office</span>
                         </div>
                         <p class="gr-text">Completely redesigned our 5,000 sq ft office space. The modular workstations, conference table, and reception desk are outstanding. Project was delivered on time and the team was extremely professional throughout.</p>
-                        <div class="gr-verified"><i class="fa fa-check-circle me-1"></i>Verified Customer</div>
+                        <div class="gr-verified"><i class="fa-solid fa-check-circle me-1"></i>Verified Customer</div>
                     </div>
                 </div>
 
@@ -350,7 +350,7 @@
                             <span class="gr-tag">Home Interior</span>
                         </div>
                         <p class="gr-text">We hired ARS for our full home interior — kitchen cabinets, wardrobes, TV unit, and wooden flooring. The finish quality is premium and the wood selection was exactly what we wanted. Our home looks like a magazine now!</p>
-                        <div class="gr-verified"><i class="fa fa-check-circle me-1"></i>Verified Customer</div>
+                        <div class="gr-verified"><i class="fa-solid fa-check-circle me-1"></i>Verified Customer</div>
                     </div>
                 </div>
 
@@ -369,7 +369,7 @@
                             <span class="gr-tag">Restaurant</span>
                         </div>
                         <p class="gr-text">ARS built all the custom furniture for our new restaurant — dining tables, bar counter, booth seating, and decorative wall panels. Guests constantly compliment the interiors. Worth every rupee. Highly recommend!</p>
-                        <div class="gr-verified"><i class="fa fa-check-circle me-1"></i>Verified Customer</div>
+                        <div class="gr-verified"><i class="fa-solid fa-check-circle me-1"></i>Verified Customer</div>
                     </div>
                 </div>
 
@@ -388,7 +388,7 @@
                             <span class="gr-tag">Apartment</span>
                         </div>
                         <p class="gr-text">Got my 2BHK apartment fully furnished by ARS Wood Works. The modular kitchen and wardrobe designs are very functional and look beautiful. Small delay in delivery but the quality made up for it. Very happy overall.</p>
-                        <div class="gr-verified"><i class="fa fa-check-circle me-1"></i>Verified Customer</div>
+                        <div class="gr-verified"><i class="fa-solid fa-check-circle me-1"></i>Verified Customer</div>
                     </div>
                 </div>
 
@@ -407,7 +407,7 @@
                             <span class="gr-tag">Industrial</span>
                         </div>
                         <p class="gr-text">We needed heavy-duty shelving, storage units, and a custom packing station for our warehouse. ARS delivered industrial-grade carpentry that is sturdy and well-built. They understood our requirements perfectly.</p>
-                        <div class="gr-verified"><i class="fa fa-check-circle me-1"></i>Verified Customer</div>
+                        <div class="gr-verified"><i class="fa-solid fa-check-circle me-1"></i>Verified Customer</div>
                     </div>
                 </div>
 
@@ -426,7 +426,7 @@
                             <span class="gr-tag">Luxury Villa</span>
                         </div>
                         <p class="gr-text">ARS handled the complete woodwork for our villa — staircase, ceiling panels, bedroom furniture, and garden pergola. The craftsmanship is exceptional. Our architect was impressed too. They truly care about their work.</p>
-                        <div class="gr-verified"><i class="fa fa-check-circle me-1"></i>Verified Customer</div>
+                        <div class="gr-verified"><i class="fa-solid fa-check-circle me-1"></i>Verified Customer</div>
                     </div>
                 </div>
             </div>

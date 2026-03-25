@@ -216,15 +216,15 @@
                 <div class="product-spec-card p-4 h-100">
                     <h5 class="mb-3">Why Choose ARS</h5>
                     <div class="d-flex align-items-start mb-3">
-                        <i class="fa fa-check-circle text-primary mt-1 me-2"></i>
+                        <i class="fa-solid fa-check-circle text-primary mt-1 me-2"></i>
                         <p class="mb-0 text-muted">Premium craftsmanship with durable materials.</p>
                     </div>
                     <div class="d-flex align-items-start mb-3">
-                        <i class="fa fa-check-circle text-primary mt-1 me-2"></i>
+                        <i class="fa-solid fa-check-circle text-primary mt-1 me-2"></i>
                         <p class="mb-0 text-muted">Design-first execution for homes and commercial spaces.</p>
                     </div>
                     <div class="d-flex align-items-start">
-                        <i class="fa fa-check-circle text-primary mt-1 me-2"></i>
+                        <i class="fa-solid fa-check-circle text-primary mt-1 me-2"></i>
                         <p class="mb-0 text-muted">Clear timelines and professional project support.</p>
                     </div>
                 </div>

@@ -32,24 +32,25 @@
     <div class="row gx-0 d-none d-lg-flex">
         <div class="col-lg-7 px-5 text-start">
             <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                <small class="fa-solid fa-location-dot text-primary me-2"></small>
                 <small>Professional Wood & Interior Services</small>
             </div>
             <div class="h-100 d-inline-flex align-items-center py-3">
-                <small class="far fa-clock text-primary me-2"></small>
+                <small class="fa-regular fa-clock text-primary me-2"></small>
                 <small>Mon - Sat : 08.00 AM - 06.00 PM</small>
             </div>
         </div>
         <div class="col-lg-5 px-5 text-end">
             <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                <small class="fa fa-phone-alt text-primary me-2"></small>
+                <small class="fa-solid fa-phone text-primary me-2"></small>
                 <small>Contact Us Today</small>
             </div>
             <div class="h-100 d-inline-flex align-items-center">
-                <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-sm-square bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-sm-square me-1" href="#" style="background:#1877F2;color:#fff;"><i class="fa-brands fa-facebook-f"></i></a>
+                <a class="btn btn-sm-square me-1" href="#" style="background:#E4405F;color:#fff;"><i class="fa-brands fa-instagram"></i></a>
+                <a class="btn btn-sm-square me-1" href="#" style="background:#0A66C2;color:#fff;"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a class="btn btn-sm-square me-1" href="#" style="background:#25D366;color:#fff;"><i class="fa-brands fa-whatsapp"></i></a>
+                <a class="btn btn-sm-square me-0" href="#" style="background:#000;color:#fff;"><i class="fa-brands fa-x-twitter"></i></a>
             </div>
         </div>
     </div>
@@ -74,7 +75,7 @@
             <a href="{{ route('catalog') }}" class="nav-item nav-link {{ request()->routeIs('catalog*') ? 'active' : '' }}">Catalog</a>
             <a href="{{ route('contact') }}" class="nav-item nav-link {{ request()->routeIs('contact') ? 'active' : '' }}">Contact</a>
         </div>
-        <a href="{{ route('contact') }}" class="btn btn-primary py-4 px-lg-4 d-none d-lg-block">Get A Quote<i class="fa fa-arrow-right ms-3"></i></a>
+        <a href="{{ route('contact') }}" class="btn btn-primary py-4 px-lg-4 d-none d-lg-block">Get A Quote<i class="fa-solid fa-arrow-right ms-3"></i></a>
     </div>
 </nav>
 <!-- Navbar End -->

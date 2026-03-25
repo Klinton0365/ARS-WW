@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
@@ -59,24 +59,25 @@
         <div class="row gx-0 d-none d-lg-flex">
             <div class="col-lg-7 px-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                    <small class="fa-solid fa-location-dot text-primary me-2"></small>
                     <small>123 Street, New York, USA</small>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center py-3">
-                    <small class="far fa-clock text-primary me-2"></small>
+                    <small class="fa-regular fa-clock text-primary me-2"></small>
                     <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
                 </div>
             </div>
             <div class="col-lg-5 px-5 text-end">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-phone-alt text-primary me-2"></small>
+                    <small class="fa-solid fa-phone text-primary me-2"></small>
                     <small>+012 345 6789</small>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-sm-square me-1" href="#" style="background:#1877F2;color:#fff;"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square me-1" href="#" style="background:#E4405F;color:#fff;"><i class="fa-brands fa-instagram"></i></a>
+                    <a class="btn btn-sm-square me-1" href="#" style="background:#0A66C2;color:#fff;"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a class="btn btn-sm-square me-1" href="#" style="background:#25D366;color:#fff;"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a class="btn btn-sm-square me-0" href="#" style="background:#000;color:#fff;"><i class="fa-brands fa-x-twitter"></i></a>
                 </div>
             </div>
         </div>
@@ -110,7 +111,7 @@
                 </div>
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Get A Quote<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Get A Quote<i class="fa-solid fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -179,7 +180,7 @@
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
                     <div class="d-flex align-items-center justify-content-between mb-2">
                         <div class="d-flex align-items-center justify-content-center bg-light" style="width: 60px; height: 60px;">
-                            <i class="fa fa-user-check fa-2x text-primary"></i>
+                            <i class="fa-solid fa-user-check fa-2x text-primary"></i>
                         </div>
                         <h1 class="display-1 text-light mb-0">01</h1>
                     </div>
@@ -188,7 +189,7 @@
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
                     <div class="d-flex align-items-center justify-content-between mb-2">
                         <div class="d-flex align-items-center justify-content-center bg-light" style="width: 60px; height: 60px;">
-                            <i class="fa fa-check fa-2x text-primary"></i>
+                            <i class="fa-solid fa-check fa-2x text-primary"></i>
                         </div>
                         <h1 class="display-1 text-light mb-0">02</h1>
                     </div>
@@ -197,7 +198,7 @@
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
                     <div class="d-flex align-items-center justify-content-between mb-2">
                         <div class="d-flex align-items-center justify-content-center bg-light" style="width: 60px; height: 60px;">
-                            <i class="fa fa-drafting-compass fa-2x text-primary"></i>
+                            <i class="fa-solid fa-drafting-compass fa-2x text-primary"></i>
                         </div>
                         <h1 class="display-1 text-light mb-0">03</h1>
                     </div>
@@ -206,7 +207,7 @@
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
                     <div class="d-flex align-items-center justify-content-between mb-2">
                         <div class="d-flex align-items-center justify-content-center bg-light" style="width: 60px; height: 60px;">
-                            <i class="fa fa-headphones fa-2x text-primary"></i>
+                            <i class="fa-solid fa-headphones fa-2x text-primary"></i>
                         </div>
                         <h1 class="display-1 text-light mb-0">04</h1>
                     </div>
@@ -238,7 +239,7 @@
                             <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
-                                        <i class="fa fa-users fa-2x text-primary"></i>
+                                        <i class="fa-solid fa-users fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-3">
                                         <h2 class="text-primary mb-1" data-toggle="counter-up">1234</h2>
@@ -249,7 +250,7 @@
                             <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
-                                        <i class="fa fa-check fa-2x text-primary"></i>
+                                        <i class="fa-solid fa-check fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-3">
                                         <h2 class="text-primary mb-1" data-toggle="counter-up">1234</h2>
@@ -282,7 +283,7 @@
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">General Carpentry</h4>
                             <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                            <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="">Read More<i class="fa-solid fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -294,7 +295,7 @@
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Furniture Manufacturing</h4>
                             <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                            <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="">Read More<i class="fa-solid fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -306,7 +307,7 @@
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Furniture Remodeling</h4>
                             <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                            <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="">Read More<i class="fa-solid fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -318,7 +319,7 @@
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Wooden Floor</h4>
                             <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                            <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="">Read More<i class="fa-solid fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -330,7 +331,7 @@
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Wooden Furniture</h4>
                             <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                            <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="">Read More<i class="fa-solid fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -342,7 +343,7 @@
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Custom Work</h4>
                             <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                            <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="">Read More<i class="fa-solid fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -366,7 +367,7 @@
                             <div class="col-6">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
-                                        <i class="fa fa-check fa-2x text-primary"></i>
+                                        <i class="fa-solid fa-check fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-4">
                                         <p class="mb-2">Quality</p>
@@ -377,7 +378,7 @@
                             <div class="col-6">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
-                                        <i class="fa fa-user-check fa-2x text-primary"></i>
+                                        <i class="fa-solid fa-user-check fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-4">
                                         <p class="mb-2">Creative</p>
@@ -388,7 +389,7 @@
                             <div class="col-6">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
-                                        <i class="fa fa-drafting-compass fa-2x text-primary"></i>
+                                        <i class="fa-solid fa-drafting-compass fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-4">
                                         <p class="mb-2">Free</p>
@@ -399,7 +400,7 @@
                             <div class="col-6">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
-                                        <i class="fa fa-headphones fa-2x text-primary"></i>
+                                        <i class="fa-solid fa-headphones fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-4">
                                         <p class="mb-2">Customer</p>
@@ -442,8 +443,8 @@
                         <div class="position-relative overflow-hidden">
                             <img class="img-fluid w-100" src="{{ asset('img/portfolio-1.jpg') }}" alt="">
                             <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="{{ asset('img/portfolio-1.jpg') }}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href="{{ asset('img/portfolio-1.jpg') }}" data-lightbox="portfolio"><i class="fa-solid fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa-solid fa-link"></i></a>
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
@@ -457,8 +458,8 @@
                         <div class="position-relative overflow-hidden">
                             <img class="img-fluid w-100" src="{{ asset('img/portfolio-2.jpg') }}" alt="">
                             <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="{{ asset('img/portfolio-2.jpg') }}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href="{{ asset('img/portfolio-2.jpg') }}" data-lightbox="portfolio"><i class="fa-solid fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa-solid fa-link"></i></a>
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
@@ -472,8 +473,8 @@
                         <div class="position-relative overflow-hidden">
                             <img class="img-fluid w-100" src="{{ asset('img/portfolio-3.jpg') }}" alt="">
                             <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="{{ asset('img/portfolio-3.jpg') }}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href="{{ asset('img/portfolio-3.jpg') }}" data-lightbox="portfolio"><i class="fa-solid fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa-solid fa-link"></i></a>
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
@@ -487,8 +488,8 @@
                         <div class="position-relative overflow-hidden">
                             <img class="img-fluid w-100" src="{{ asset('img/portfolio-4.jpg') }}" alt="">
                             <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="{{ asset('img/portfolio-4.jpg') }}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href="{{ asset('img/portfolio-4.jpg') }}" data-lightbox="portfolio"><i class="fa-solid fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa-solid fa-link"></i></a>
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
@@ -502,8 +503,8 @@
                         <div class="position-relative overflow-hidden">
                             <img class="img-fluid w-100" src="{{ asset('img/portfolio-5.jpg') }}" alt="">
                             <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="{{ asset('img/portfolio-5.jpg') }}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href="{{ asset('img/portfolio-5.jpg') }}" data-lightbox="portfolio"><i class="fa-solid fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa-solid fa-link"></i></a>
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
@@ -517,8 +518,8 @@
                         <div class="position-relative overflow-hidden">
                             <img class="img-fluid w-100" src="{{ asset('img/portfolio-6.jpg') }}" alt="">
                             <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="{{ asset('img/portfolio-6.jpg') }}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href="{{ asset('img/portfolio-6.jpg') }}" data-lightbox="portfolio"><i class="fa-solid fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa-solid fa-link"></i></a>
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
@@ -595,9 +596,9 @@
                         <div class="overflow-hidden position-relative">
                             <img class="img-fluid" src="{{ asset('img/team-1.jpg') }}" alt="">
                             <div class="team-social">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square" href=""><i class="fa-brands fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href=""><i class="fa-brands fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fa-brands fa-instagram"></i></a>
                             </div>
                         </div>
                         <div class="text-center border border-5 border-light border-top-0 p-4">
@@ -611,9 +612,9 @@
                         <div class="overflow-hidden position-relative">
                             <img class="img-fluid" src="{{ asset('img/team-2.jpg') }}" alt="">
                             <div class="team-social">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square" href=""><i class="fa-brands fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href=""><i class="fa-brands fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fa-brands fa-instagram"></i></a>
                             </div>
                         </div>
                         <div class="text-center border border-5 border-light border-top-0 p-4">
@@ -627,9 +628,9 @@
                         <div class="overflow-hidden position-relative">
                             <img class="img-fluid" src="{{ asset('img/team-3.jpg') }}" alt="">
                             <div class="team-social">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square" href=""><i class="fa-brands fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href=""><i class="fa-brands fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fa-brands fa-instagram"></i></a>
                             </div>
                         </div>
                         <div class="text-center border border-5 border-light border-top-0 p-4">
@@ -643,9 +644,9 @@
                         <div class="overflow-hidden position-relative">
                             <img class="img-fluid" src="{{ asset('img/team-4.jpg') }}" alt="">
                             <div class="team-social">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square" href=""><i class="fa-brands fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href=""><i class="fa-brands fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fa-brands fa-instagram"></i></a>
                             </div>
                         </div>
                         <div class="text-center border border-5 border-light border-top-0 p-4">
@@ -703,14 +704,15 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Address</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <p class="mb-2"><i class="fa-solid fa-location-dot me-3"></i>123 Street, New York, USA</p>
+                    <p class="mb-2"><i class="fa-solid fa-phone me-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa-solid fa-envelope me-3"></i>info@example.com</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-social" href="#" style="background:#1877F2;color:#fff;"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a class="btn btn-social" href="#" style="background:#E4405F;color:#fff;"><i class="fa-brands fa-instagram"></i></a>
+                        <a class="btn btn-social" href="#" style="background:#0A66C2;color:#fff;"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a class="btn btn-social" href="#" style="background:#25D366;color:#fff;"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a class="btn btn-social" href="#" style="background:#000;color:#fff;"><i class="fa-brands fa-x-twitter"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">

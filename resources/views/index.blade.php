@@ -859,7 +859,7 @@
                     <div class="d-flex align-items-center justify-content-between mb-2">
                         <div class="d-flex align-items-center justify-content-center bg-light"
                             style="width: 60px; height: 60px;">
-                            <i class="fa fa-user-check fa-2x text-primary"></i>
+                            <i class="fa-solid fa-user-check fa-2x text-primary"></i>
                         </div>
                         <h1 class="display-1 text-light mb-0">01</h1>
                     </div>
@@ -869,7 +869,7 @@
                     <div class="d-flex align-items-center justify-content-between mb-2">
                         <div class="d-flex align-items-center justify-content-center bg-light"
                             style="width: 60px; height: 60px;">
-                            <i class="fa fa-check fa-2x text-primary"></i>
+                            <i class="fa-solid fa-check fa-2x text-primary"></i>
                         </div>
                         <h1 class="display-1 text-light mb-0">02</h1>
                     </div>
@@ -879,7 +879,7 @@
                     <div class="d-flex align-items-center justify-content-between mb-2">
                         <div class="d-flex align-items-center justify-content-center bg-light"
                             style="width: 60px; height: 60px;">
-                            <i class="fa fa-drafting-compass fa-2x text-primary"></i>
+                            <i class="fa-solid fa-drafting-compass fa-2x text-primary"></i>
                         </div>
                         <h1 class="display-1 text-light mb-0">03</h1>
                     </div>
@@ -889,7 +889,7 @@
                     <div class="d-flex align-items-center justify-content-between mb-2">
                         <div class="d-flex align-items-center justify-content-center bg-light"
                             style="width: 60px; height: 60px;">
-                            <i class="fa fa-headphones fa-2x text-primary"></i>
+                            <i class="fa-solid fa-headphones fa-2x text-primary"></i>
                         </div>
                         <h1 class="display-1 text-light mb-0">04</h1>
                     </div>
@@ -927,7 +927,7 @@
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white"
                                         style="width: 60px; height: 60px;">
-                                        <i class="fa fa-users fa-2x text-primary"></i>
+                                        <i class="fa-solid fa-users fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-3">
                                         <h2 class="text-primary mb-1" data-toggle="counter-up">500</h2>
@@ -939,7 +939,7 @@
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white"
                                         style="width: 60px; height: 60px;">
-                                        <i class="fa fa-check fa-2x text-primary"></i>
+                                        <i class="fa-solid fa-check fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-3">
                                         <h2 class="text-primary mb-1" data-toggle="counter-up">750</h2>
@@ -1063,72 +1063,72 @@
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="svc-card">
                         <div class="svc-icon-wrap">
-                            <i class="fa fa-hammer"></i>
+                            <i class="fa-solid fa-hammer"></i>
                         </div>
                         <h4>General Carpentry</h4>
                         <div class="svc-card-body">
                             <p>From structural framing to fine trim work — professional execution with premium materials and reliable timelines.</p>
-                            <a href="{{ route('services') }}" class="svc-link">Learn More <i class="fa fa-arrow-right"></i></a>
+                            <a href="{{ route('services') }}" class="svc-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="svc-card">
                         <div class="svc-icon-wrap">
-                            <i class="fa fa-couch"></i>
+                            <i class="fa-solid fa-couch"></i>
                         </div>
                         <h4>Furniture Manufacturing</h4>
                         <div class="svc-card-body">
                             <p>Bespoke furniture crafted to your exact specifications — from concept sketches to showroom-quality pieces.</p>
-                            <a href="{{ route('services') }}" class="svc-link">Learn More <i class="fa fa-arrow-right"></i></a>
+                            <a href="{{ route('services') }}" class="svc-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="svc-card">
                         <div class="svc-icon-wrap">
-                            <i class="fa fa-sync-alt"></i>
+                            <i class="fa-solid fa-sync-alt"></i>
                         </div>
                         <h4>Furniture Remodeling</h4>
                         <div class="svc-card-body">
                             <p>Breathe new life into existing pieces. We restore, refinish, and reimagine furniture to match your evolving style.</p>
-                            <a href="{{ route('services') }}" class="svc-link">Learn More <i class="fa fa-arrow-right"></i></a>
+                            <a href="{{ route('services') }}" class="svc-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="svc-card">
                         <div class="svc-icon-wrap">
-                            <i class="fa fa-th-large"></i>
+                            <i class="fa-solid fa-th-large"></i>
                         </div>
                         <h4>Wooden Flooring</h4>
                         <div class="svc-card-body">
                             <p>Hardwood, engineered, and parquet flooring — installed with precision for warmth and elegance underfoot.</p>
-                            <a href="{{ route('services') }}" class="svc-link">Learn More <i class="fa fa-arrow-right"></i></a>
+                            <a href="{{ route('services') }}" class="svc-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="svc-card">
                         <div class="svc-icon-wrap">
-                            <i class="fa fa-chair"></i>
+                            <i class="fa-solid fa-chair"></i>
                         </div>
                         <h4>Wooden Furniture</h4>
                         <div class="svc-card-body">
                             <p>Tables, cabinets, wardrobes, and shelving — handcrafted from select timber with meticulous joinery.</p>
-                            <a href="{{ route('services') }}" class="svc-link">Learn More <i class="fa fa-arrow-right"></i></a>
+                            <a href="{{ route('services') }}" class="svc-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="svc-card">
                         <div class="svc-icon-wrap">
-                            <i class="fa fa-pencil-ruler"></i>
+                            <i class="fa-solid fa-pencil-ruler"></i>
                         </div>
                         <h4>Custom Work</h4>
                         <div class="svc-card-body">
                             <p>Unique projects that defy categories — decorative carving, built-ins, and one-of-a-kind commissioned pieces.</p>
-                            <a href="{{ route('services') }}" class="svc-link">Learn More <i class="fa fa-arrow-right"></i></a>
+                            <a href="{{ route('services') }}" class="svc-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1153,7 +1153,7 @@
                         <div class="process-step" data-step="1">
                             <div class="process-icon">
                                 <div class="process-icon-inner">
-                                    <i class="fa fa-comments fa-2x"></i>
+                                    <i class="fa-solid fa-comments fa-2x"></i>
                                 </div>
                                 <svg class="process-ring" viewBox="0 0 100 100">
                                     <circle cx="50" cy="50" r="46" />
@@ -1167,7 +1167,7 @@
                         <div class="process-step" data-step="2">
                             <div class="process-icon">
                                 <div class="process-icon-inner">
-                                    <i class="fa fa-drafting-compass fa-2x"></i>
+                                    <i class="fa-solid fa-drafting-compass fa-2x"></i>
                                 </div>
                                 <svg class="process-ring" viewBox="0 0 100 100">
                                     <circle cx="50" cy="50" r="46" />
@@ -1181,7 +1181,7 @@
                         <div class="process-step" data-step="3">
                             <div class="process-icon">
                                 <div class="process-icon-inner">
-                                    <i class="fa fa-hammer fa-2x"></i>
+                                    <i class="fa-solid fa-hammer fa-2x"></i>
                                 </div>
                                 <svg class="process-ring" viewBox="0 0 100 100">
                                     <circle cx="50" cy="50" r="46" />
@@ -1195,7 +1195,7 @@
                         <div class="process-step" data-step="4">
                             <div class="process-icon">
                                 <div class="process-icon-inner">
-                                    <i class="fa fa-tools fa-2x"></i>
+                                    <i class="fa-solid fa-tools fa-2x"></i>
                                 </div>
                                 <svg class="process-ring" viewBox="0 0 100 100">
                                     <circle cx="50" cy="50" r="46" />
@@ -1209,7 +1209,7 @@
                         <div class="process-step" data-step="5">
                             <div class="process-icon">
                                 <div class="process-icon-inner">
-                                    <i class="fa fa-search fa-2x"></i>
+                                    <i class="fa-solid fa-search fa-2x"></i>
                                 </div>
                                 <svg class="process-ring" viewBox="0 0 100 100">
                                     <circle cx="50" cy="50" r="46" />
@@ -1223,7 +1223,7 @@
                         <div class="process-step" data-step="6">
                             <div class="process-icon">
                                 <div class="process-icon-inner">
-                                    <i class="fa fa-handshake fa-2x"></i>
+                                    <i class="fa-solid fa-handshake fa-2x"></i>
                                 </div>
                                 <svg class="process-ring" viewBox="0 0 100 100">
                                     <circle cx="50" cy="50" r="46" />
@@ -1264,7 +1264,7 @@
                         <div class="ba-handle" id="baHandle">
                             <div class="ba-handle-line"></div>
                             <div class="ba-handle-circle">
-                                <i class="fa fa-arrows-alt-h"></i>
+                                <i class="fa-solid fa-arrows-alt-h"></i>
                             </div>
                             <div class="ba-handle-line"></div>
                         </div>
@@ -1272,21 +1272,21 @@
                     <div class="row mt-4 g-3">
                         <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
                             <div class="ba-stat-card text-center p-3">
-                                <i class="fa fa-home fa-2x text-primary mb-2"></i>
+                                <i class="fa-solid fa-home fa-2x text-primary mb-2"></i>
                                 <h5 class="mb-1">Complete Renovation</h5>
                                 <small class="text-muted">Interior + Furniture</small>
                             </div>
                         </div>
                         <div class="col-md-4 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="ba-stat-card text-center p-3">
-                                <i class="fa fa-calendar-check fa-2x text-primary mb-2"></i>
+                                <i class="fa-solid fa-calendar-check fa-2x text-primary mb-2"></i>
                                 <h5 class="mb-1">45 Days</h5>
                                 <small class="text-muted">Project Duration</small>
                             </div>
                         </div>
                         <div class="col-md-4 wow fadeInUp" data-wow-delay="0.5s">
                             <div class="ba-stat-card text-center p-3">
-                                <i class="fa fa-star fa-2x text-primary mb-2"></i>
+                                <i class="fa-solid fa-star fa-2x text-primary mb-2"></i>
                                 <h5 class="mb-1">100% Satisfied</h5>
                                 <small class="text-muted">Client Approved</small>
                             </div>
@@ -1351,16 +1351,16 @@
                         <label class="rd-label">Add Furniture</label>
                         <div class="rd-furniture-grid">
                             <button onclick="rdAddFurniture('sofa')" title="Add Sofa">
-                                <i class="fa fa-couch"></i><span>Sofa</span>
+                                <i class="fa-solid fa-couch"></i><span>Sofa</span>
                             </button>
                             <button onclick="rdAddFurniture('table')" title="Add Table">
-                                <i class="fa fa-border-all"></i><span>Table</span>
+                                <i class="fa-solid fa-border-all"></i><span>Table</span>
                             </button>
                             <button onclick="rdAddFurniture('chair')" title="Add Chair">
-                                <i class="fa fa-chair"></i><span>Chair</span>
+                                <i class="fa-solid fa-chair"></i><span>Chair</span>
                             </button>
                             <button onclick="rdAddFurniture('cabinet')" title="Add Cabinet">
-                                <i class="fa fa-th-large"></i><span>Cabinet</span>
+                                <i class="fa-solid fa-th-large"></i><span>Cabinet</span>
                             </button>
                         </div>
                     </div>
@@ -1371,11 +1371,11 @@
                             <span id="rdSelectedInfo">None</span>
                             <button id="rdRotateBtn" class="rd-icon-btn" style="display:none"
                                 onclick="rdRotateSelected()" title="Rotate 45°">
-                                <i class="fa fa-redo-alt"></i>
+                                <i class="fa-solid fa-redo-alt"></i>
                             </button>
                             <button id="rdDeleteBtn" class="rd-icon-btn rd-danger" style="display:none"
                                 onclick="rdDeleteSelected()" title="Remove">
-                                <i class="fa fa-trash-alt"></i>
+                                <i class="fa-solid fa-trash-alt"></i>
                             </button>
                         </div>
                         <div id="rdFurnitureList"></div>
@@ -1385,19 +1385,19 @@
                         <label class="rd-label">Lighting</label>
                         <div class="rd-lighting-row">
                             <button id="rdLightBtn" class="rd-toggle-btn active" onclick="rdToggleLights()">
-                                <i class="fa fa-lightbulb"></i> Lights
+                                <i class="fa-solid fa-lightbulb"></i> Lights
                             </button>
                             <button id="rdDayBtn" class="rd-toggle-btn active" onclick="rdSetDayMode(true)">
-                                <i class="fa fa-sun"></i>
+                                <i class="fa-solid fa-sun"></i>
                             </button>
                             <button id="rdNightBtn" class="rd-toggle-btn" onclick="rdSetDayMode(false)">
-                                <i class="fa fa-moon"></i>
+                                <i class="fa-solid fa-moon"></i>
                             </button>
                         </div>
                     </div>
 
                     <div class="rd-hint">
-                        <small><i class="fa fa-mouse-pointer"></i> Drag to orbit &bull; Scroll to zoom &bull; Click
+                        <small><i class="fa-solid fa-mouse-pointer"></i> Drag to orbit &bull; Scroll to zoom &bull; Click
                             furniture to select &bull; Drag to move</small>
                     </div>
                 </div>
@@ -1424,7 +1424,7 @@
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white"
                                         style="width: 60px; height: 60px;">
-                                        <i class="fa fa-check fa-2x text-primary"></i>
+                                        <i class="fa-solid fa-check fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-4">
                                         <p class="mb-2">Quality</p>
@@ -1436,7 +1436,7 @@
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white"
                                         style="width: 60px; height: 60px;">
-                                        <i class="fa fa-user-check fa-2x text-primary"></i>
+                                        <i class="fa-solid fa-user-check fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-4">
                                         <p class="mb-2">Creative</p>
@@ -1448,7 +1448,7 @@
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white"
                                         style="width: 60px; height: 60px;">
-                                        <i class="fa fa-drafting-compass fa-2x text-primary"></i>
+                                        <i class="fa-solid fa-drafting-compass fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-4">
                                         <p class="mb-2">Free</p>
@@ -1460,7 +1460,7 @@
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white"
                                         style="width: 60px; height: 60px;">
-                                        <i class="fa fa-headphones fa-2x text-primary"></i>
+                                        <i class="fa-solid fa-headphones fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-4">
                                         <p class="mb-2">Customer</p>
@@ -1516,9 +1516,9 @@
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1"
                                     href="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80&auto=format"
-                                    data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                    data-lightbox="portfolio"><i class="fa-solid fa-eye"></i></a>
                                 <a class="btn btn-square btn-outline-light mx-1" href=""><i
-                                        class="fa fa-link"></i></a>
+                                        class="fa-solid fa-link"></i></a>
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
@@ -1537,9 +1537,9 @@
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1"
                                     href="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80&auto=format"
-                                    data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                    data-lightbox="portfolio"><i class="fa-solid fa-eye"></i></a>
                                 <a class="btn btn-square btn-outline-light mx-1" href=""><i
-                                        class="fa fa-link"></i></a>
+                                        class="fa-solid fa-link"></i></a>
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
@@ -1558,9 +1558,9 @@
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1"
                                     href="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80&auto=format"
-                                    data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                    data-lightbox="portfolio"><i class="fa-solid fa-eye"></i></a>
                                 <a class="btn btn-square btn-outline-light mx-1" href=""><i
-                                        class="fa fa-link"></i></a>
+                                        class="fa-solid fa-link"></i></a>
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
@@ -1579,9 +1579,9 @@
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1"
                                     href="https://images.unsplash.com/photo-1600121848594-d8644e57abab?w=800&q=80&auto=format"
-                                    data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                    data-lightbox="portfolio"><i class="fa-solid fa-eye"></i></a>
                                 <a class="btn btn-square btn-outline-light mx-1" href=""><i
-                                        class="fa fa-link"></i></a>
+                                        class="fa-solid fa-link"></i></a>
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
@@ -1600,9 +1600,9 @@
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1"
                                     href="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80&auto=format"
-                                    data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                    data-lightbox="portfolio"><i class="fa-solid fa-eye"></i></a>
                                 <a class="btn btn-square btn-outline-light mx-1" href=""><i
-                                        class="fa fa-link"></i></a>
+                                        class="fa-solid fa-link"></i></a>
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
@@ -1621,9 +1621,9 @@
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1"
                                     href="https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=800&q=80&auto=format"
-                                    data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                    data-lightbox="portfolio"><i class="fa-solid fa-eye"></i></a>
                                 <a class="btn btn-square btn-outline-light mx-1" href=""><i
-                                        class="fa fa-link"></i></a>
+                                        class="fa-solid fa-link"></i></a>
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
@@ -1709,9 +1709,9 @@
                                 src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80&auto=format"
                                 alt="Team Member">
                             <div class="team-social">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square" href=""><i class="fa-brands fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href=""><i class="fa-brands fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fa-brands fa-instagram"></i></a>
                             </div>
                         </div>
                         <div class="text-center border border-5 border-light border-top-0 p-4">
@@ -1727,9 +1727,9 @@
                                 src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80&auto=format"
                                 alt="Team Member">
                             <div class="team-social">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square" href=""><i class="fa-brands fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href=""><i class="fa-brands fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fa-brands fa-instagram"></i></a>
                             </div>
                         </div>
                         <div class="text-center border border-5 border-light border-top-0 p-4">
@@ -1745,9 +1745,9 @@
                                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80&auto=format"
                                 alt="Team Member">
                             <div class="team-social">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square" href=""><i class="fa-brands fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href=""><i class="fa-brands fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fa-brands fa-instagram"></i></a>
                             </div>
                         </div>
                         <div class="text-center border border-5 border-light border-top-0 p-4">
@@ -1763,9 +1763,9 @@
                                 src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80&auto=format"
                                 alt="Team Member">
                             <div class="team-social">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square" href=""><i class="fa-brands fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href=""><i class="fa-brands fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fa-brands fa-instagram"></i></a>
                             </div>
                         </div>
                         <div class="text-center border border-5 border-light border-top-0 p-4">

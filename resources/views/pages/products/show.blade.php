@@ -73,7 +73,7 @@
 <div class="container-fluid product-detail-page py-5">
     <div class="container py-3">
         <div class="mb-4">
-            <a href="{{ route('products') }}" class="btn btn-outline-primary"><i class="fa fa-arrow-left me-2"></i>Back to Products</a>
+            <a href="{{ route('products') }}" class="btn btn-outline-primary"><i class="fa-solid fa-arrow-left me-2"></i>Back to Products</a>
         </div>
 
         <div class="row g-4 g-xl-5 align-items-start">

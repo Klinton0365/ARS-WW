@@ -279,15 +279,12 @@ body {
 }
 .container-fluid.bg-light.p-0 .btn-sm-square {
     border-radius: 8px;
-    border: 1px solid var(--line);
-    background: #fff !important;
+    border: none;
     transition: all 0.3s var(--ease);
 }
 .container-fluid.bg-light.p-0 .btn-sm-square:hover {
-    background: var(--primary) !important;
-    border-color: var(--primary);
-    color: #fff !important;
-    transform: translateY(-1px);
+    opacity: 0.8;
+    transform: translateY(-2px);
 }
 
 
@@ -943,15 +940,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--light);
-    border: 1px solid rgba(255,255,255,0.2);
+    border: none;
     border-radius: 50%;
     transition: all 0.3s var(--ease);
 }
 .footer .btn.btn-social:hover {
-    background: var(--primary);
-    border-color: var(--primary);
-    color: #fff;
+    opacity: 0.8;
+    transform: translateY(-2px);
     transform: translateY(-2px);
 }
 

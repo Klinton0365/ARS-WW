@@ -25,7 +25,7 @@
                     <div class="d-flex align-items-center justify-content-between mb-2">
                         <div class="d-flex align-items-center justify-content-center bg-light"
                             style="width: 60px; height: 60px;">
-                            <i class="fa fa-user-check fa-2x text-primary"></i>
+                            <i class="fa-solid fa-user-check fa-2x text-primary"></i>
                         </div>
                         <h1 class="display-1 text-light mb-0">01</h1>
                     </div>
@@ -35,7 +35,7 @@
                     <div class="d-flex align-items-center justify-content-between mb-2">
                         <div class="d-flex align-items-center justify-content-center bg-light"
                             style="width: 60px; height: 60px;">
-                            <i class="fa fa-check fa-2x text-primary"></i>
+                            <i class="fa-solid fa-check fa-2x text-primary"></i>
                         </div>
                         <h1 class="display-1 text-light mb-0">02</h1>
                     </div>
@@ -45,7 +45,7 @@
                     <div class="d-flex align-items-center justify-content-between mb-2">
                         <div class="d-flex align-items-center justify-content-center bg-light"
                             style="width: 60px; height: 60px;">
-                            <i class="fa fa-drafting-compass fa-2x text-primary"></i>
+                            <i class="fa-solid fa-drafting-compass fa-2x text-primary"></i>
                         </div>
                         <h1 class="display-1 text-light mb-0">03</h1>
                     </div>
@@ -55,7 +55,7 @@
                     <div class="d-flex align-items-center justify-content-between mb-2">
                         <div class="d-flex align-items-center justify-content-center bg-light"
                             style="width: 60px; height: 60px;">
-                            <i class="fa fa-headphones fa-2x text-primary"></i>
+                            <i class="fa-solid fa-headphones fa-2x text-primary"></i>
                         </div>
                         <h1 class="display-1 text-light mb-0">04</h1>
                     </div>
@@ -90,7 +90,7 @@
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white"
                                         style="width: 60px; height: 60px;">
-                                        <i class="fa fa-users fa-2x text-primary"></i>
+                                        <i class="fa-solid fa-users fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-3">
                                         <h2 class="text-primary mb-1" data-toggle="counter-up">1234</h2>
@@ -102,7 +102,7 @@
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white"
                                         style="width: 60px; height: 60px;">
-                                        <i class="fa fa-check fa-2x text-primary"></i>
+                                        <i class="fa-solid fa-check fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-3">
                                         <h2 class="text-primary mb-1" data-toggle="counter-up">1234</h2>
@@ -132,9 +132,9 @@
                         <div class="overflow-hidden position-relative">
                             <img class="img-fluid" src="img/team-1.jpg" alt="">
                             <div class="team-social">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square" href=""><i class="fa-brands fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href=""><i class="fa-brands fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fa-brands fa-instagram"></i></a>
                             </div>
                         </div>
                         <div class="text-center border border-5 border-light border-top-0 p-4">
@@ -148,9 +148,9 @@
                         <div class="overflow-hidden position-relative">
                             <img class="img-fluid" src="img/team-2.jpg" alt="">
                             <div class="team-social">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square" href=""><i class="fa-brands fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href=""><i class="fa-brands fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fa-brands fa-instagram"></i></a>
                             </div>
                         </div>
                         <div class="text-center border border-5 border-light border-top-0 p-4">
@@ -164,9 +164,9 @@
                         <div class="overflow-hidden position-relative">
                             <img class="img-fluid" src="img/team-3.jpg" alt="">
                             <div class="team-social">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square" href=""><i class="fa-brands fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href=""><i class="fa-brands fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fa-brands fa-instagram"></i></a>
                             </div>
                         </div>
                         <div class="text-center border border-5 border-light border-top-0 p-4">
@@ -180,9 +180,9 @@
                         <div class="overflow-hidden position-relative">
                             <img class="img-fluid" src="img/team-4.jpg" alt="">
                             <div class="team-social">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square" href=""><i class="fa-brands fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href=""><i class="fa-brands fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fa-brands fa-instagram"></i></a>
                             </div>
                         </div>
                         <div class="text-center border border-5 border-light border-top-0 p-4">
