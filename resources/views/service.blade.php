@@ -20,8 +20,8 @@
 
     <!-- Service Start -->
     <style>
-        .svc-section { background: #faf8f5; }
-        .svc-subtitle { color: #C89B6D; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; font-size: 0.85rem; }
+        .svc-section { background: #F5F8FC; }
+        .svc-subtitle { color: #1E5FAE; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; font-size: 0.85rem; }
         .svc-card {
             position: relative;
             background: #fff;
@@ -31,7 +31,7 @@
             cursor: pointer;
             overflow: hidden;
             transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            border: 1px solid rgba(200,155,109,0.12);
+            border: 1px solid rgba(30,95,174,0.12);
             height: 100%;
         }
         .svc-card::before {
@@ -41,21 +41,21 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, #C89B6D, #a07a4e);
+            background: linear-gradient(90deg, #1E5FAE, #14437A);
             transform: scaleX(0);
             transition: transform 0.4s ease;
         }
         .svc-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 60px rgba(200,155,109,0.15);
-            border-color: rgba(200,155,109,0.3);
+            box-shadow: 0 20px 60px rgba(30,95,174,0.15);
+            border-color: rgba(30,95,174,0.3);
         }
         .svc-card:hover::before { transform: scaleX(1); }
         .svc-icon-wrap {
             width: 80px;
             height: 80px;
             border-radius: 50%;
-            background: linear-gradient(135deg, rgba(200,155,109,0.1), rgba(200,155,109,0.05));
+            background: linear-gradient(135deg, rgba(30,95,174,0.1), rgba(30,95,174,0.05));
             display: flex;
             align-items: center;
             justify-content: center;
@@ -63,12 +63,12 @@
             transition: all 0.4s ease;
         }
         .svc-card:hover .svc-icon-wrap {
-            background: linear-gradient(135deg, #C89B6D, #a07a4e);
+            background: linear-gradient(135deg, #1E5FAE, #14437A);
             transform: scale(1.1);
         }
         .svc-icon-wrap i {
             font-size: 32px;
-            color: #C89B6D;
+            color: #1E5FAE;
             transition: color 0.4s ease;
         }
         .svc-card:hover .svc-icon-wrap i { color: #fff; }
@@ -76,7 +76,7 @@
             font-family: 'Manrope', sans-serif;
             font-weight: 700;
             font-size: 1.15rem;
-            color: #1E1E1E;
+            color: #1A2332;
             margin-bottom: 0;
             transition: margin 0.4s ease;
         }
@@ -103,11 +103,11 @@
             gap: 6px;
             font-weight: 600;
             font-size: 0.85rem;
-            color: #C89B6D;
+            color: #1E5FAE;
             text-decoration: none;
             transition: gap 0.3s ease;
         }
-        .svc-link:hover { gap: 10px; color: #a07a4e; }
+        .svc-link:hover { gap: 10px; color: #14437A; }
         @media (max-width: 767px) {
             .svc-card { padding: 30px 20px; }
             .svc-icon-wrap { width: 64px; height: 64px; }
@@ -118,7 +118,7 @@
         <div class="container">
             <div class="text-center mb-5">
                 <p class="svc-subtitle wow fadeInUp">What We Do</p>
-                <h1 class="display-5 fw-bold wow fadeInUp" data-wow-delay="0.1s" style="color:#1E1E1E;">Our Services</h1>
+                <h1 class="display-5 fw-bold wow fadeInUp" data-wow-delay="0.1s" style="color:#1A2332;">Our Services</h1>
             </div>
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
@@ -254,7 +254,7 @@
         .gr-section { background: #fff; }
         .gr-header { display: flex; align-items: center; gap: 14px; justify-content: center; margin-bottom: 10px; }
         .gr-google-icon { width: 36px; height: 36px; }
-        .gr-rating-big { font-size: 2.8rem; font-weight: 700; color: #1E1E1E; line-height: 1; }
+        .gr-rating-big { font-size: 2.8rem; font-weight: 700; color: #1A2332; line-height: 1; }
         .gr-stars { color: #FBBC04; font-size: 1.1rem; letter-spacing: 2px; }
         .gr-stars-sm { color: #FBBC04; font-size: 0.85rem; letter-spacing: 1px; }
         .gr-meta { color: #70757a; font-size: 0.85rem; }
@@ -282,7 +282,7 @@
             color: #fff;
             flex-shrink: 0;
         }
-        .gr-name { font-weight: 600; font-size: 0.95rem; color: #1E1E1E; }
+        .gr-name { font-weight: 600; font-size: 0.95rem; color: #1A2332; }
         .gr-time { font-size: 0.78rem; color: #70757a; }
         .gr-tag {
             display: inline-block;
@@ -358,7 +358,7 @@
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="gr-card">
                         <div class="d-flex align-items-center gap-3 mb-2">
-                            <div class="gr-avatar" style="background:#FBBC04; color:#1E1E1E;">S</div>
+                            <div class="gr-avatar" style="background:#FBBC04; color:#1A2332;">S</div>
                             <div>
                                 <div class="gr-name">Senthil Kumar</div>
                                 <div class="gr-time">2 months ago</div>
