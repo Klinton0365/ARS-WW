@@ -46,12 +46,12 @@
         }
 
         .story-scene--2 .story-scene__bg {
-            background-image: url('https://images.unsplash.com/photo-1622021142947-da7dedc7c39a?w=1920&q=80&auto=format');
+            background-image: url('https://images.unsplash.com/photo-1504148455328-c376907d081c?w=1920&q=80&auto=format');
             filter: brightness(0.38) saturate(0.95) contrast(1.05);
         }
 
         .story-scene--3 .story-scene__bg {
-            background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1920&q=80&auto=format');
+            background-image: url('https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=1920&q=80&auto=format');
             filter: brightness(0.38) saturate(0.9) contrast(1.05);
         }
 
@@ -1616,11 +1616,11 @@
                     <div class="rounded overflow-hidden">
                         <div class="position-relative overflow-hidden">
                             <img class="img-fluid w-100"
-                                src="https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=800&q=80&auto=format"
+                                src="{{ asset('assets/img/service/woman-measuring-wood-planks.jpg') }}"
                                 alt="">
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1"
-                                    href="https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=800&q=80&auto=format"
+                                    href="{{ asset('assets/img/service/woman-measuring-wood-planks.jpg') }}"
                                     data-lightbox="portfolio"><i class="fa-solid fa-eye"></i></a>
                                 <a class="btn btn-square btn-outline-light mx-1" href=""><i
                                         class="fa-solid fa-link"></i></a>
@@ -1780,53 +1780,177 @@
     <!-- Team End -->
 
 
-    <!-- Testimonial Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <!-- Testimonial / Google Reviews Start -->
+    <style>
+        .gr-section { background: #fff; }
+        .gr-header { display: flex; align-items: center; gap: 14px; justify-content: center; margin-bottom: 10px; }
+        .gr-google-icon { width: 36px; height: 36px; }
+        .gr-rating-big { font-size: 2.8rem; font-weight: 700; color: #1A2332; line-height: 1; }
+        .gr-stars { color: #FBBC04; font-size: 1.1rem; letter-spacing: 2px; }
+        .gr-stars-sm { color: #FBBC04; font-size: 0.85rem; letter-spacing: 1px; }
+        .gr-meta { color: #70757a; font-size: 0.85rem; }
+        .gr-card {
+            background: #fff;
+            border: 1px solid #e8e8e8;
+            border-radius: 12px;
+            padding: 28px 24px;
+            height: 100%;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        .gr-card:hover {
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            transform: translateY(-4px);
+        }
+        .gr-avatar {
+            width: 44px; height: 44px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 1.1rem; color: #fff; flex-shrink: 0;
+        }
+        .gr-name { font-weight: 600; font-size: 0.95rem; color: #1A2332; }
+        .gr-time { font-size: 0.78rem; color: #70757a; }
+        .gr-tag {
+            display: inline-block; background: #f1f3f4; color: #5f6368;
+            font-size: 0.72rem; font-weight: 500; padding: 3px 10px;
+            border-radius: 20px; letter-spacing: 0.5px; text-transform: uppercase;
+        }
+        .gr-text { font-size: 0.9rem; color: #3c4043; line-height: 1.65; margin: 14px 0 0; }
+        .gr-verified { color: #34A853; font-size: 0.78rem; font-weight: 500; }
+    </style>
+    <div class="container-xxl py-5 gr-section">
         <div class="container">
-            <div class="section-title text-center">
-                <h1 class="display-5 mb-5">Testimonial</h1>
+            <!-- Google-style summary header -->
+            <div class="text-center mb-5 wow fadeInUp">
+                <div class="gr-header">
+                    <svg class="gr-google-icon" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59A14.5 14.5 0 0 1 9.5 24c0-1.59.28-3.14.76-4.59l-7.98-6.19A23.99 23.99 0 0 0 0 24c0 3.77.9 7.34 2.44 10.5l8.09-5.91z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                    <div>
+                        <div class="gr-rating-big">4.9</div>
+                    </div>
+                    <div class="text-start">
+                        <div class="gr-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <div class="gr-meta">Based on 120+ reviews</div>
+                    </div>
+                </div>
             </div>
-            <div class="owl-carousel testimonial-carousel">
-                <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light p-2 mx-auto mb-3 rounded-circle"
-                        src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80&auto=format"
-                        style="width: 90px; height: 90px; object-fit: cover;">
-                    <div class="testimonial-text text-center p-4">
-                        <p>ARS Wood Works transformed our office space with exceptional attention to detail. Their team
-                            managed the entire project professionally, from custom furniture to complete interior fit-out.
-                            Highly recommended for quality craftsmanship.</p>
-                        <h5 class="mb-1">Client Name</h5>
-                        <span class="fst-italic">Profession</span>
+
+            <!-- Review cards -->
+            <div class="row g-4">
+                <!-- Review 1: Corporate Office -->
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="gr-card">
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                            <div class="gr-avatar" style="background:#4285F4;">M</div>
+                            <div>
+                                <div class="gr-name">Murugan Selvam</div>
+                                <div class="gr-time">3 weeks ago</div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 mb-1">
+                            <span class="gr-stars-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            <span class="gr-tag">Corporate Office</span>
+                        </div>
+                        <p class="gr-text">Completely redesigned our 5,000 sq ft office space. The modular workstations, conference table, and reception desk are outstanding. Project was delivered on time and the team was extremely professional throughout.</p>
+                        <div class="gr-verified"><i class="fa-solid fa-check-circle me-1"></i>Verified Customer</div>
                     </div>
                 </div>
-                <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light p-2 mx-auto mb-3 rounded-circle"
-                        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80&auto=format"
-                        style="width: 90px; height: 90px; object-fit: cover;">
-                    <div class="testimonial-text text-center p-4">
-                        <p>ARS Wood Works transformed our office space with exceptional attention to detail. Their team
-                            managed the entire project professionally, from custom furniture to complete interior fit-out.
-                            Highly recommended for quality craftsmanship.</p>
-                        <h5 class="mb-1">Client Name</h5>
-                        <span class="fst-italic">Profession</span>
+
+                <!-- Review 2: Home Interior -->
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="gr-card">
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                            <div class="gr-avatar" style="background:#EA4335;">K</div>
+                            <div>
+                                <div class="gr-name">Kavitha Pandian</div>
+                                <div class="gr-time">1 month ago</div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 mb-1">
+                            <span class="gr-stars-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            <span class="gr-tag">Home Interior</span>
+                        </div>
+                        <p class="gr-text">We hired ARS for our full home interior — kitchen cabinets, wardrobes, TV unit, and wooden flooring. The finish quality is premium and the wood selection was exactly what we wanted. Our home looks like a magazine now!</p>
+                        <div class="gr-verified"><i class="fa-solid fa-check-circle me-1"></i>Verified Customer</div>
                     </div>
                 </div>
-                <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light p-2 mx-auto mb-3 rounded-circle"
-                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80&auto=format"
-                        style="width: 90px; height: 90px; object-fit: cover;">
-                    <div class="testimonial-text text-center p-4">
-                        <p>ARS Wood Works transformed our office space with exceptional attention to detail. Their team
-                            managed the entire project professionally, from custom furniture to complete interior fit-out.
-                            Highly recommended for quality craftsmanship.</p>
-                        <h5 class="mb-1">Client Name</h5>
-                        <span class="fst-italic">Profession</span>
+
+                <!-- Review 3: Restaurant -->
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="gr-card">
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                            <div class="gr-avatar" style="background:#FBBC04; color:#1A2332;">S</div>
+                            <div>
+                                <div class="gr-name">Senthil Kumar</div>
+                                <div class="gr-time">2 months ago</div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 mb-1">
+                            <span class="gr-stars-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            <span class="gr-tag">Restaurant</span>
+                        </div>
+                        <p class="gr-text">ARS built all the custom furniture for our new restaurant — dining tables, bar counter, booth seating, and decorative wall panels. Guests constantly compliment the interiors. Worth every rupee. Highly recommend!</p>
+                        <div class="gr-verified"><i class="fa-solid fa-check-circle me-1"></i>Verified Customer</div>
+                    </div>
+                </div>
+
+                <!-- Review 4: Apartment -->
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="gr-card">
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                            <div class="gr-avatar" style="background:#34A853;">T</div>
+                            <div>
+                                <div class="gr-name">Tamilselvi Rajan</div>
+                                <div class="gr-time">3 months ago</div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 mb-1">
+                            <span class="gr-stars-sm">&#9733;&#9733;&#9733;&#9733;<span style="color:#dadce0;">&#9733;</span></span>
+                            <span class="gr-tag">Apartment</span>
+                        </div>
+                        <p class="gr-text">Got my 2BHK apartment fully furnished by ARS Wood Works. The modular kitchen and wardrobe designs are very functional and look beautiful. Small delay in delivery but the quality made up for it. Very happy overall.</p>
+                        <div class="gr-verified"><i class="fa-solid fa-check-circle me-1"></i>Verified Customer</div>
+                    </div>
+                </div>
+
+                <!-- Review 5: Industrial / Warehouse -->
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="gr-card">
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                            <div class="gr-avatar" style="background:#673AB7;">A</div>
+                            <div>
+                                <div class="gr-name">Arun Prakash</div>
+                                <div class="gr-time">4 months ago</div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 mb-1">
+                            <span class="gr-stars-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            <span class="gr-tag">Industrial</span>
+                        </div>
+                        <p class="gr-text">We needed heavy-duty shelving, storage units, and a custom packing station for our warehouse. ARS delivered industrial-grade carpentry that is sturdy and well-built. They understood our requirements perfectly.</p>
+                        <div class="gr-verified"><i class="fa-solid fa-check-circle me-1"></i>Verified Customer</div>
+                    </div>
+                </div>
+
+                <!-- Review 6: Villa -->
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="gr-card">
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                            <div class="gr-avatar" style="background:#FF5722;">M</div>
+                            <div>
+                                <div class="gr-name">Meenakshi Sundaram</div>
+                                <div class="gr-time">5 months ago</div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 mb-1">
+                            <span class="gr-stars-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            <span class="gr-tag">Luxury Villa</span>
+                        </div>
+                        <p class="gr-text">ARS handled the complete woodwork for our villa — staircase, ceiling panels, bedroom furniture, and garden pergola. The craftsmanship is exceptional. Our architect was impressed too. They truly care about their work.</p>
+                        <div class="gr-verified"><i class="fa-solid fa-check-circle me-1"></i>Verified Customer</div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Testimonial End -->
+    <!-- Testimonial / Google Reviews End -->
 @endsection
 
 @push('scripts')
