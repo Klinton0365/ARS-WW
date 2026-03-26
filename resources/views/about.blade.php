@@ -120,79 +120,143 @@
     <!-- About End -->
 
 
-    <!-- Team Start -->
+    <!-- Expert Service Teams Start -->
+    <style>
+        .svc-team-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            transition: all 0.4s ease;
+            height: 100%;
+        }
+        .svc-team-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(30,95,174,0.12);
+            border-color: var(--primary);
+        }
+        .svc-team-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            margin: 0 auto 16px;
+            transition: all 0.4s ease;
+        }
+        .svc-team-card:hover .svc-team-icon {
+            transform: scale(1.1);
+        }
+        .svc-team-count {
+            display: inline-block;
+            background: var(--accent-soft);
+            color: var(--primary);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 3px 12px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+        }
+        .svc-team-list {
+            list-style: none;
+            padding: 0;
+            margin: 16px 0 0;
+        }
+        .svc-team-list li {
+            padding: 6px 0;
+            font-size: 0.88rem;
+            color: var(--muted);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .svc-team-list li i {
+            color: var(--primary);
+            font-size: 0.7rem;
+        }
+    </style>
     <div class="container-xxl py-5">
         <div class="container">
             <div class="section-title text-center">
-                <h1 class="display-5 mb-5">Team Members</h1>
+                <h1 class="display-5 mb-2">Our Expert Teams</h1>
+                <p class="text-muted mx-auto mb-5" style="max-width:600px;">Dedicated specialist teams for every stage of your project — from design to final handover.</p>
             </div>
             <div class="row g-4">
+                <!-- Design & Consultation -->
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item">
-                        <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="img/team-1.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-square" href=""><i class="fa-brands fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fa-brands fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fa-brands fa-instagram"></i></a>
-                            </div>
+                    <div class="svc-team-card text-center p-4">
+                        <div class="svc-team-icon" style="background:rgba(30,95,174,0.1); color:#1E5FAE;">
+                            <i class="fa-solid fa-compass-drafting"></i>
                         </div>
-                        <div class="text-center border border-5 border-light border-top-0 p-4">
-                            <h5 class="mb-0">Full Name</h5>
-                            <small>Designation</small>
-                        </div>
+                        <span class="svc-team-count">8 Experts</span>
+                        <h5 class="mb-1">Design & Consultation</h5>
+                        <small class="text-muted d-block mb-2">Planning your vision</small>
+                        <ul class="svc-team-list text-start">
+                            <li><i class="fa-solid fa-check"></i> Space measurement & analysis</li>
+                            <li><i class="fa-solid fa-check"></i> 3D design visualization</li>
+                            <li><i class="fa-solid fa-check"></i> Material consultation</li>
+                            <li><i class="fa-solid fa-check"></i> Budget planning</li>
+                        </ul>
                     </div>
                 </div>
+
+                <!-- Carpentry & Fabrication -->
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item">
-                        <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="img/team-2.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-square" href=""><i class="fa-brands fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fa-brands fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fa-brands fa-instagram"></i></a>
-                            </div>
+                    <div class="svc-team-card text-center p-4">
+                        <div class="svc-team-icon" style="background:rgba(0,188,212,0.1); color:#00BCD4;">
+                            <i class="fa-solid fa-hammer"></i>
                         </div>
-                        <div class="text-center border border-5 border-light border-top-0 p-4">
-                            <h5 class="mb-0">Full Name</h5>
-                            <small>Designation</small>
-                        </div>
+                        <span class="svc-team-count">15 Craftsmen</span>
+                        <h5 class="mb-1">Carpentry & Fabrication</h5>
+                        <small class="text-muted d-block mb-2">Building with precision</small>
+                        <ul class="svc-team-list text-start">
+                            <li><i class="fa-solid fa-check"></i> Custom furniture making</li>
+                            <li><i class="fa-solid fa-check"></i> Modular kitchen & wardrobes</li>
+                            <li><i class="fa-solid fa-check"></i> Decorative wood carving</li>
+                            <li><i class="fa-solid fa-check"></i> CNC & machine work</li>
+                        </ul>
                     </div>
                 </div>
+
+                <!-- Interior Execution -->
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item">
-                        <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="img/team-3.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-square" href=""><i class="fa-brands fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fa-brands fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fa-brands fa-instagram"></i></a>
-                            </div>
+                    <div class="svc-team-card text-center p-4">
+                        <div class="svc-team-icon" style="background:rgba(76,175,80,0.1); color:#4CAF50;">
+                            <i class="fa-solid fa-couch"></i>
                         </div>
-                        <div class="text-center border border-5 border-light border-top-0 p-4">
-                            <h5 class="mb-0">Full Name</h5>
-                            <small>Designation</small>
-                        </div>
+                        <span class="svc-team-count">12 Specialists</span>
+                        <h5 class="mb-1">Interior Execution</h5>
+                        <small class="text-muted d-block mb-2">Bringing spaces to life</small>
+                        <ul class="svc-team-list text-start">
+                            <li><i class="fa-solid fa-check"></i> Full home interiors</li>
+                            <li><i class="fa-solid fa-check"></i> Office & commercial fit-outs</li>
+                            <li><i class="fa-solid fa-check"></i> Flooring & wall panelling</li>
+                            <li><i class="fa-solid fa-check"></i> Lighting & finishing</li>
+                        </ul>
                     </div>
                 </div>
+
+                <!-- Quality & Handover -->
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item">
-                        <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="img/team-4.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-square" href=""><i class="fa-brands fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fa-brands fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fa-brands fa-instagram"></i></a>
-                            </div>
+                    <div class="svc-team-card text-center p-4">
+                        <div class="svc-team-icon" style="background:rgba(255,152,0,0.1); color:#FF9800;">
+                            <i class="fa-solid fa-clipboard-check"></i>
                         </div>
-                        <div class="text-center border border-5 border-light border-top-0 p-4">
-                            <h5 class="mb-0">Full Name</h5>
-                            <small>Designation</small>
-                        </div>
+                        <span class="svc-team-count">6 Inspectors</span>
+                        <h5 class="mb-1">Quality & Handover</h5>
+                        <small class="text-muted d-block mb-2">Ensuring perfection</small>
+                        <ul class="svc-team-list text-start">
+                            <li><i class="fa-solid fa-check"></i> Multi-point quality check</li>
+                            <li><i class="fa-solid fa-check"></i> Finishing & polish review</li>
+                            <li><i class="fa-solid fa-check"></i> Client walkthrough</li>
+                            <li><i class="fa-solid fa-check"></i> Warranty documentation</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Team End -->
+    <!-- Expert Service Teams End -->
 @endsection
