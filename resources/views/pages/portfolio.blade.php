@@ -14,7 +14,7 @@
       @forelse($portfolioItems as $item)
       <article class="card reveal">
         @if($item->image)
-          <img class="thumb" src="{{ asset('storage/'.$item->image) }}" alt="{{ $item->title }}">
+          <img class="thumb" src="{{  asset($item->image) }}" alt="{{ $item->title }}">
         @endif
         <span class="badge">{{ $item->service_type }}</span>
         <h3>{{ $item->title }}</h3>

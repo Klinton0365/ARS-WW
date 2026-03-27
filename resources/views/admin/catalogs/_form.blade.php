@@ -21,7 +21,7 @@
 @if (isset($catalog) && $catalog->attachment)
     <p style="margin:0 0 10px 0;">
         Current attachment:
-        <a href="{{ asset('storage/' . $catalog->attachment) }}" target="_blank" rel="noopener">View / Download</a>
+        <a href="{{ asset($catalog->attachment) }}" target="_blank" rel="noopener">View / Download</a>
     </p>
 @endif
 <label class="form-label">Description</label>

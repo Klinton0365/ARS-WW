@@ -78,7 +78,7 @@
                             $imagePath = $item->image ?: 'assets/img/portfolio-1.jpg';
                             $imageUrl = \Illuminate\Support\Str::startsWith($imagePath, ['http://', 'https://'])
                                 ? $imagePath
-                                : (str_starts_with($imagePath, 'assets/') ? asset($imagePath) : asset('storage/' . ltrim($imagePath, '/')));
+                                : (str_starts_with($imagePath, 'assets/') ? asset($imagePath) : asset(ltrim($imagePath, '/')));
                         @endphp
 
                         <div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
@@ -92,7 +92,7 @@
                                     <div class="d-flex flex-wrap gap-2">
                                         <a href="{{ route('products.show', $item->slug) }}" class="btn btn-primary py-2 px-4">View Product</a>
                                         @if($item->attachment)
-                                            <a href="{{ asset('storage/' . $item->attachment) }}" target="_blank" rel="noopener" class="btn btn-outline-primary py-2 px-3">Attachment</a>
+                                            <a href="{{ asset($item->attachment) }}" target="_blank" rel="noopener" class="btn btn-outline-primary py-2 px-3">Attachment</a>
                                         @endif
                                     </div>
                                 </div>

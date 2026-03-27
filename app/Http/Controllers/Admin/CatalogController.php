@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Catalog;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
 use Illuminate\View\View;
@@ -28,10 +28,16 @@ class CatalogController extends Controller
     {
         $data = $this->validatedData($request);
         if ($request->hasFile('image')) {
-            $data['image'] = $request->file('image')->store('catalog', 'public');
+            $file = $request->file('image');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('uploads/catalog'), $filename);
+            $data['image'] = 'uploads/catalog/' . $filename;
         }
         if ($request->hasFile('attachment')) {
-            $data['attachment'] = $request->file('attachment')->store('catalog/attachments', 'public');
+            $file = $request->file('attachment');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('uploads/catalog/attachments'), $filename);
+            $data['attachment'] = 'uploads/catalog/attachments/' . $filename;
         }
 
         Catalog::create($data);
@@ -52,16 +58,22 @@ class CatalogController extends Controller
     {
         $data = $this->validatedData($request, $catalog);
         if ($request->hasFile('image')) {
-            if ($catalog->image) {
-                Storage::disk('public')->delete($catalog->image);
+            if ($catalog->image && File::exists(public_path($catalog->image))) {
+                File::delete(public_path($catalog->image));
             }
-            $data['image'] = $request->file('image')->store('catalog', 'public');
+            $file = $request->file('image');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('uploads/catalog'), $filename);
+            $data['image'] = 'uploads/catalog/' . $filename;
         }
         if ($request->hasFile('attachment')) {
-            if ($catalog->attachment) {
-                Storage::disk('public')->delete($catalog->attachment);
+            if ($catalog->attachment && File::exists(public_path($catalog->attachment))) {
+                File::delete(public_path($catalog->attachment));
             }
-            $data['attachment'] = $request->file('attachment')->store('catalog/attachments', 'public');
+            $file = $request->file('attachment');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('uploads/catalog/attachments'), $filename);
+            $data['attachment'] = 'uploads/catalog/attachments/' . $filename;
         }
 
         $catalog->update($data);
@@ -70,11 +82,11 @@ class CatalogController extends Controller
 
     public function destroy(Catalog $catalog)
     {
-        if ($catalog->image) {
-            Storage::disk('public')->delete($catalog->image);
+        if ($catalog->image && File::exists(public_path($catalog->image))) {
+            File::delete(public_path($catalog->image));
         }
-        if ($catalog->attachment) {
-            Storage::disk('public')->delete($catalog->attachment);
+        if ($catalog->attachment && File::exists(public_path($catalog->attachment))) {
+            File::delete(public_path($catalog->attachment));
         }
         $catalog->delete();
         return back()->with('success', 'Catalog item deleted.');

@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Project;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
 use Illuminate\View\View;
@@ -29,7 +29,10 @@ class ProjectController extends Controller
         $data = $this->validatedData($request);
 
         if ($request->hasFile('cover_image')) {
-            $data['cover_image'] = $request->file('cover_image')->store('projects', 'public');
+            $file = $request->file('cover_image');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('uploads/projects'), $filename);
+            $data['cover_image'] = 'uploads/projects/' . $filename;
         }
 
         Project::create($data);
@@ -52,10 +55,13 @@ class ProjectController extends Controller
         $data = $this->validatedData($request, $project);
 
         if ($request->hasFile('cover_image')) {
-            if ($project->cover_image) {
-                Storage::disk('public')->delete($project->cover_image);
+            if ($project->cover_image && File::exists(public_path($project->cover_image))) {
+                File::delete(public_path($project->cover_image));
             }
-            $data['cover_image'] = $request->file('cover_image')->store('projects', 'public');
+            $file = $request->file('cover_image');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('uploads/projects'), $filename);
+            $data['cover_image'] = 'uploads/projects/' . $filename;
         }
 
         $project->update($data);
@@ -65,8 +71,8 @@ class ProjectController extends Controller
 
     public function destroy(Project $project)
     {
-        if ($project->cover_image) {
-            Storage::disk('public')->delete($project->cover_image);
+        if ($project->cover_image && File::exists(public_path($project->cover_image))) {
+            File::delete(public_path($project->cover_image));
         }
         $project->delete();
         return back()->with('success', 'Project deleted.');

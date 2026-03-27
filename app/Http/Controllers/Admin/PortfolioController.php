@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Portfolio;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
 use Illuminate\View\View;
@@ -28,7 +28,10 @@ class PortfolioController extends Controller
     {
         $data = $this->validatedData($request);
         if ($request->hasFile('image')) {
-            $data['image'] = $request->file('image')->store('portfolio', 'public');
+            $file = $request->file('image');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('uploads/portfolio'), $filename);
+            $data['image'] = 'uploads/portfolio/' . $filename;
         }
 
         Portfolio::create($data);
@@ -49,10 +52,13 @@ class PortfolioController extends Controller
     {
         $data = $this->validatedData($request, $portfolio);
         if ($request->hasFile('image')) {
-            if ($portfolio->image) {
-                Storage::disk('public')->delete($portfolio->image);
+            if ($portfolio->image && File::exists(public_path($portfolio->image))) {
+                File::delete(public_path($portfolio->image));
             }
-            $data['image'] = $request->file('image')->store('portfolio', 'public');
+            $file = $request->file('image');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('uploads/portfolio'), $filename);
+            $data['image'] = 'uploads/portfolio/' . $filename;
         }
 
         $portfolio->update($data);
@@ -61,8 +67,8 @@ class PortfolioController extends Controller
 
     public function destroy(Portfolio $portfolio)
     {
-        if ($portfolio->image) {
-            Storage::disk('public')->delete($portfolio->image);
+        if ($portfolio->image && File::exists(public_path($portfolio->image))) {
+            File::delete(public_path($portfolio->image));
         }
         $portfolio->delete();
         return back()->with('success', 'Portfolio item deleted.');

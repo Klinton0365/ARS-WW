@@ -66,7 +66,7 @@
     $imagePath = $product->image ?: 'assets/img/portfolio-1.jpg';
     $imageUrl = \Illuminate\Support\Str::startsWith($imagePath, ['http://', 'https://'])
         ? $imagePath
-        : (str_starts_with($imagePath, 'assets/') ? asset($imagePath) : asset('storage/' . ltrim($imagePath, '/')));
+        : (str_starts_with($imagePath, 'assets/') ? asset($imagePath) : asset(ltrim($imagePath, '/')));
     $specs = is_array($product->specifications) ? $product->specifications : [];
 @endphp
 
@@ -93,7 +93,7 @@
                     <div class="d-flex flex-wrap gap-2">
                         <a href="{{ route('contact') }}" class="btn btn-primary py-2 px-4">Request Quote</a>
                         @if($product->attachment)
-                            <a href="{{ asset('storage/' . $product->attachment) }}" target="_blank" rel="noopener" class="btn btn-dark py-2 px-4">Download Attachment</a>
+                            <a href="{{ asset($product->attachment) }}" target="_blank" rel="noopener" class="btn btn-dark py-2 px-4">Download Attachment</a>
                         @endif
                     </div>
                 </div>
@@ -143,7 +143,7 @@
                             $relatedImagePath = $relatedProduct->image ?: 'assets/img/portfolio-1.jpg';
                             $relatedImageUrl = \Illuminate\Support\Str::startsWith($relatedImagePath, ['http://', 'https://'])
                                 ? $relatedImagePath
-                                : (str_starts_with($relatedImagePath, 'assets/') ? asset($relatedImagePath) : asset('storage/' . ltrim($relatedImagePath, '/')));
+                                : (str_starts_with($relatedImagePath, 'assets/') ? asset($relatedImagePath) : asset(ltrim($relatedImagePath, '/')));
                         @endphp
 
                         <div class="col-md-6 col-xl-4">

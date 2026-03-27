@@ -118,7 +118,7 @@
     $imagePath = $catalogItem->image ?: 'assets/img/portfolio-1.jpg';
     $imageUrl = \Illuminate\Support\Str::startsWith($imagePath, ['http://', 'https://'])
         ? $imagePath
-        : (str_starts_with($imagePath, 'assets/') ? asset($imagePath) : asset('storage/' . ltrim($imagePath, '/')));
+        : (str_starts_with($imagePath, 'assets/') ? asset($imagePath) : asset(ltrim($imagePath, '/')));
 
     $specs = is_array($catalogItem->specifications) ? $catalogItem->specifications : [];
 @endphp
@@ -170,7 +170,7 @@
                             Request Quote
                         </a>
                         @if($catalogItem->attachment)
-                            <a href="{{ asset('storage/' . $catalogItem->attachment) }}" class="btn btn-dark py-2 px-4" target="_blank" rel="noopener">
+                            <a href="{{ asset($catalogItem->attachment) }}" class="btn btn-dark py-2 px-4" target="_blank" rel="noopener">
                                 Download Attachment
                             </a>
                         @endif
@@ -244,7 +244,7 @@
                             $relatedImagePath = $relatedItem->image ?: 'assets/img/portfolio-1.jpg';
                             $relatedImageUrl = \Illuminate\Support\Str::startsWith($relatedImagePath, ['http://', 'https://'])
                                 ? $relatedImagePath
-                                : (str_starts_with($relatedImagePath, 'assets/') ? asset($relatedImagePath) : asset('storage/' . ltrim($relatedImagePath, '/')));
+                                : (str_starts_with($relatedImagePath, 'assets/') ? asset($relatedImagePath) : asset(ltrim($relatedImagePath, '/')));
                         @endphp
 
                         <div class="col-md-6 col-xl-4">

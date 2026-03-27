@@ -103,7 +103,7 @@
                             $imagePath = $item->image ?: 'assets/img/portfolio-1.jpg';
                             $imageUrl = \Illuminate\Support\Str::startsWith($imagePath, ['http://', 'https://'])
                                 ? $imagePath
-                                : (str_starts_with($imagePath, 'assets/') ? asset($imagePath) : asset('storage/' . ltrim($imagePath, '/')));
+                                : (str_starts_with($imagePath, 'assets/') ? asset($imagePath) : asset(ltrim($imagePath, '/')));
 
                             $specs = is_array($item->specifications) ? $item->specifications : [];
                             $specLabels = [];

@@ -15,7 +15,7 @@
       <td>{{ $catalog->category }}</td>
       <td>
         @if($catalog->attachment)
-          <a href="{{ asset('storage/' . $catalog->attachment) }}" target="_blank" rel="noopener">Download</a>
+          <a href="{{ asset($catalog->attachment) }}" target="_blank" rel="noopener">Download</a>
         @else
           -
         @endif

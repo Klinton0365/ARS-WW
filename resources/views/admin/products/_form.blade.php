@@ -24,7 +24,7 @@
 @if (isset($product) && $product->attachment)
     <p style="margin:0 0 10px 0;">
         Current attachment:
-        <a href="{{ asset('storage/' . $product->attachment) }}" target="_blank" rel="noopener">View / Download</a>
+        <a href="{{ asset($product->attachment) }}" target="_blank" rel="noopener">View / Download</a>
     </p>
 @endif
 <label class="form-label">Full Description</label>

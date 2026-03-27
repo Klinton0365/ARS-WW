@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
 use Illuminate\View\View;
@@ -29,10 +29,16 @@ class ProductController extends Controller
         $data = $this->validatedData($request);
 
         if ($request->hasFile('image')) {
-            $data['image'] = $request->file('image')->store('products', 'public');
+            $file = $request->file('image');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('uploads/products'), $filename);
+            $data['image'] = 'uploads/products/' . $filename;
         }
         if ($request->hasFile('attachment')) {
-            $data['attachment'] = $request->file('attachment')->store('products/attachments', 'public');
+            $file = $request->file('attachment');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('uploads/products/attachments'), $filename);
+            $data['attachment'] = 'uploads/products/attachments/' . $filename;
         }
 
         Product::create($data);
@@ -55,16 +61,22 @@ class ProductController extends Controller
         $data = $this->validatedData($request, $product);
 
         if ($request->hasFile('image')) {
-            if ($product->image) {
-                Storage::disk('public')->delete($product->image);
+            if ($product->image && File::exists(public_path($product->image))) {
+                File::delete(public_path($product->image));
             }
-            $data['image'] = $request->file('image')->store('products', 'public');
+            $file = $request->file('image');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('uploads/products'), $filename);
+            $data['image'] = 'uploads/products/' . $filename;
         }
         if ($request->hasFile('attachment')) {
-            if ($product->attachment) {
-                Storage::disk('public')->delete($product->attachment);
+            if ($product->attachment && File::exists(public_path($product->attachment))) {
+                File::delete(public_path($product->attachment));
             }
-            $data['attachment'] = $request->file('attachment')->store('products/attachments', 'public');
+            $file = $request->file('attachment');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('uploads/products/attachments'), $filename);
+            $data['attachment'] = 'uploads/products/attachments/' . $filename;
         }
 
         $product->update($data);
@@ -74,11 +86,11 @@ class ProductController extends Controller
 
     public function destroy(Product $product)
     {
-        if ($product->image) {
-            Storage::disk('public')->delete($product->image);
+        if ($product->image && File::exists(public_path($product->image))) {
+            File::delete(public_path($product->image));
         }
-        if ($product->attachment) {
-            Storage::disk('public')->delete($product->attachment);
+        if ($product->attachment && File::exists(public_path($product->attachment))) {
+            File::delete(public_path($product->attachment));
         }
         $product->delete();
 

@@ -7,7 +7,7 @@
   <div class="container grid grid-2">
     <article class="card reveal">
       @if($project->cover_image)
-        <img class="thumb" src="{{ asset('storage/'.$project->cover_image) }}" alt="{{ $project->title }}">
+        <img class="thumb" src="{{  asset($project->cover_image) }}" alt="{{ $project->title }}">
       @endif
       <span class="badge">{{ $project->category }}</span>
       <h2>{{ $project->title }}</h2>

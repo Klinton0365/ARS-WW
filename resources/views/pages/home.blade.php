@@ -53,7 +53,7 @@
       @forelse($featuredProjects as $project)
       <article class="card reveal">
         @if($project->cover_image)
-          <img class="thumb" src="{{ asset('storage/'.$project->cover_image) }}" alt="{{ $project->title }}">
+          <img class="thumb" src="{{  asset($project->cover_image) }}" alt="{{ $project->title }}">
         @endif
         <span class="badge">{{ $project->category }}</span>
         <h3>{{ $project->title }}</h3>
