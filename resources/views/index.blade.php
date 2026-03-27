@@ -851,6 +851,80 @@
     </section>
     <!-- Storytelling Scroll Hero End -->
 
+    <!-- Trusted Clients Logo Strip Start -->
+    <style>
+        .clients-strip {
+            padding: 40px 0;
+            background: #fff;
+            border-bottom: 1px solid var(--line);
+            overflow: hidden;
+        }
+        .clients-strip__label {
+            text-align: center;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 24px;
+        }
+        .clients-strip__track {
+            display: flex;
+            width: max-content;
+            animation: clientsScroll 30s linear infinite;
+        }
+        .clients-strip__track:hover {
+            animation-play-state: paused;
+        }
+        .clients-strip__logo {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 160px;
+            height: 60px;
+            margin: 0 32px;
+            filter: grayscale(1) opacity(0.45);
+            transition: all 0.4s ease;
+        }
+        .clients-strip__logo:hover {
+            filter: grayscale(0) opacity(1);
+            transform: scale(1.08);
+        }
+        .clients-strip__logo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        @keyframes clientsScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        @media (max-width: 767px) {
+            .clients-strip__logo {
+                width: 120px;
+                height: 45px;
+                margin: 0 20px;
+            }
+        }
+    </style>
+    <div class="clients-strip">
+        <div class="container">
+            <p class="clients-strip__label">Trusted By Leading Brands & Businesses</p>
+        </div>
+        <div class="clients-strip__track">
+            <!-- Set 1 -->
+            @for($i = 1; $i <= 10; $i++)
+            <div class="clients-strip__logo"><img src="{{ asset('assets/img/clients/' . $i . '.jpg') }}" alt="Client {{ $i }}"></div>
+            @endfor
+            <!-- Set 2 (duplicate for seamless loop) -->
+            @for($i = 1; $i <= 10; $i++)
+            <div class="clients-strip__logo"><img src="{{ asset('assets/img/clients/' . $i . '.jpg') }}" alt="Client {{ $i }}"></div>
+            @endfor
+        </div>
+    </div>
+    <!-- Trusted Clients Logo Strip End -->
+
     <!-- Feature Start -->
     <div class="container-xxl py-5">
         <div class="container">
