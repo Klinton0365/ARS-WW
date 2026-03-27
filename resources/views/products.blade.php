@@ -3,110 +3,82 @@
 @section('title', 'Products | ARS Wood Works')
 
 @section('content')
-<style>
-    .products-page {
-        background: #f8f8f8;
-    }
-    .product-category-block + .product-category-block {
-        margin-top: 2.25rem;
-    }
-    .product-category-head {
-        border-left: 4px solid #ab7442;
-        padding-left: 14px;
-        margin-bottom: 1rem;
-    }
-    .product-category-meta {
-        color: #6b7280;
-        margin-bottom: 0;
-        font-size: 0.92rem;
-    }
-    .product-card {
-        background: #fff;
-        border: 1px solid #ececec;
-        border-radius: 12px;
-        overflow: hidden;
-        height: 100%;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-        transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-    .product-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
-    }
-    .product-thumb {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-    }
-    .product-category-chip {
-        display: inline-block;
-        background: rgba(171, 116, 66, 0.12);
-        color: #ab7442;
-        font-size: 12px;
-        font-weight: 700;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-        padding: 6px 10px;
-        border-radius: 999px;
-        margin-bottom: 14px;
-    }
-</style>
-
-<div class="container-fluid products-page py-5">
-    <div class="container py-3">
-        @php
-            $groupedProducts = $products->groupBy(function ($item) {
-                return $item->category ?: 'Uncategorized';
-            });
-        @endphp
-
-        <div class="section-title text-center mx-auto" style="max-width: 760px;">
-            <h1 class="display-5 mb-3">Products</h1>
-            <p class="text-muted mb-0">Browse our products dynamically grouped by category, with dedicated product detail pages.</p>
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Our Products</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-white" href="{{ route('home') }}">Home</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Products</li>
+                </ol>
+            </nav>
         </div>
+    </div>
+    <!-- Page Header End -->
 
-        @forelse($groupedProducts as $categoryName => $items)
-            <section class="product-category-block mt-4">
-                <div class="product-category-head">
-                    <h2 class="h4 mb-1">{{ $categoryName }}</h2>
-                    <p class="product-category-meta">{{ $items->count() }} {{ $items->count() === 1 ? 'product' : 'products' }}</p>
-                </div>
+    @php
+        $groupedProducts = $products->groupBy(fn($item) => $item->category ?: 'Uncategorized');
+    @endphp
 
-                <div class="row g-4">
-                    @foreach($items as $item)
-                        @php
-                            $imagePath = $item->image ?: 'assets/img/portfolio-1.jpg';
-                            $imageUrl = \Illuminate\Support\Str::startsWith($imagePath, ['http://', 'https://'])
-                                ? $imagePath
-                                : (str_starts_with($imagePath, 'assets/') ? asset($imagePath) : asset(ltrim($imagePath, '/')));
-                        @endphp
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="section-title text-center">
+                <h1 class="display-5 mb-3">Browse Our Products</h1>
+                <p class="text-muted mb-5 mx-auto" style="max-width:650px;">Quality wood products and interior solutions, organized by category. Each product is customizable to your needs.</p>
+            </div>
 
-                        <div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                            <article class="product-card">
-                                <img class="product-thumb" src="{{ $imageUrl }}" alt="{{ $item->name }}">
-                                <div class="p-4">
-                                    <span class="product-category-chip">{{ $item->category }}</span>
-                                    <h3 class="h5">{{ $item->name }}</h3>
-                                    <p class="text-muted mb-3">{{ \Illuminate\Support\Str::limit($item->short_description ?: $item->description, 120) }}</p>
+            @forelse($groupedProducts as $categoryName => $items)
+                <div class="mb-5">
+                    <div class="d-flex align-items-center mb-4">
+                        <div style="width:4px;height:32px;background:var(--primary);border-radius:2px;margin-right:14px;"></div>
+                        <div>
+                            <h3 class="mb-0" style="font-weight:700;">{{ $categoryName }}</h3>
+                            <small class="text-muted">{{ $items->count() }} {{ $items->count() === 1 ? 'product' : 'products' }}</small>
+                        </div>
+                    </div>
 
-                                    <div class="d-flex flex-wrap gap-2">
-                                        <a href="{{ route('products.show', $item->slug) }}" class="btn btn-primary py-2 px-4">View Product</a>
-                                        @if($item->attachment)
-                                            <a href="{{ asset($item->attachment) }}" target="_blank" rel="noopener" class="btn btn-outline-primary py-2 px-3">Attachment</a>
-                                        @endif
+                    <div class="row g-4">
+                        @foreach($items as $item)
+                            @php
+                                $imagePath = $item->image ?: 'assets/img/portfolio-1.jpg';
+                                $imageUrl = \Illuminate\Support\Str::startsWith($imagePath, ['http://', 'https://'])
+                                    ? $imagePath
+                                    : asset(ltrim($imagePath, '/'));
+                            @endphp
+
+                            <div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay="{{ ($loop->index % 3) * 0.2 + 0.1 }}s">
+                                <div class="h-100 rounded overflow-hidden" style="border:1px solid var(--line);background:#fff;transition:all 0.4s ease;">
+                                    <div class="position-relative" style="height:220px;overflow:hidden;">
+                                        <img class="img-fluid w-100 h-100" src="{{ $imageUrl }}" alt="{{ $item->name }}" style="object-fit:cover;transition:transform 0.5s ease;">
+                                        <div class="position-absolute top-0 start-0 m-3">
+                                            <span class="badge text-white px-3 py-2" style="background:var(--primary);border-radius:6px;font-size:0.72rem;">{{ $item->category }}</span>
+                                        </div>
+                                    </div>
+                                    <div class="p-4">
+                                        <h5 class="mb-2">{{ $item->name }}</h5>
+                                        <p class="text-muted mb-3" style="font-size:0.9rem;line-height:1.6;">{{ \Illuminate\Support\Str::limit($item->short_description ?: $item->description, 110) }}</p>
+                                        <div class="d-flex flex-wrap gap-2">
+                                            <a href="{{ route('products.show', $item->slug) }}" class="btn btn-primary btn-sm px-3">View Product</a>
+                                            @if($item->attachment)
+                                                <a href="{{ asset($item->attachment) }}" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm px-3">
+                                                    <i class="fa-solid fa-download me-1"></i>Brochure
+                                                </a>
+                                            @endif
+                                        </div>
                                     </div>
                                 </div>
-                            </article>
-                        </div>
-                    @endforeach
+                            </div>
+                        @endforeach
+                    </div>
                 </div>
-            </section>
-        @empty
-            <div class="bg-white border rounded p-5 text-center mt-4">
-                <h5 class="mb-2">No Products Available</h5>
-                <p class="text-muted mb-0">Add and publish products from the admin panel to display them here.</p>
-            </div>
-        @endforelse
+            @empty
+                <div class="text-center py-5">
+                    <i class="fa-solid fa-box-open fa-3x mb-3" style="color:var(--muted);opacity:0.3;"></i>
+                    <h5 class="text-muted">No Products Available</h5>
+                    <p class="text-muted">Products will appear here once published from the admin panel.</p>
+                </div>
+            @endforelse
+        </div>
     </div>
-</div>
 @endsection

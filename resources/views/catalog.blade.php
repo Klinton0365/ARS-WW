@@ -3,150 +3,89 @@
 @section('title', 'Catalog | ARS Wood Works')
 
 @section('content')
-<style>
-    .catalog-section {
-        background: #f8f8f8;
-    }
-    .catalog-category-section + .catalog-category-section {
-        margin-top: 2.5rem;
-    }
-    .catalog-category-header {
-        border-left: 4px solid #ab7442;
-        padding-left: 14px;
-        margin-bottom: 1rem;
-    }
-    .catalog-category-title {
-        margin-bottom: 0.25rem;
-    }
-    .catalog-category-meta {
-        color: #6b7280;
-        font-size: 0.92rem;
-        margin-bottom: 0;
-    }
-    .catalog-card {
-        background: #fff;
-        border: 1px solid #ececec;
-        border-radius: 12px;
-        overflow: hidden;
-        height: 100%;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-        transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-    .catalog-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
-    }
-    .catalog-thumb {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-    }
-    .catalog-category {
-        display: inline-block;
-        background: rgba(171, 116, 66, 0.12);
-        color: #ab7442;
-        font-size: 12px;
-        font-weight: 700;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-        padding: 6px 10px;
-        border-radius: 999px;
-        margin-bottom: 14px;
-    }
-    .catalog-title {
-        font-size: 1.15rem;
-        margin-bottom: 10px;
-    }
-    .catalog-description {
-        color: #6b7280;
-        font-size: 0.95rem;
-        margin-bottom: 14px;
-    }
-    .catalog-specs {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-bottom: 18px;
-    }
-    .catalog-spec-chip {
-        font-size: 12px;
-        background: #f4f5f7;
-        color: #374151;
-        border-radius: 999px;
-        padding: 5px 10px;
-    }
-</style>
-
-<div class="container-fluid catalog-section py-5">
-    <div class="container py-3">
-        @php
-            $groupedCatalogItems = $catalogItems->groupBy(function ($item) {
-                return $item->category ?: 'Uncategorized';
-            });
-        @endphp
-
-        <div class="section-title text-center mx-auto" style="max-width: 760px;">
-            <h1 class="display-5 mb-3">Product Catalog</h1>
-            <p class="text-muted mb-0">Explore our curated carpentry and interior product options, grouped dynamically by category.</p>
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Product Catalog</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-white" href="{{ route('home') }}">Home</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Catalog</li>
+                </ol>
+            </nav>
         </div>
+    </div>
+    <!-- Page Header End -->
 
-        @forelse($groupedCatalogItems as $categoryName => $items)
-            <section class="catalog-category-section mt-4">
-                <div class="catalog-category-header">
-                    <h2 class="h4 catalog-category-title">{{ $categoryName }}</h2>
-                    <p class="catalog-category-meta">{{ $items->count() }} {{ $items->count() === 1 ? 'product' : 'products' }}</p>
-                </div>
+    @php
+        $groupedCatalogItems = $catalogItems->groupBy(fn($item) => $item->category ?: 'Uncategorized');
+    @endphp
 
-                <div class="row g-4">
-                    @foreach($items as $item)
-                        @php
-                            $imagePath = $item->image ?: 'assets/img/portfolio-1.jpg';
-                            $imageUrl = \Illuminate\Support\Str::startsWith($imagePath, ['http://', 'https://'])
-                                ? $imagePath
-                                : (str_starts_with($imagePath, 'assets/') ? asset($imagePath) : asset(ltrim($imagePath, '/')));
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="section-title text-center">
+                <h1 class="display-5 mb-3">Explore Our Collection</h1>
+                <p class="text-muted mb-5 mx-auto" style="max-width:650px;">Curated carpentry and interior products, grouped by category. Find the perfect fit for your space.</p>
+            </div>
 
-                            $specs = is_array($item->specifications) ? $item->specifications : [];
-                            $specLabels = [];
-                            foreach ($specs as $key => $value) {
-                                $specLabels[] = is_string($key) ? ucfirst(str_replace('_', ' ', (string) $key)) . ': ' . $value : $value;
-                            }
-                        @endphp
-
-                        <div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                            <article class="catalog-card">
-                                <img class="catalog-thumb" src="{{ $imageUrl }}" alt="{{ $item->name }}">
-                                <div class="p-4">
-                                    <span class="catalog-category">{{ $item->category }}</span>
-                                    <h3 class="catalog-title">{{ $item->name }}</h3>
-                                    <p class="catalog-description">{{ \Illuminate\Support\Str::limit($item->description, 110) }}</p>
-
-                                    @if(!empty($specLabels))
-                                        <div class="catalog-specs">
-                                            @foreach(array_slice($specLabels, 0, 3) as $spec)
-                                                <span class="catalog-spec-chip">{{ $spec }}</span>
-                                            @endforeach
-                                        </div>
-                                    @endif
-
-                                    <a href="{{ route('catalog.show', $item->slug) }}" class="btn btn-primary py-2 px-4">
-                                        View Details
-                                    </a>
-                                </div>
-                            </article>
+            @forelse($groupedCatalogItems as $categoryName => $items)
+                <div class="mb-5">
+                    <div class="d-flex align-items-center mb-4">
+                        <div style="width:4px;height:32px;background:var(--primary);border-radius:2px;margin-right:14px;"></div>
+                        <div>
+                            <h3 class="mb-0" style="font-weight:700;">{{ $categoryName }}</h3>
+                            <small class="text-muted">{{ $items->count() }} {{ $items->count() === 1 ? 'product' : 'products' }}</small>
                         </div>
-                    @endforeach
-                </div>
-            </section>
-        @empty
-            <div class="row g-4 mt-2">
-                <div class="col-12">
-                    <div class="bg-white border rounded p-5 text-center">
-                        <h5 class="mb-2">No Catalog Items Available</h5>
-                        <p class="text-muted mb-0">Add and publish catalog entries from your admin panel to display them here.</p>
+                    </div>
+
+                    <div class="row g-4">
+                        @foreach($items as $item)
+                            @php
+                                $imagePath = $item->image ?: 'assets/img/portfolio-1.jpg';
+                                $imageUrl = \Illuminate\Support\Str::startsWith($imagePath, ['http://', 'https://'])
+                                    ? $imagePath
+                                    : asset(ltrim($imagePath, '/'));
+                                $specs = is_array($item->specifications) ? $item->specifications : [];
+                                $specLabels = [];
+                                foreach ($specs as $key => $value) {
+                                    $specLabels[] = is_string($key) ? ucfirst(str_replace('_', ' ', (string) $key)) . ': ' . $value : $value;
+                                }
+                            @endphp
+
+                            <div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay="{{ ($loop->index % 3) * 0.2 + 0.1 }}s">
+                                <div class="h-100 rounded overflow-hidden" style="border:1px solid var(--line);background:#fff;transition:all 0.4s ease;">
+                                    <div class="position-relative" style="height:220px;overflow:hidden;">
+                                        <img class="img-fluid w-100 h-100" src="{{ $imageUrl }}" alt="{{ $item->name }}" style="object-fit:cover;transition:transform 0.5s ease;">
+                                        <div class="position-absolute top-0 start-0 m-3">
+                                            <span class="badge text-white px-3 py-2" style="background:var(--primary);border-radius:6px;font-size:0.72rem;">{{ $item->category }}</span>
+                                        </div>
+                                    </div>
+                                    <div class="p-4">
+                                        <h5 class="mb-2">{{ $item->name }}</h5>
+                                        <p class="text-muted mb-3" style="font-size:0.9rem;line-height:1.6;">{{ \Illuminate\Support\Str::limit($item->description, 100) }}</p>
+
+                                        @if(!empty($specLabels))
+                                            <div class="d-flex flex-wrap gap-1 mb-3">
+                                                @foreach(array_slice($specLabels, 0, 3) as $spec)
+                                                    <span class="px-2 py-1" style="font-size:0.72rem;background:var(--accent-soft);color:var(--primary);border-radius:20px;font-weight:600;">{{ $spec }}</span>
+                                                @endforeach
+                                            </div>
+                                        @endif
+
+                                        <a href="{{ route('catalog.show', $item->slug) }}" class="btn btn-primary btn-sm px-3">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
-            </div>
-        @endforelse
+            @empty
+                <div class="text-center py-5">
+                    <i class="fa-solid fa-box-open fa-3x mb-3" style="color:var(--muted);opacity:0.3;"></i>
+                    <h5 class="text-muted">No Catalog Items Available</h5>
+                    <p class="text-muted">Products will appear here once published from the admin panel.</p>
+                </div>
+            @endforelse
+        </div>
     </div>
-</div>
 @endsection
