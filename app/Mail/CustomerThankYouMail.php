@@ -9,7 +9,7 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class LeadCapturedMail extends Mailable
+class CustomerThankYouMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -17,34 +17,23 @@ class LeadCapturedMail extends Mailable
     {
     }
 
-    /**
-     * Get the message envelope.
-     */
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'New Website Lead: '.$this->lead->name,
+            subject: 'Thank You for Contacting ARS Wood Works',
         );
     }
 
-    /**
-     * Get the message content definition.
-     */
     public function content(): Content
     {
         return new Content(
-            view: 'emails.leads.admin-notification',
+            view: 'emails.leads.customer-thankyou',
             with: [
                 'lead' => $this->lead,
             ],
         );
     }
 
-    /**
-     * Get the attachments for the message.
-     *
-     * @return array<int, \Illuminate\Mail\Mailables\Attachment>
-     */
     public function attachments(): array
     {
         return [];

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\CustomerThankYouMail;
 use App\Mail\LeadCapturedMail;
 use App\Models\Lead;
 use Illuminate\Http\Request;
@@ -31,9 +32,15 @@ class ContactController extends Controller
             'source' => $data['source'] ?? 'contact_form',
         ]);
 
-        $recipient = config('mail.from.address');
-        if ($recipient) {
-            Mail::to($recipient)->send(new LeadCapturedMail($lead));
+        // Send notification to admin
+        $adminEmail = config('mail.from.address');
+        if ($adminEmail) {
+            Mail::to($adminEmail)->send(new LeadCapturedMail($lead));
+        }
+
+        // Send thank-you confirmation to customer
+        if ($lead->email) {
+            Mail::to($lead->email)->send(new CustomerThankYouMail($lead));
         }
 
         return back()->with('success', 'Thank you. Our team will contact you shortly.');
