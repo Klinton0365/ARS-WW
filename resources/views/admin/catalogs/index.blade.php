@@ -7,10 +7,17 @@
 </div>
 <div class="table-wrap card">
 <table>
-  <thead><tr><th>Name</th><th>Category</th><th>Attachment</th><th>Published</th><th>Actions</th></tr></thead>
+  <thead><tr><th style="width:80px;">Image</th><th>Name</th><th>Category</th><th>Attachment</th><th>Published</th><th>Actions</th></tr></thead>
   <tbody>
     @forelse($catalogs as $catalog)
     <tr>
+      <td>
+        @if($catalog->image)
+          <img src="{{ asset($catalog->image) }}" alt="" style="width:60px;height:45px;object-fit:cover;border-radius:6px;">
+        @else
+          <span style="color:#aaa;font-size:12px;">No image</span>
+        @endif
+      </td>
       <td>{{ $catalog->name }}</td>
       <td>{{ $catalog->category }}</td>
       <td>
@@ -29,7 +36,7 @@
       </td>
     </tr>
     @empty
-    <tr><td colspan="5">No catalog items yet.</td></tr>
+    <tr><td colspan="6">No catalog items yet.</td></tr>
     @endforelse
   </tbody>
 </table>

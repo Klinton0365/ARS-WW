@@ -9,6 +9,7 @@
         <table>
             <thead>
                 <tr>
+                    <th style="width:80px;">Image</th>
                     <th>Name</th>
                     <th>Category</th>
                     <th>Published</th>
@@ -18,6 +19,13 @@
             <tbody>
                 @forelse($products as $product)
                     <tr>
+                        <td>
+                            @if($product->image)
+                              <img src="{{ asset($product->image) }}" alt="" style="width:60px;height:45px;object-fit:cover;border-radius:6px;">
+                            @else
+                              <span style="color:#aaa;font-size:12px;">No image</span>
+                            @endif
+                        </td>
                         <td>{{ $product->name }}</td>
                         <td>{{ $product->category }}</td>
                         <td>{{ $product->is_published ? 'Yes' : 'No' }}</td>
@@ -31,7 +39,7 @@
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="4">No products yet.</td>
+                        <td colspan="5">No products yet.</td>
                     </tr>
                 @endforelse
             </tbody>

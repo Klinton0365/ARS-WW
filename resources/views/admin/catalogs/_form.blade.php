@@ -11,6 +11,11 @@
     <input type="text" name="category" placeholder="Category" value="{{ old('category', $catalog->category ?? '') }}"
         required>
     <label class="form-label">Catalog Display Image</label>
+    @if(isset($catalog) && $catalog->image)
+      <div style="margin-bottom:8px;">
+        <img src="{{ asset($catalog->image) }}" alt="Current image" style="max-width:200px;max-height:140px;object-fit:cover;border-radius:8px;border:1px solid #e5e7eb;">
+      </div>
+    @endif
     <input type="file" name="image" accept="image/*">
 </div>
 <div class="form-row">

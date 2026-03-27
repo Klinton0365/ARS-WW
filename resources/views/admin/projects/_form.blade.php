@@ -18,6 +18,11 @@
   <input type="date" name="completed_at" value="{{ old('completed_at', isset($project) && $project->completed_at ? $project->completed_at->format('Y-m-d') : '') }}">
 </div>
 <label class="form-label">Project Cover Image</label>
+@if(isset($project) && $project->cover_image)
+  <div style="margin-bottom:8px;">
+    <img src="{{ asset($project->cover_image) }}" alt="Current cover" style="max-width:200px;max-height:140px;object-fit:cover;border-radius:8px;border:1px solid #e5e7eb;">
+  </div>
+@endif
 <input type="file" name="cover_image" accept="image/*">
 <label class="form-label">Project Summary</label>
 <input type="text" name="summary" placeholder="Summary" value="{{ old('summary', $project->summary ?? '') }}" required>

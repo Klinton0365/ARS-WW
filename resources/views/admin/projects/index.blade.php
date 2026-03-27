@@ -7,10 +7,17 @@
 </div>
 <div class="table-wrap card">
 <table>
-  <thead><tr><th>Title</th><th>Category</th><th>Featured</th><th>Published</th><th>Actions</th></tr></thead>
+  <thead><tr><th style="width:80px;">Image</th><th>Title</th><th>Category</th><th>Featured</th><th>Published</th><th>Actions</th></tr></thead>
   <tbody>
     @forelse($projects as $project)
     <tr>
+      <td>
+        @if($project->cover_image)
+          <img src="{{ asset($project->cover_image) }}" alt="" style="width:60px;height:45px;object-fit:cover;border-radius:6px;">
+        @else
+          <span style="color:#aaa;font-size:12px;">No image</span>
+        @endif
+      </td>
       <td>{{ $project->title }}</td>
       <td>{{ $project->category }}</td>
       <td>{{ $project->is_featured ? 'Yes' : 'No' }}</td>
@@ -23,7 +30,7 @@
       </td>
     </tr>
     @empty
-    <tr><td colspan="5">No projects yet.</td></tr>
+    <tr><td colspan="6">No projects yet.</td></tr>
     @endforelse
   </tbody>
 </table>

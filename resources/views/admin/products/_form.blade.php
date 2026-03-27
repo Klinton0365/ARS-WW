@@ -16,6 +16,11 @@
 </div>
 <div class="form-row">
     <label class="form-label">Product Display Image</label>
+    @if(isset($product) && $product->image)
+      <div style="margin-bottom:8px;">
+        <img src="{{ asset($product->image) }}" alt="Current image" style="max-width:200px;max-height:140px;object-fit:cover;border-radius:8px;border:1px solid #e5e7eb;">
+      </div>
+    @endif
     <input type="file" name="image" accept="image/*">
     <label class="form-label">Product Attachment (Brochure/Spec Sheet)</label>
     <input type="file" name="attachment" accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.zip">
